@@ -24,4 +24,5 @@ production:
   <<: *default
   username: deployer
   password: deployer
+  host: localhost
   database: heim_production
