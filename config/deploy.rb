@@ -65,11 +65,30 @@ set :rbenv_ruby, '2.1.3'
 
 namespace :deploy do
 
+
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
+      within release_path do
+        # execute :bundle, "exec thin restart -C config/thin.#{fetch :rails_env}.yml"
+        execute :kill, '-USR2 $(< tmp/pids/unicorn.pid)'
+      end
+    end
+  end
+
+  desc 'Start application'
+  task :start do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+      within release_path do
+        with rails_env: fetch(:rails_env, 'production') do
+          # execute :bundle, "exec thin restart -C config/thin.#{fetch :rails_env}.yml"
+          execute :bundle, 'exec unicorn -c config/unicorn.rb -D'
+        end
+      end
     end
   end
 
@@ -83,8 +102,6 @@ namespace :deploy do
       # end
     end
   end
-
-
 
 
 
