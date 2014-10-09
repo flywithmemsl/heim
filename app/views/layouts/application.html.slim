@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    / meta name="viewport" content="width=device-width, initial-scale=1"
+    / meta name="viewport" content="initial-scale=1.0, user-scalable=no"
+    meta name="format-detection" content="telephone=no"
+    title
+      | Heim</title>
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body class= controller.controller_name
+    = yield
+
+
+    .footer
+      .links.container
+        .logo
+          img(src="/logo_white.png")
+        ul.nav
+          li
+            a(href="#") О нас
+          li
+            a(href="#") Магазин
+          li
+            a(href="#") Блог
+          li
+            a(href="#") События
+          li
+            a(href="#") Галерея
+          li
+            a(href="#") Контакты
+        .toggle_magazines
+          | издания :
+          a(href="#")
+            | Kinfolk
+
+          a(href="#")
+            | Cereal
+
+        .search
+          .icon
+        a.button.rounded(href="#") Где купить оффлайн?
+        .social
+          a.vk(href="#")
+          a.fb(href="#")
+          a.in(href="#")
+          a.pi(href="#")
+        .illustration
+          img(src="/illustr.png")
+      hr
+      .container
+        p.copy Heim Publishing, 2014
+        p.made_by
+          | Made by&nbsp;
+          span J.J. Gittes

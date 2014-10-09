@@ -1,0 +1,80 @@
+@import "bourbon"
+@import "neat"
+@include reset-all
+
+$white:   #fff
+$black:   #212121
+$grey:    #9c9c9c
+$dgrey:   #4d4d4d
+$lgrey:   #e1e1e1
+
+$red:     #ed5f5f
+
+$sandy:   #f5f0e9
+
+
+
+// @include font-face(Maiola, '/fonts/MaiolaPro', 400, normal)
+// @include font-face(Maiola, '/fonts/MaiolaPro-Italic', 300, italic)
+// @include font-face(Maiola, '/fonts/MaiolaPro-BoldItalic', 700, italic)
+
+@include font-face(Room, '/fonts/Room-Bold', 700, normal)
+@include font-face(Room, '/fonts/Room-Thin', 300, normal)
+@include font-face(Ionicons, '/fonts/ionicons', 400, normal)
+
+
+$maiola: "Maiola", Maiola, "PT Serif", "Times New Roman", Arial
+$room: "Room-Thin", "Room", Helvetica, Sans, Arial
+
+
+@mixin thin($font-size: 18px, $line-height: 24px)
+  font: 300 #{$font-size}/#{$line-height} $room
+  -webkit-font-smoothing: antialiased
+
+@mixin bold($font-size: 12px, $line-height: 16px)
+  font: 700 #{$font-size}/#{$line-height} $room
+  -webkit-font-smoothing: antialiased
+
+@mixin normal($font-size: 14px, $line-height: 22px)
+  font: 400 #{$font-size}/#{$line-height} $maiola
+  -webkit-font-smoothing: antialiased
+
+@mixin italic($font-size: 14px, $line-height: 22px)
+  font: 300 italic #{$font-size}/#{$line-height} $maiola
+  -webkit-font-smoothing: antialiased
+
+@mixin bolditalic($font-size: 14px, $line-height: 22px)
+  font: 700 italic #{$font-size}/#{$line-height} $maiola
+  -webkit-font-smoothing: antialiased
+
+
+@mixin edit($color: black, $important: false)
+  @if $important
+    *
+      background: rgba($color, .05) !important
+  @else
+    *
+      background: rgba($color, .05)
+
+ul
+  margin: 0
+  padding: 0
+p
+  margin: 0
+  padding: 0
+
+@mixin ion($content: "", $size: inherit)
+  display: inline-block
+  font-family: "Ionicons"
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  text-rendering: auto
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  content: $content
+  font-size: $size
+

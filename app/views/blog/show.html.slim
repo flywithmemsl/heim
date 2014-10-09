@@ -1,0 +1,59 @@
+
+.header
+  .logo
+    img(src="/black_logo.png")
+  ul.nav
+    li
+      a(href="#") О нас
+    li
+      a(href="#") Магазин
+    li
+      a(href="#") Блог
+    li
+      a(href="#") События
+    li
+      a(href="#") Галерея
+    li
+      a(href="#") Контакты
+  .fluid_container
+    .toggle_magazines
+      | издания
+    .search
+      .icon
+    .magazines
+.hr
+.blog_post
+  .content_header
+    .container
+      h1 Блог
+      a.button(href="/blog")
+        | Вернуться
+      .breadcrumbs
+        ul
+          li
+            a(href="#") Главная
+          li
+            a(href="#") Блог
+          li
+            a(href="#") = @category.name
+          li
+            a(href="#") = raw @article.title
+  .fluid_container
+    -unless @article.illustration.blank?
+      .illustration(style="background-image: url(#{@article.illustration});")
+  .container
+    .post_header
+      h4.date
+        | Дата |&nbsp;
+        span = l @article.date, format: :long
+      h2.theme
+        | Тема |&nbsp;
+        span = raw @article.title
+    .post_content
+      = raw @article.text
+
+    .similar_posts
+      h4 похожие посты
+
+
+

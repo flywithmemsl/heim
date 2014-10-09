@@ -1,0 +1,424 @@
+@import "bourbon"
+@import "settings"
+
+body
+  +bold()
+  color: $black
+  letter-spacing: 0.05em
+  min-width: 960px
+
+a
+  color: $dgrey
+  text-decoration: none
+  &:visited
+    color: $dgrey
+  &:hover
+    color: $black
+  &.active
+    color: $black
+
+
+
+h1
+  +thin(28px,24px)
+  padding-bottom: 30px
+  margin: 0
+  text-transform: uppercase
+  letter-spacing: 0.2em
+h2
+  +thin(24px,24px)
+  padding-bottom: 30px
+  margin: 0
+  text-transform: uppercase
+  letter-spacing: 0.2em
+  text-align: center
+h3
+  +thin(18px,18px)
+  padding-bottom: 30px
+  margin: 0
+  text-transform: uppercase
+  letter-spacing: 0.2em
+h4
+  +bold(12px,24px)
+  padding-bottom: 30px
+  margin: 0
+  text-transform: uppercase
+  letter-spacing: 0.12em
+
+
+label
+  color: #9c9c9c
+  text-transform: uppercase
+  +bold(12px,24px)
+
+
+
+.fluid_container
+  max-width: 1280px
+  // padding: 0px 10px
+  position: relative
+  margin: 0 auto
+  min-width: 960px
+  text-align: center
+
+.container
+  padding: 0px 10px
+  position: relative
+  margin: 0 auto
+  width: 960px
+  text-align: center
+
+.block
+  padding: 80px 0
+
+
+.header
+  height: 110px
+  position: relative
+  .logo
+    position: absolute
+    display: inline-block
+    left: 50%
+    margin-left: -45px
+    top: 20px
+  ul.nav
+    position: absolute
+    display: inline-block
+    left: 50%
+    margin-left: -257px
+    top: 75px
+    list-style-type: none
+    li
+      display: inline-block
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      a
+        letter-spacing: 0.12em
+        text-transform: uppercase
+  h1
+    text-align: center
+  .toggle_magazines
+    position: absolute
+    display: inline-block
+    left: 25px
+    top: 75px
+    padding-left: 16px
+    cursor: pointer
+    &:before
+      position: absolute
+      top: 4px
+      left: 0
+      +ion("\f151", 12px)
+  .search
+    position: absolute
+    display: inline-block
+    right: 25px
+    top: 75px
+    padding-left: 16px
+    cursor: pointer
+    &:before
+      position: absolute
+      top: 4px
+      left: 0
+      +ion("\f21f", 15px)
+
+p
+  +italic(14px,24px)
+  text-align: justify
+
+
+p.col-2
+  width: 365px
+  display: inline-block
+  vertical-align: top
+  margin-right: 14px
+  text-align: justify
+  &:last-child
+    margin-right: 0px
+    margin-left: 14px
+
+.half
+  width: 48.5%
+  margin-right: 2.5%
+  display: inline-block
+
+  &:nth-child(2n)
+    margin-right: 0px
+
+
+.slider
+  .image
+    width: 400px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 60px
+  .text
+    width: 360px
+    display: inline-block
+    vertical-align: middle
+    text-align: left
+    h2
+      text-align: left
+    p
+      margin-bottom: 50px
+
+.block_logo
+  text-align: center
+  margin-bottom: 40px
+
+p.centred
+  display: inline-block
+  width: 420px
+  text-align: center
+
+
+.shop_items
+  margin-top: 75px
+  margin-bottom: 70px
+  .shop_item
+    width: 296px
+    height: 256px
+    display: inline-block
+    margin-right: 5px
+    position: relative
+    overflow: hidden
+    &:nth-child(3n)
+      margin-right: 0
+    margin-bottom: 5px
+    cursor: pointer
+    img
+      transition: opacity 0.6s ease
+    .info
+      width: 100%
+      height: 155px
+      color: $white
+      background: rgba(0,0,0,0.5)
+      position: absolute
+      transition: top 0.6s ease
+      top: 256px
+
+      .name
+        margin-top: 52px
+        +bold(12px,24px)
+        text-transform: uppercase
+        text-align: center
+      .type
+        margin-top: 5px
+        +italic(14px,24px)
+        text-align: center
+      .price
+        margin-top: 18px
+        +bold(12px,24px)
+        text-align: center
+    &:hover
+      img
+        opacity: 0.4
+      .info
+        top: 256px-155px
+
+
+.footer
+  @extend .header
+  background: $dgrey
+  height: 255px
+  color: $lgrey
+  .button
+    color: $lgrey
+    border-color: $lgrey
+    position: absolute
+    display: inline-block
+    text-transform: none
+    +normal(12px,24px)
+    left: 25px
+    top: 130px
+    padding: 11px 20px
+  ul.nav
+    li
+      a
+        color: $lgrey
+
+  .links
+    height: 215px
+  .toggle_magazines
+    padding: 0
+    a
+      color: $white
+      +normal(10px,10px)
+      margin-left: 8px
+      padding-bottom: 1px
+      &:hover
+        border-bottom: 1px solid $white
+    &:before
+      display: none
+  .illustration
+    position: absolute
+    top: 122px
+    right: 25px
+  .social
+    position: absolute
+    display: inline-block
+    left: 50%
+    margin-left: -65px
+    width: 140px
+    top: 130px
+    a
+      display: inline-block
+      width: 25px
+      height: 25px
+      padding-top: 3px
+      margin-right: 10px
+      background: #9b9b9b
+      border-radius: 3px
+      color: $dgrey
+      text-decoration: none
+      &:visited
+        background: #9b9b9b
+        color: $dgrey
+      &:hover
+        background: #e0e0e0
+        color: $dgrey
+      &:active
+        background: #e0e0e0
+        color: $dgrey
+
+      &.vk
+        &:before
+          +ion("\f245", 20px)
+      &.fb
+        &:before
+          +ion("\f231", 20px)
+      &.in
+        &:before
+          +ion("\f350", 20px)
+      &.pi
+        &:before
+          +ion("\f2b0", 20px)
+
+  hr
+    background: $grey
+    color: $grey
+    border-bottom: none
+
+
+
+  p.copy
+    // display: inline-block
+    padding-left: 15px
+  p.made_by
+
+    position: absolute
+    right: 25px
+    top: 0
+
+
+.button
+  display: inline-block
+  +bold(12px,24px)
+  text-transform: uppercase
+  padding: 10px 36px
+  border: 1px solid $black
+  color: $black
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease
+  cursor: pointer
+  &:hover
+    border-color: $grey
+    background: $grey
+    color: $white
+  &.rounded
+    border-radius: 30px
+
+
+
+hr
+  border-color: #e1e1e1
+  background: #e1e1e1
+  color: #e1e1e1
+  border-bottom: none
+
+
+
+.content_header
+  height: 120px
+  h1
+    display: inline-block
+    position: absolute
+    left: 10px
+    top: 35px
+
+
+
+
+.breadcrumbs
+  position: absolute
+  left: 10px
+  top: 80px
+  ul
+    li
+      display: inline-block
+      margin-right: 15px
+      position: relative
+      &:before
+        font-size: 18px
+        content: ">"
+        position: absolute
+        right: -12px
+        top: 3px
+        color: $grey
+      &:last-child
+        margin-right: 0px
+        &:before
+          display: none
+      a
+        +italic(14px)
+        color: $grey
+        text-decoration: underline
+
+
+.hr
+  height: 1px
+  background: $grey
+  color: $grey
+  border-bottom: none
+  border-top: 1px solid $lgrey
+
+
+a.absolute
+  text-decoration: none
+  text-opacity: 0
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+
+
+
+
+
+
+.post_content
+  text-align: center
+  h3
+    text-align: left
+    +bolditalic(16px)
+    text-transform: none
+    padding: 0 (940px-700px)/2
+    padding-bottom: 30px
+
+  p
+    padding: 0 (940px-700px)/2
+    text-align: left
+    margin-bottom: 48px
+
+  img+p
+    margin: 20px 0 50px 0
+    text-align: center
+    +italic(12px)
+    color: $grey
+
+
+
+
+
+

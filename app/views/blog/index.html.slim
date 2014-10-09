@@ -1,0 +1,67 @@
+
+.header
+  .logo
+    img(src="black_logo.png")
+  ul.nav
+    li
+      a(href="#") О нас
+    li
+      a(href="#") Магазин
+    li
+      a(href="#") Блог
+    li
+      a(href="#") События
+    li
+      a(href="#") Галерея
+    li
+      a(href="#") Контакты
+  .fluid_container
+    .toggle_magazines
+      | издания
+    .search
+      .icon
+    .magazines
+.hr
+.blog
+  .content_header
+    .container
+      h1 Блог
+      ul.types
+        li
+          a.active(href="#")
+            | все
+        li
+          a(href="#")
+            | статьи
+        li
+          a(href="#")
+            | галереии
+        li
+          a(href="#")
+            | видео
+      .city
+        | Все города
+      .breadcrumbs
+        ul
+          li
+            a(href="#") Главная
+          li
+            a(href="#") Блог
+
+  .posts
+    .container
+      - 6.times
+        .post
+          a.absolute(href="#")
+          .picture
+            img(src="position.jpg")
+          .info
+            h4 статья |  GOING AGAINST THE GRAIN of my fucking heart
+            p.text Ever felt like something just doesn’t belong? The world can occasionally make us feel out of place in our own lives.
+
+
+
+
+
+
+

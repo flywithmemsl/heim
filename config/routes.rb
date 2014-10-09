@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
+
+
+  get 'blog/(:category)', to: "blog#index", constraints: { category: /(articles|galleries|videos)/ }
+
+  get 'blog/:category/:alias', to: "blog#show"
+
+
+
+  mount Ckeditor::Engine => '/ckeditor'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'main#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

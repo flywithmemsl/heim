@@ -1,0 +1,76 @@
+@import "_normalize"
+@import "bourbon"
+@import "settings"
+@import "kit"
+
+.content_header
+  .types
+    position: absolute
+    left: 50%
+    top: 36px
+    margin-left: -128px
+    li
+      display: inline-block
+      border-radius: 3px
+      margin-right: 20px
+      padding-bottom: 1px
+      cursor: pointer
+      a
+        padding: 2px 6px 2px 6px
+        +bold(12px)
+        background: none
+        color: $black
+        text-decoration: none
+      &.active
+        background: $black
+        a
+          color: $white
+      &:hover
+        background: $black
+        a
+          color: $white
+  .city
+    position: absolute
+    right: 10px
+    top: 35px
+    border: 1px solid #e1e1e1
+    border-radius: 5px
+    padding: 2px 60px 2px 6px
+    +italic(12px)
+    cursor: pointer
+
+.posts
+  .container
+    text-align: left
+    &:after
+      content: ""
+      display: table
+      clear: both
+  .post
+    position: relative
+    display: inline-block
+    float: left
+    width: 300px
+    margin-right: 20px
+    &:nth-child(3n)
+      margin-right: 0px
+    .picture
+      width: 300px
+      height: 255px
+      overflow: hidden
+      img
+        width: 100%
+    .info
+      h4
+        text-align: center
+        padding: 12px 14px 10px 14px
+      p.text
+        font-size: 13px
+        height: 150px
+        padding: 0px 14px 10px 14px
+        overflow: hidden
+
+
+
+
+
