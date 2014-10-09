@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
 
-  get 'blog/(:category)', to: "blog#index", constraints: { category: /(articles|galleries|videos)/ }
+  get 'blog/(:category)', to: "blog#index", as: :posts, constraints: { category: /(articles|galleries|videos)/ }
 
-  get 'blog/:category/:alias', to: "blog#show"
+  get 'blog/:category/:alias', to: "blog#show", as: :post
 
 
 

@@ -25,7 +25,7 @@ class SmallpicUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  process :scale => [300, 255]
+  process :resize_to_fit => [300, 255]
   #
   # def scale(width, height)
   #   # do something

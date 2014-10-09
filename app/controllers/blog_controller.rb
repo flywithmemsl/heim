@@ -1,5 +1,6 @@
 class BlogController < ApplicationController
   def index
+    @list = BlogPost.all
   end
 
   def show

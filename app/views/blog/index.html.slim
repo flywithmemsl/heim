@@ -50,15 +50,17 @@
 
   .posts
     .container
-      - 6.times
+      - @list.each do |post|
         .post
-          a.absolute(href="#")
+          = link_to "", post_path(post.try(:category).try(:alias), post.alias), class: "absolute"
           .picture
-            img(src="position.jpg")
+            = image_tag post.smallpic_url
           .info
-            h4 статья |  GOING AGAINST THE GRAIN of my fucking heart
-            p.text Ever felt like something just doesn’t belong? The world can occasionally make us feel out of place in our own lives.
-
+            h4
+              = post.category.name
+              | &nbsp;|&nbsp;
+              = post.title
+            p.text = raw post.introtext
 
 
 
