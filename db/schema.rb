@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20141009174505) do
 
   create_table "blog_posts", force: true do |t|
     t.string   "title"
-    t.text     "description"
-    t.text     "introtext"
+    t.string   "description",  limit: 4000
+    t.string   "introtext",    limit: 4000
     t.text     "text"
     t.date     "date"
     t.string   "smallpic"
