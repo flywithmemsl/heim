@@ -2,19 +2,7 @@
   .header
     .logo
       img(src="logo_white.png")
-    ul.nav
-      li
-        a(href="#") О нас
-      li
-        a(href="#") Магазин
-      li
-        a(href="#") Блог
-      li
-        a(href="#") События
-      li
-        a(href="#") Галерея
-      li
-        a(href="#") Контакты
+    = render partial: "partials/nav"
     .fluid_container
       .toggle_magazines
         | издания
@@ -85,7 +73,7 @@
             | Beach resort towns in the United Kingdom no longer have“
             | wheeled bathing machines” and seawater as medicine,
             | but there are a number of characteristics they still do share.
-      .post(style="background-image: url(/blog_pic.jpg); left: -4px;")
+      .post(style="background-image: url(/blog_pic.jpg);")
         .info
           .title
             | BRITISH BEACH TOWNS: A SOCIAL HISTORY

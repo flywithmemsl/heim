@@ -5,35 +5,111 @@
 
 .content_header
   .button
+    display: inline-block
     position: absolute
     right: 10px
     top: 60px
     color: $grey
     border-color: $grey
     padding: 5px 28px
+    &:hover
+      color: $white
+  .open_fullscreen
+    color: $dgrey
+    border-color: $dgrey
+    width: 136px
+    margin-left: -68px
+    left: 50%
+    &:hover
+      border-color: $grey
+
+
+
+.slideshow
+  .counter
+    position: absolute
+    right: 0
+    bottom: -45px
+    font-size: 10px
+
+.slick-slider
+  margin-bottom: 60px
+  .slick-slide
+    text-align: center
+    height: 450px
+    img
+      display: inline-block
+      height: 100%
+  .slick-dots
+    li
+      margin: 0px
+      button
+
+        &:before
+          font-size: 9px
+          color: $grey
+      &.slick-active
+        button:before
+          color: $dgrey
 
 
 
 .blog_post
+  .post_header
+    position: relative
+    &:after
+      clear: both
+      display: table
+      content: ""
   .illustration
     height: 300px
     background: center center no-repeat
     background-size: cover
   .container
     text-align: left
-    margin-top: 50px
+    &.articles
+      margin-top: 50px
   .date
+    position: absolute
+    top: 0
+    left: 0
+    vertical-align: top
     display: inline-block
     color: $grey
+    width: 183px
     span
       color: $black
   .theme
-    margin-bottom: 50px
+    // margin-bottom: 50px
+    width: 520px
+    text-align: left
+    text-indent: -117px
     display: inline-block
-    margin-left: 140px
+    margin-left: 417px
     color: $grey
     span
       color: $black
+
+  .sharing
+    height: 150px
+    display: block
+    width: 300px
+    display: inline-block
+    vertical-align: top
+  .description_and_introtext
+    width: 640px
+    display: inline-block
+    vertical-align: top
+    .description
+      +italic(14px,22px)
+      width: 400px
+      margin-bottom: 27px
+    .introtext
+      +bolditalic(14px,22px)
+      text-transform: uppercase
+      width: auto
+      width: 565px
+      margin-bottom: 30px
   // .post_content
 
   .similar_posts

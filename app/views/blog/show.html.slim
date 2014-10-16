@@ -2,19 +2,7 @@
 .header
   .logo
     img(src="/black_logo.png")
-  ul.nav
-    li
-      a(href="#") О нас
-    li
-      a(href="#") Магазин
-    li
-      a(href="#") Блог
-    li
-      a(href="#") События
-    li
-      a(href="#") Галерея
-    li
-      a(href="#") Контакты
+  = render partial: "partials/nav"
   .fluid_container
     .toggle_magazines
       | издания
@@ -26,22 +14,33 @@
   .content_header
     .container
       h1 Блог
-      a.button(href="/blog")
+      -if @article.category.id == 2
+        a.button.open_fullscreen(href="#") фуллскрин
+      a.button.goback(href="/blog")
         | Вернуться
       .breadcrumbs
         ul
           li
-            a(href="#") Главная
+            a(href="/") Главная
           li
-            a(href="#") Блог
+            a(href="/blog") Блог
           li
-            a(href="#") = @category.name
+            a(href="/blog/#{@category.alias}") = @category.name
           li
             a(href="#") = raw @article.title
-  .fluid_container
-    -unless @article.illustration.blank?
-      .illustration(style="background-image: url(#{@article.illustration});")
-  .container
+  -if @article.category.id == 1
+    .fluid_container
+      -unless @article.illustration.blank?
+        .illustration(style="background-image: url(#{@article.illustration});")
+  .container(class="#{@category.alias}")
+    -if @article.category.id == 2
+      .slideshow
+        = raw @article.gallery
+
+    -if @article.category.id == 3
+      .slideshow
+        = raw @article.video_link
+
     .post_header
       h4.date
         | Дата |&nbsp;
@@ -49,11 +48,28 @@
       h2.theme
         | Тема |&nbsp;
         span = raw @article.title
-    .post_content
-      = raw @article.text
+      .sharing
+        p.share
+          | Поделиться постом:<br/>
+          a(href="#") Вконтакте
+          | /
+          a(href="#") Facebook
+        -if @article.category.id == 1
+          p.Tags
+            | Тэги:<br/>
+            a(href="#") Рецепт
+            |,&nbsp;
+            a(href="#") Кофе
 
-    .similar_posts
-      h4 похожие посты
+      .description_and_introtext
+        p.description = raw @article.description
+        -if @article.category.id == 1
+          p.introtext = raw @article.introtext
+    -if @article.category.id == 1
+      .post_content
+        = raw @article.text
+      .similar_posts
+        h4 похожие посты
 
 
 

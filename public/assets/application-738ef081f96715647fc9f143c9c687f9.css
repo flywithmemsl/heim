@@ -1,0 +1,4492 @@
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 55, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 63, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html {
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a {
+  background: transparent;
+}
+/* line 139, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 199, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 211, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 236, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 246, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 271, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 279, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 287, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 294, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 350, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 359, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 369, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 397, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 414, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 426, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 436, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 451, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 462, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 470, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 479, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 490, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 498, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 507, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* line 517, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 4, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+body {
+  font: 700 12px/16px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #212121;
+  letter-spacing: 0.05em;
+  min-width: 960px;
+}
+
+/* line 10, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 13, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:visited {
+  color: #4d4d4d;
+}
+/* line 15, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:hover {
+  color: #212121;
+}
+/* line 17, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.active {
+  color: #212121;
+}
+
+/* line 22, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h1 {
+  font: 300 28px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 28, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h2 {
+  font: 300 24px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* line 35, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h3 {
+  font: 300 18px/18px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 41, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h4 {
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* line 49, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+label {
+  color: #9c9c9c;
+  text-transform: uppercase;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 56, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.fluid_container {
+  max-width: 1280px;
+  position: relative;
+  margin: 0 auto;
+  min-width: 960px;
+  text-align: center;
+}
+
+/* line 64, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.container {
+  padding: 0px 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  text-align: center;
+}
+
+/* line 71, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block {
+  padding: 80px 0;
+}
+
+/* line 75, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header, .footer {
+  height: 110px;
+  position: relative;
+}
+/* line 78, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .logo, .footer .logo {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -45px;
+  top: 20px;
+}
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav, .footer ul.nav {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -257px;
+  top: 75px;
+  list-style-type: none;
+}
+/* line 91, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li, .footer ul.nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
+/* line 94, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li:last-child, .footer ul.nav li:last-child {
+  margin-right: 0;
+}
+/* line 96, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li a, .footer ul.nav li a {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* line 99, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header h1, .footer h1 {
+  text-align: center;
+}
+/* line 101, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines, .footer .toggle_magazines {
+  position: absolute;
+  display: inline-block;
+  left: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 108, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines:before, .footer .toggle_magazines:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f151";
+  font-size: 12px;
+}
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search, .footer .search {
+  position: absolute;
+  display: inline-block;
+  right: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 120, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search:before, .footer .search:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f21f";
+  font-size: 15px;
+}
+
+/* line 126, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p {
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+}
+
+/* line 131, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2 {
+  width: 365px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 14px;
+  text-align: justify;
+}
+/* line 137, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2:last-child {
+  margin-right: 0px;
+  margin-left: 14px;
+}
+
+/* line 141, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half {
+  width: 48.5%;
+  margin-right: 2.5%;
+  display: inline-block;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half:nth-child(2n) {
+  margin-right: 0px;
+}
+
+/* line 151, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .image {
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 60px;
+}
+/* line 156, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text {
+  width: 360px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 161, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text h2 {
+  text-align: left;
+}
+/* line 163, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text p {
+  margin-bottom: 50px;
+}
+
+/* line 166, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block_logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* line 170, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.centred {
+  display: inline-block;
+  width: 420px;
+  text-align: center;
+}
+
+/* line 176, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items {
+  margin-top: 75px;
+  margin-bottom: 70px;
+}
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item {
+  width: 296px;
+  height: 256px;
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+/* line 186, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 190, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item img {
+  transition: opacity 0.6s ease;
+}
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info {
+  width: 100%;
+  height: 155px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  transition: top 0.6s ease;
+  top: 256px;
+}
+/* line 201, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .name {
+  margin-top: 52px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* line 206, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .type {
+  margin-top: 5px;
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 210, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .price {
+  margin-top: 18px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 215, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover img {
+  opacity: 0.4;
+}
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover .info {
+  top: 256px -155px;
+}
+
+/* line 221, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer {
+  background: #4d4d4d;
+  height: 255px;
+  color: #e1e1e1;
+}
+/* line 226, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .button {
+  color: #e1e1e1;
+  border-color: #e1e1e1;
+  position: absolute;
+  display: inline-block;
+  text-transform: none;
+  font: 400 12px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  left: 25px;
+  top: 130px;
+  padding: 11px 20px;
+}
+/* line 238, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer ul.nav li a {
+  color: #e1e1e1;
+}
+/* line 241, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .links {
+  height: 215px;
+}
+/* line 243, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines {
+  padding: 0;
+}
+/* line 245, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a {
+  color: white;
+  font: 400 10px/10px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 8px;
+  padding-bottom: 1px;
+}
+/* line 250, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a:hover {
+  border-bottom: 1px solid white;
+}
+/* line 252, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines:before {
+  display: none;
+}
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .illustration {
+  position: absolute;
+  top: 122px;
+  right: 25px;
+}
+/* line 258, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -65px;
+  width: 140px;
+  top: 130px;
+}
+/* line 265, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  margin-right: 10px;
+  background: #9b9b9b;
+  border-radius: 3px;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 275, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:visited {
+  background: #9b9b9b;
+  color: #4d4d4d;
+}
+/* line 278, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:hover {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 281, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:active {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 286, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.vk:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f245";
+  font-size: 20px;
+}
+/* line 289, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.fb:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f231";
+  font-size: 20px;
+}
+/* line 292, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.in:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f350";
+  font-size: 20px;
+}
+/* line 295, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.pi:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f2b0";
+  font-size: 20px;
+}
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer hr {
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+}
+/* line 305, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.copy {
+  padding-left: 15px;
+}
+/* line 308, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.made_by {
+  position: absolute;
+  right: 25px;
+  top: 0;
+}
+
+/* line 315, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button {
+  display: inline-block;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  padding: 10px 36px;
+  border: 1px solid #212121;
+  color: #212121;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+/* line 324, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button:hover {
+  border-color: #9c9c9c;
+  background: #9c9c9c;
+  color: white;
+}
+/* line 328, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button.rounded {
+  border-radius: 30px;
+}
+
+/* line 333, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+hr {
+  border-color: #e1e1e1;
+  background: #e1e1e1;
+  color: #e1e1e1;
+  border-bottom: none;
+}
+
+/* line 341, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header {
+  height: 120px;
+}
+/* line 343, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header h1 {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 35px;
+}
+
+/* line 352, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+}
+/* line 357, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+}
+/* line 361, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:before {
+  font-size: 18px;
+  content: ">";
+  position: absolute;
+  right: -12px;
+  top: 3px;
+  color: #9c9c9c;
+}
+/* line 368, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child {
+  margin-right: 0px;
+}
+/* line 370, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child:before {
+  display: none;
+}
+/* line 372, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li a {
+  font: 300 italic 14px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+  text-decoration: underline;
+}
+
+/* line 378, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.hr {
+  height: 1px;
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+  border-top: 1px solid #e1e1e1;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.absolute {
+  text-decoration: none;
+  text-opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 400, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content {
+  text-align: center;
+}
+/* line 402, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content h3 {
+  text-align: left;
+  font: 700 italic 16px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  padding: 0 120px;
+  padding-bottom: 30px;
+}
+/* line 409, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p {
+  padding: 0 120px;
+  text-align: left;
+  margin-bottom: 48px;
+}
+/* line 413, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p img {
+  position: relative;
+  left: -120px;
+  width: 940px;
+}
+/* line 419, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content img + p {
+  margin: 20px 0 50px 0;
+  text-align: center;
+  font: 300 italic 12px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+}
+
+/* line 55, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 63, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html {
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a {
+  background: transparent;
+}
+/* line 139, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 199, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 211, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 236, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 246, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 271, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 279, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 287, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 294, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 350, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 359, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 369, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 397, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 414, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 426, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 436, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 451, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 462, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 470, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 479, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 490, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 498, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 507, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* line 517, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 4, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+body {
+  font: 700 12px/16px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #212121;
+  letter-spacing: 0.05em;
+  min-width: 960px;
+}
+
+/* line 10, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 13, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:visited {
+  color: #4d4d4d;
+}
+/* line 15, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:hover {
+  color: #212121;
+}
+/* line 17, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.active {
+  color: #212121;
+}
+
+/* line 22, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h1 {
+  font: 300 28px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 28, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h2 {
+  font: 300 24px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* line 35, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h3 {
+  font: 300 18px/18px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 41, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h4 {
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* line 49, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+label {
+  color: #9c9c9c;
+  text-transform: uppercase;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 56, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.fluid_container {
+  max-width: 1280px;
+  position: relative;
+  margin: 0 auto;
+  min-width: 960px;
+  text-align: center;
+}
+
+/* line 64, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.container {
+  padding: 0px 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  text-align: center;
+}
+
+/* line 71, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block {
+  padding: 80px 0;
+}
+
+/* line 75, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header, .footer {
+  height: 110px;
+  position: relative;
+}
+/* line 78, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .logo, .footer .logo {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -45px;
+  top: 20px;
+}
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav, .footer ul.nav {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -257px;
+  top: 75px;
+  list-style-type: none;
+}
+/* line 91, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li, .footer ul.nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
+/* line 94, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li:last-child, .footer ul.nav li:last-child {
+  margin-right: 0;
+}
+/* line 96, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li a, .footer ul.nav li a {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* line 99, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header h1, .footer h1 {
+  text-align: center;
+}
+/* line 101, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines, .footer .toggle_magazines {
+  position: absolute;
+  display: inline-block;
+  left: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 108, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines:before, .footer .toggle_magazines:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f151";
+  font-size: 12px;
+}
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search, .footer .search {
+  position: absolute;
+  display: inline-block;
+  right: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 120, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search:before, .footer .search:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f21f";
+  font-size: 15px;
+}
+
+/* line 126, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p {
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+}
+
+/* line 131, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2 {
+  width: 365px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 14px;
+  text-align: justify;
+}
+/* line 137, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2:last-child {
+  margin-right: 0px;
+  margin-left: 14px;
+}
+
+/* line 141, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half {
+  width: 48.5%;
+  margin-right: 2.5%;
+  display: inline-block;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half:nth-child(2n) {
+  margin-right: 0px;
+}
+
+/* line 151, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .image {
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 60px;
+}
+/* line 156, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text {
+  width: 360px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 161, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text h2 {
+  text-align: left;
+}
+/* line 163, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text p {
+  margin-bottom: 50px;
+}
+
+/* line 166, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block_logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* line 170, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.centred {
+  display: inline-block;
+  width: 420px;
+  text-align: center;
+}
+
+/* line 176, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items {
+  margin-top: 75px;
+  margin-bottom: 70px;
+}
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item {
+  width: 296px;
+  height: 256px;
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+/* line 186, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 190, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item img {
+  transition: opacity 0.6s ease;
+}
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info {
+  width: 100%;
+  height: 155px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  transition: top 0.6s ease;
+  top: 256px;
+}
+/* line 201, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .name {
+  margin-top: 52px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* line 206, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .type {
+  margin-top: 5px;
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 210, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .price {
+  margin-top: 18px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 215, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover img {
+  opacity: 0.4;
+}
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover .info {
+  top: 256px -155px;
+}
+
+/* line 221, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer {
+  background: #4d4d4d;
+  height: 255px;
+  color: #e1e1e1;
+}
+/* line 226, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .button {
+  color: #e1e1e1;
+  border-color: #e1e1e1;
+  position: absolute;
+  display: inline-block;
+  text-transform: none;
+  font: 400 12px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  left: 25px;
+  top: 130px;
+  padding: 11px 20px;
+}
+/* line 238, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer ul.nav li a {
+  color: #e1e1e1;
+}
+/* line 241, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .links {
+  height: 215px;
+}
+/* line 243, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines {
+  padding: 0;
+}
+/* line 245, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a {
+  color: white;
+  font: 400 10px/10px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 8px;
+  padding-bottom: 1px;
+}
+/* line 250, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a:hover {
+  border-bottom: 1px solid white;
+}
+/* line 252, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines:before {
+  display: none;
+}
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .illustration {
+  position: absolute;
+  top: 122px;
+  right: 25px;
+}
+/* line 258, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -65px;
+  width: 140px;
+  top: 130px;
+}
+/* line 265, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  margin-right: 10px;
+  background: #9b9b9b;
+  border-radius: 3px;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 275, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:visited {
+  background: #9b9b9b;
+  color: #4d4d4d;
+}
+/* line 278, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:hover {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 281, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:active {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 286, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.vk:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f245";
+  font-size: 20px;
+}
+/* line 289, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.fb:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f231";
+  font-size: 20px;
+}
+/* line 292, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.in:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f350";
+  font-size: 20px;
+}
+/* line 295, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.pi:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f2b0";
+  font-size: 20px;
+}
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer hr {
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+}
+/* line 305, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.copy {
+  padding-left: 15px;
+}
+/* line 308, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.made_by {
+  position: absolute;
+  right: 25px;
+  top: 0;
+}
+
+/* line 315, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button {
+  display: inline-block;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  padding: 10px 36px;
+  border: 1px solid #212121;
+  color: #212121;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+/* line 324, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button:hover {
+  border-color: #9c9c9c;
+  background: #9c9c9c;
+  color: white;
+}
+/* line 328, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button.rounded {
+  border-radius: 30px;
+}
+
+/* line 333, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+hr {
+  border-color: #e1e1e1;
+  background: #e1e1e1;
+  color: #e1e1e1;
+  border-bottom: none;
+}
+
+/* line 341, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header {
+  height: 120px;
+}
+/* line 343, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header h1 {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 35px;
+}
+
+/* line 352, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+}
+/* line 357, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+}
+/* line 361, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:before {
+  font-size: 18px;
+  content: ">";
+  position: absolute;
+  right: -12px;
+  top: 3px;
+  color: #9c9c9c;
+}
+/* line 368, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child {
+  margin-right: 0px;
+}
+/* line 370, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child:before {
+  display: none;
+}
+/* line 372, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li a {
+  font: 300 italic 14px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+  text-decoration: underline;
+}
+
+/* line 378, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.hr {
+  height: 1px;
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+  border-top: 1px solid #e1e1e1;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.absolute {
+  text-decoration: none;
+  text-opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 400, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content {
+  text-align: center;
+}
+/* line 402, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content h3 {
+  text-align: left;
+  font: 700 italic 16px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  padding: 0 120px;
+  padding-bottom: 30px;
+}
+/* line 409, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p {
+  padding: 0 120px;
+  text-align: left;
+  margin-bottom: 48px;
+}
+/* line 413, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p img {
+  position: relative;
+  left: -120px;
+  width: 940px;
+}
+/* line 419, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content img + p {
+  margin: 20px 0 50px 0;
+  text-align: center;
+  font: 300 italic 12px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+}
+
+/* line 10, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+body {
+  background: white;
+}
+
+/* line 15, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen {
+  height: 720px;
+  background: url(/bg1.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* line 24, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .header ul.nav li a, .fullscreen .footer ul.nav li a {
+  color: white;
+  opacity: 0.9;
+}
+/* line 27, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .header ul.nav li a:visited, .fullscreen .footer ul.nav li a:visited {
+  color: white;
+  opacity: 0.9;
+}
+/* line 30, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .header ul.nav li a.active, .fullscreen .footer ul.nav li a.active {
+  color: white;
+  opacity: 1;
+}
+/* line 33, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .header ul.nav li a:hover, .fullscreen .footer ul.nav li a:hover {
+  color: white;
+  opacity: 1;
+}
+/* line 36, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .header .toggle_magazines, .fullscreen .footer .toggle_magazines {
+  color: white;
+}
+/* line 38, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .header .search, .fullscreen .footer .search {
+  color: white;
+}
+/* line 41, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .header .magazines, .fullscreen .footer .magazines {
+  display: none;
+  position: absolute;
+  top: 110px;
+  height: 220px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 49, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen h1 {
+  color: white;
+  text-align: center;
+  margin-top: 250px;
+}
+/* line 54, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen hr {
+  width: 620px;
+  color: white;
+  border-color: white;
+}
+/* line 60, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen p.description {
+  margin-top: 20px;
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  text-align: center;
+}
+/* line 66, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .scrolldown {
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  position: relative;
+  color: white;
+  margin-top: 200px;
+}
+/* line 72, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.fullscreen .scrolldown:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f151  \f151";
+  font-size: inherit;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -4px;
+  width: 1px;
+  line-height: 6px;
+}
+
+/* line 81, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.slider {
+  background: #f5f0e9;
+}
+/* line 83, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.slider .half {
+  vertical-align: middle;
+}
+
+/* line 86, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.store {
+  background: white;
+}
+
+/* line 91, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.blog .previews {
+  white-space: nowrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+/* line 95, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.blog .previews .post {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 320px;
+  background-size: cover;
+  cursor: pointer;
+}
+/* line 102, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.blog .previews .post .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(141, 141, 141, 0.8);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+/* line 111, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.blog .previews .post .info .title {
+  font: 700 14px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 120px;
+}
+/* line 114, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.blog .previews .post .info .introtext {
+  font: 300 italic 14px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  white-space: normal;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10px;
+}
+/* line 121, /Users/flywithme/heim/app/assets/stylesheets/main.css.sass */
+.blog .previews .post:hover .info {
+  opacity: 1;
+}
+
+/* line 55, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 63, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html {
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a {
+  background: transparent;
+}
+/* line 139, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 199, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 211, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 236, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 246, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 271, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 279, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 287, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 294, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 350, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 359, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 369, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 397, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 414, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 426, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 436, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 451, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 462, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 470, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 479, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 490, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 498, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 507, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* line 517, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 4, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+body {
+  font: 700 12px/16px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #212121;
+  letter-spacing: 0.05em;
+  min-width: 960px;
+}
+
+/* line 10, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 13, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:visited {
+  color: #4d4d4d;
+}
+/* line 15, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:hover {
+  color: #212121;
+}
+/* line 17, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.active {
+  color: #212121;
+}
+
+/* line 22, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h1 {
+  font: 300 28px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 28, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h2 {
+  font: 300 24px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* line 35, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h3 {
+  font: 300 18px/18px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 41, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h4 {
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* line 49, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+label {
+  color: #9c9c9c;
+  text-transform: uppercase;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 56, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.fluid_container {
+  max-width: 1280px;
+  position: relative;
+  margin: 0 auto;
+  min-width: 960px;
+  text-align: center;
+}
+
+/* line 64, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.container {
+  padding: 0px 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  text-align: center;
+}
+
+/* line 71, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block {
+  padding: 80px 0;
+}
+
+/* line 75, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header, .footer {
+  height: 110px;
+  position: relative;
+}
+/* line 78, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .logo, .footer .logo {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -45px;
+  top: 20px;
+}
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav, .footer ul.nav {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -257px;
+  top: 75px;
+  list-style-type: none;
+}
+/* line 91, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li, .footer ul.nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
+/* line 94, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li:last-child, .footer ul.nav li:last-child {
+  margin-right: 0;
+}
+/* line 96, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li a, .footer ul.nav li a {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* line 99, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header h1, .footer h1 {
+  text-align: center;
+}
+/* line 101, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines, .footer .toggle_magazines {
+  position: absolute;
+  display: inline-block;
+  left: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 108, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines:before, .footer .toggle_magazines:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f151";
+  font-size: 12px;
+}
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search, .footer .search {
+  position: absolute;
+  display: inline-block;
+  right: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 120, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search:before, .footer .search:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f21f";
+  font-size: 15px;
+}
+
+/* line 126, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p {
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+}
+
+/* line 131, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2 {
+  width: 365px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 14px;
+  text-align: justify;
+}
+/* line 137, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2:last-child {
+  margin-right: 0px;
+  margin-left: 14px;
+}
+
+/* line 141, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half {
+  width: 48.5%;
+  margin-right: 2.5%;
+  display: inline-block;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half:nth-child(2n) {
+  margin-right: 0px;
+}
+
+/* line 151, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .image {
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 60px;
+}
+/* line 156, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text {
+  width: 360px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 161, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text h2 {
+  text-align: left;
+}
+/* line 163, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text p {
+  margin-bottom: 50px;
+}
+
+/* line 166, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block_logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* line 170, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.centred {
+  display: inline-block;
+  width: 420px;
+  text-align: center;
+}
+
+/* line 176, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items {
+  margin-top: 75px;
+  margin-bottom: 70px;
+}
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item {
+  width: 296px;
+  height: 256px;
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+/* line 186, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 190, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item img {
+  transition: opacity 0.6s ease;
+}
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info {
+  width: 100%;
+  height: 155px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  transition: top 0.6s ease;
+  top: 256px;
+}
+/* line 201, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .name {
+  margin-top: 52px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* line 206, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .type {
+  margin-top: 5px;
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 210, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .price {
+  margin-top: 18px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 215, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover img {
+  opacity: 0.4;
+}
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover .info {
+  top: 256px -155px;
+}
+
+/* line 221, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer {
+  background: #4d4d4d;
+  height: 255px;
+  color: #e1e1e1;
+}
+/* line 226, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .button {
+  color: #e1e1e1;
+  border-color: #e1e1e1;
+  position: absolute;
+  display: inline-block;
+  text-transform: none;
+  font: 400 12px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  left: 25px;
+  top: 130px;
+  padding: 11px 20px;
+}
+/* line 238, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer ul.nav li a {
+  color: #e1e1e1;
+}
+/* line 241, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .links {
+  height: 215px;
+}
+/* line 243, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines {
+  padding: 0;
+}
+/* line 245, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a {
+  color: white;
+  font: 400 10px/10px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 8px;
+  padding-bottom: 1px;
+}
+/* line 250, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a:hover {
+  border-bottom: 1px solid white;
+}
+/* line 252, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines:before {
+  display: none;
+}
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .illustration {
+  position: absolute;
+  top: 122px;
+  right: 25px;
+}
+/* line 258, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -65px;
+  width: 140px;
+  top: 130px;
+}
+/* line 265, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  margin-right: 10px;
+  background: #9b9b9b;
+  border-radius: 3px;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 275, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:visited {
+  background: #9b9b9b;
+  color: #4d4d4d;
+}
+/* line 278, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:hover {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 281, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:active {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 286, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.vk:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f245";
+  font-size: 20px;
+}
+/* line 289, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.fb:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f231";
+  font-size: 20px;
+}
+/* line 292, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.in:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f350";
+  font-size: 20px;
+}
+/* line 295, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.pi:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f2b0";
+  font-size: 20px;
+}
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer hr {
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+}
+/* line 305, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.copy {
+  padding-left: 15px;
+}
+/* line 308, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.made_by {
+  position: absolute;
+  right: 25px;
+  top: 0;
+}
+
+/* line 315, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button {
+  display: inline-block;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  padding: 10px 36px;
+  border: 1px solid #212121;
+  color: #212121;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+/* line 324, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button:hover {
+  border-color: #9c9c9c;
+  background: #9c9c9c;
+  color: white;
+}
+/* line 328, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button.rounded {
+  border-radius: 30px;
+}
+
+/* line 333, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+hr {
+  border-color: #e1e1e1;
+  background: #e1e1e1;
+  color: #e1e1e1;
+  border-bottom: none;
+}
+
+/* line 341, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header {
+  height: 120px;
+}
+/* line 343, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header h1 {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 35px;
+}
+
+/* line 352, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+}
+/* line 357, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+}
+/* line 361, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:before {
+  font-size: 18px;
+  content: ">";
+  position: absolute;
+  right: -12px;
+  top: 3px;
+  color: #9c9c9c;
+}
+/* line 368, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child {
+  margin-right: 0px;
+}
+/* line 370, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child:before {
+  display: none;
+}
+/* line 372, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li a {
+  font: 300 italic 14px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+  text-decoration: underline;
+}
+
+/* line 378, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.hr {
+  height: 1px;
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+  border-top: 1px solid #e1e1e1;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.absolute {
+  text-decoration: none;
+  text-opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 400, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content {
+  text-align: center;
+}
+/* line 402, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content h3 {
+  text-align: left;
+  font: 700 italic 16px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  padding: 0 120px;
+  padding-bottom: 30px;
+}
+/* line 409, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p {
+  padding: 0 120px;
+  text-align: left;
+  margin-bottom: 48px;
+}
+/* line 413, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p img {
+  position: relative;
+  left: -120px;
+  width: 940px;
+}
+/* line 419, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content img + p {
+  margin: 20px 0 50px 0;
+  text-align: center;
+  font: 300 italic 12px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+}
+
+/* line 7, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .types {
+  position: absolute;
+  left: 50%;
+  top: 36px;
+  margin-left: -128px;
+}
+/* line 12, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .types li {
+  display: inline-block;
+  border-radius: 3px;
+  margin-right: 20px;
+  padding-bottom: 1px;
+  cursor: pointer;
+}
+/* line 18, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .types li a {
+  padding: 2px 6px 2px 6px;
+  font: 700 12px/16px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+  color: #212121;
+  text-decoration: none;
+}
+/* line 24, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .types li.active {
+  background: #212121;
+}
+/* line 26, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .types li.active a {
+  color: white;
+}
+/* line 28, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .types li:hover {
+  background: #212121;
+}
+/* line 30, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .types li:hover a {
+  color: white;
+}
+/* line 32, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.content_header .city {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 2px 60px 2px 6px;
+  font: 300 italic 12px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
+/* line 43, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .container {
+  text-align: left;
+}
+/* line 45, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 49, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .post {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+}
+/* line 55, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .post:nth-child(3n) {
+  margin-right: 0px;
+}
+/* line 57, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .post .picture {
+  width: 300px;
+  height: 255px;
+  overflow: hidden;
+}
+/* line 61, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .post .picture img {
+  width: 100%;
+}
+/* line 64, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .post .info h4 {
+  text-align: center;
+  padding: 12px 14px 10px 14px;
+}
+/* line 67, /Users/flywithme/heim/app/assets/stylesheets/blog.css.sass */
+.posts .post .info p.text {
+  font-size: 13px;
+  height: 150px;
+  padding: 0px 14px 10px 14px;
+  overflow: hidden;
+}
+
+/* line 55, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 63, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html {
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a {
+  background: transparent;
+}
+/* line 139, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 199, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 211, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 236, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 246, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 271, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 279, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 287, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 294, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 350, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 359, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 369, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 397, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 414, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 426, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 436, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 451, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 462, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 470, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 479, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 490, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 498, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 507, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* line 517, /Users/flywithme/heim/app/assets/stylesheets/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, /Users/flywithme/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/MaiolaPro.eot);
+  src: url(/assets/MaiolaPro.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro.woff) format("woff"), url(/assets/MaiolaPro.ttf) format("truetype"), url(/assets/MaiolaPro.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-Italic.eot);
+  src: url(/assets/MaiolaPro-Italic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-Italic.woff) format("woff"), url(/assets/MaiolaPro-Italic.ttf) format("truetype"), url(/assets/MaiolaPro-Italic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Maiola;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/MaiolaPro-BoldItalic.eot);
+  src: url(/assets/MaiolaPro-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/MaiolaPro-BoldItalic.woff) format("woff"), url(/assets/MaiolaPro-BoldItalic.ttf) format("truetype"), url(/assets/MaiolaPro-BoldItalic.svg#Maiola) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/Room-Bold.eot);
+  src: url(/assets/Room-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Bold.woff) format("woff"), url(/assets/Room-Bold.ttf) format("truetype"), url(/assets/Room-Bold.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Room;
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/Room-Thin.eot);
+  src: url(/assets/Room-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/Room-Thin.woff) format("woff"), url(/assets/Room-Thin.ttf) format("truetype"), url(/assets/Room-Thin.svg#Room) format("svg");
+}
+
+@font-face {
+  font-family: Ionicons;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/ionicons.eot);
+  src: url(/assets/ionicons.eot?#iefix) format("embedded-opentype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.svg#Ionicons) format("svg");
+}
+
+/* line 59, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, /Users/flywithme/heim/app/assets/stylesheets/_settings.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 4, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+body {
+  font: 700 12px/16px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #212121;
+  letter-spacing: 0.05em;
+  min-width: 960px;
+}
+
+/* line 10, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 13, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:visited {
+  color: #4d4d4d;
+}
+/* line 15, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a:hover {
+  color: #212121;
+}
+/* line 17, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.active {
+  color: #212121;
+}
+
+/* line 22, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h1 {
+  font: 300 28px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 28, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h2 {
+  font: 300 24px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* line 35, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h3 {
+  font: 300 18px/18px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 41, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+h4 {
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* line 49, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+label {
+  color: #9c9c9c;
+  text-transform: uppercase;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 56, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.fluid_container {
+  max-width: 1280px;
+  position: relative;
+  margin: 0 auto;
+  min-width: 960px;
+  text-align: center;
+}
+
+/* line 64, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.container {
+  padding: 0px 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  text-align: center;
+}
+
+/* line 71, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block {
+  padding: 80px 0;
+}
+
+/* line 75, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header, .footer {
+  height: 110px;
+  position: relative;
+}
+/* line 78, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .logo, .footer .logo {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -45px;
+  top: 20px;
+}
+/* line 84, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav, .footer ul.nav {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -257px;
+  top: 75px;
+  list-style-type: none;
+}
+/* line 91, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li, .footer ul.nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
+/* line 94, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li:last-child, .footer ul.nav li:last-child {
+  margin-right: 0;
+}
+/* line 96, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header ul.nav li a, .footer ul.nav li a {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* line 99, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header h1, .footer h1 {
+  text-align: center;
+}
+/* line 101, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines, .footer .toggle_magazines {
+  position: absolute;
+  display: inline-block;
+  left: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 108, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .toggle_magazines:before, .footer .toggle_magazines:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f151";
+  font-size: 12px;
+}
+/* line 113, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search, .footer .search {
+  position: absolute;
+  display: inline-block;
+  right: 25px;
+  top: 75px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+/* line 120, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.header .search:before, .footer .search:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f21f";
+  font-size: 15px;
+}
+
+/* line 126, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p {
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+}
+
+/* line 131, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2 {
+  width: 365px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 14px;
+  text-align: justify;
+}
+/* line 137, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.col-2:last-child {
+  margin-right: 0px;
+  margin-left: 14px;
+}
+
+/* line 141, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half {
+  width: 48.5%;
+  margin-right: 2.5%;
+  display: inline-block;
+}
+/* line 146, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.half:nth-child(2n) {
+  margin-right: 0px;
+}
+
+/* line 151, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .image {
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 60px;
+}
+/* line 156, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text {
+  width: 360px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 161, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text h2 {
+  text-align: left;
+}
+/* line 163, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.slider .text p {
+  margin-bottom: 50px;
+}
+
+/* line 166, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.block_logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* line 170, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+p.centred {
+  display: inline-block;
+  width: 420px;
+  text-align: center;
+}
+
+/* line 176, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items {
+  margin-top: 75px;
+  margin-bottom: 70px;
+}
+/* line 179, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item {
+  width: 296px;
+  height: 256px;
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+/* line 186, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 190, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item img {
+  transition: opacity 0.6s ease;
+}
+/* line 192, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info {
+  width: 100%;
+  height: 155px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  transition: top 0.6s ease;
+  top: 256px;
+}
+/* line 201, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .name {
+  margin-top: 52px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* line 206, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .type {
+  margin-top: 5px;
+  font: 300 italic 14px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 210, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item .info .price {
+  margin-top: 18px;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+/* line 215, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover img {
+  opacity: 0.4;
+}
+/* line 217, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.shop_items .shop_item:hover .info {
+  top: 256px -155px;
+}
+
+/* line 221, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer {
+  background: #4d4d4d;
+  height: 255px;
+  color: #e1e1e1;
+}
+/* line 226, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .button {
+  color: #e1e1e1;
+  border-color: #e1e1e1;
+  position: absolute;
+  display: inline-block;
+  text-transform: none;
+  font: 400 12px/24px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  left: 25px;
+  top: 130px;
+  padding: 11px 20px;
+}
+/* line 238, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer ul.nav li a {
+  color: #e1e1e1;
+}
+/* line 241, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .links {
+  height: 215px;
+}
+/* line 243, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines {
+  padding: 0;
+}
+/* line 245, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a {
+  color: white;
+  font: 400 10px/10px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 8px;
+  padding-bottom: 1px;
+}
+/* line 250, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines a:hover {
+  border-bottom: 1px solid white;
+}
+/* line 252, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .toggle_magazines:before {
+  display: none;
+}
+/* line 254, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .illustration {
+  position: absolute;
+  top: 122px;
+  right: 25px;
+}
+/* line 258, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -65px;
+  width: 140px;
+  top: 130px;
+}
+/* line 265, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  margin-right: 10px;
+  background: #9b9b9b;
+  border-radius: 3px;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 275, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:visited {
+  background: #9b9b9b;
+  color: #4d4d4d;
+}
+/* line 278, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:hover {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 281, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a:active {
+  background: #e0e0e0;
+  color: #4d4d4d;
+}
+/* line 286, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.vk:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f245";
+  font-size: 20px;
+}
+/* line 289, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.fb:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f231";
+  font-size: 20px;
+}
+/* line 292, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.in:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f350";
+  font-size: 20px;
+}
+/* line 295, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer .social a.pi:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f2b0";
+  font-size: 20px;
+}
+/* line 298, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer hr {
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+}
+/* line 305, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.copy {
+  padding-left: 15px;
+}
+/* line 308, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.footer p.made_by {
+  position: absolute;
+  right: 25px;
+  top: 0;
+}
+
+/* line 315, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button {
+  display: inline-block;
+  font: 700 12px/24px "Room-Thin", "Room", Helvetica, Sans, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  padding: 10px 36px;
+  border: 1px solid #212121;
+  color: #212121;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+/* line 324, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button:hover {
+  border-color: #9c9c9c;
+  background: #9c9c9c;
+  color: white;
+}
+/* line 328, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.button.rounded {
+  border-radius: 30px;
+}
+
+/* line 333, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+hr {
+  border-color: #e1e1e1;
+  background: #e1e1e1;
+  color: #e1e1e1;
+  border-bottom: none;
+}
+
+/* line 341, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header {
+  height: 120px;
+}
+/* line 343, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.content_header h1 {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 35px;
+}
+
+/* line 352, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+}
+/* line 357, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+}
+/* line 361, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:before {
+  font-size: 18px;
+  content: ">";
+  position: absolute;
+  right: -12px;
+  top: 3px;
+  color: #9c9c9c;
+}
+/* line 368, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child {
+  margin-right: 0px;
+}
+/* line 370, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li:last-child:before {
+  display: none;
+}
+/* line 372, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.breadcrumbs ul li a {
+  font: 300 italic 14px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+  text-decoration: underline;
+}
+
+/* line 378, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.hr {
+  height: 1px;
+  background: #9c9c9c;
+  color: #9c9c9c;
+  border-bottom: none;
+  border-top: 1px solid #e1e1e1;
+}
+
+/* line 386, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+a.absolute {
+  text-decoration: none;
+  text-opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 400, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content {
+  text-align: center;
+}
+/* line 402, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content h3 {
+  text-align: left;
+  font: 700 italic 16px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  padding: 0 120px;
+  padding-bottom: 30px;
+}
+/* line 409, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p {
+  padding: 0 120px;
+  text-align: left;
+  margin-bottom: 48px;
+}
+/* line 413, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content p img {
+  position: relative;
+  left: -120px;
+  width: 940px;
+}
+/* line 419, /Users/flywithme/heim/app/assets/stylesheets/_kit.sass */
+.post_content img + p {
+  margin: 20px 0 50px 0;
+  text-align: center;
+  font: 300 italic 12px/22px "Maiola", Maiola, "PT Serif", "Times New Roman", Arial;
+  -webkit-font-smoothing: antialiased;
+  color: #9c9c9c;
+}
+
+/* line 7, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.content_header .button {
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  color: #9c9c9c;
+  border-color: #9c9c9c;
+  padding: 5px 28px;
+}
+
+/* line 18, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.blog_post .illustration {
+  height: 300px;
+  background: center center no-repeat;
+  background-size: cover;
+}
+/* line 22, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.blog_post .container {
+  text-align: left;
+  margin-top: 50px;
+}
+/* line 25, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.blog_post .date {
+  display: inline-block;
+  color: #9c9c9c;
+}
+/* line 28, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.blog_post .date span {
+  color: #212121;
+}
+/* line 30, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.blog_post .theme {
+  margin-bottom: 50px;
+  display: inline-block;
+  margin-left: 140px;
+  color: #9c9c9c;
+}
+/* line 35, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.blog_post .theme span {
+  color: #212121;
+}
+/* line 40, /Users/flywithme/heim/app/assets/stylesheets/blog_post.sass */
+.blog_post .similar_posts h4 {
+  text-align: center;
+  margin: 45px 0;
+}

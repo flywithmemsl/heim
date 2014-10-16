@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009174505) do
+ActiveRecord::Schema.define(version: 20141014194039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20141009174505) do
 
   create_table "blog_posts", force: true do |t|
     t.string   "title"
-    t.string   "description",  limit: 4000
-    t.string   "introtext",    limit: 4000
+    t.text     "description"
+    t.text     "introtext"
     t.text     "text"
     t.date     "date"
     t.string   "smallpic"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20141009174505) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "alias"
+    t.text     "gallery"
+    t.string   "video_link"
   end
 
   create_table "categories", force: true do |t|

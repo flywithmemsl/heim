@@ -1,6 +1,7 @@
 class BlogController < ApplicationController
   def index
-    @list = BlogPost.all
+    @category = Category.find_by(alias: params[:category])
+    @list = @category.try(:blog_posts) || BlogPost.all
   end
 
   def show

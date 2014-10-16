@@ -4,7 +4,7 @@ ActiveAdmin.register BlogPost do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :title, :alias, :description, :introtext, :text, :date, :smallpic, :illustration, :category_id
+  permit_params :title, :alias, :gallery, :video_link, :description, :introtext, :text, :date, :smallpic, :illustration, :category_id
   #
   # or
   #

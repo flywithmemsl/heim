@@ -1,20 +1,8 @@
 
 .header
   .logo
-    img(src="black_logo.png")
-  ul.nav
-    li
-      a(href="#") О нас
-    li
-      a(href="#") Магазин
-    li
-      a(href="#") Блог
-    li
-      a(href="#") События
-    li
-      a(href="#") Галерея
-    li
-      a(href="#") Контакты
+    img(src="/black_logo.png")
+  = render partial: "partials/nav"
   .fluid_container
     .toggle_magazines
       | издания
@@ -28,25 +16,25 @@
       h1 Блог
       ul.types
         li
-          a.active(href="#")
+          a(href="/blog")
             | все
         li
-          a(href="#")
+          a(href="/blog/articles")
             | статьи
         li
-          a(href="#")
+          a(href="/blog/galleries")
             | галереии
         li
-          a(href="#")
+          a(href="/blog/videos")
             | видео
       .city
         | Все города
       .breadcrumbs
         ul
           li
-            a(href="#") Главная
+            a(href="/") Главная
           li
-            a(href="#") Блог
+            a(href="/blog") Блог
 
   .posts
     .container
