@@ -19,6 +19,9 @@ gem 'jquery-rails'
 gem 'slick_rails'
 gem 'rails-assets-jquery-fullscreen'
 
+gem 'mysql2', '0.3.13'
+gem 'thinking-sphinx', '3.1.1'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

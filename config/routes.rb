@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'blog/search', to: "blog#search", as: :search_post
 
   get 'blog/(:category)', to: "blog#index", as: :posts, constraints: { category: /(articles|galleries|videos)/ }
 
   get 'blog/:category/:alias', to: "blog#show", as: :post
+
+
+  resources :about, only: [:index]
+
 
 
 

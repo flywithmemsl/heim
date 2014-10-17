@@ -1,0 +1,8 @@
+form(action=search_post_path)
+  input(name="q" value="#{@q}")
+
+
+ul
+  - @results.each do |el|
+    li
+      =el.title

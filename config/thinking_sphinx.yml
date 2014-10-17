@@ -1,0 +1,14 @@
+default: &default
+  mem_limit: 128M
+  morphology: stem_enru
+  enable_star: true
+  max_matches: 1000
+  min_prefix_len: 2
+  mysql41: 9315
+  pid_file: "tmp/pids/searchd.pid"
+
+development:
+  «: *default
+
+production:
+  «: *default

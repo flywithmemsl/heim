@@ -8,4 +8,15 @@ class BlogController < ApplicationController
     @category = Category.find_by(alias: params[:category])
     @article = BlogPost.find_by(alias: params[:alias])
   end
+
+  def search
+    @q = params[:q].to_s
+    @results = BlogPost.none.page(1)
+    if @q != ''
+      @results = BlogPost.search "#{@q}|*#{@q}*", page: params[:page], per_page: 20
+    end
+  end
+
+
+
 end

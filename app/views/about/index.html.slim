@@ -1,0 +1,42 @@
+
+.header
+  .logo
+    img(src="/black_logo.png")
+  = render partial: "partials/nav"
+  .fluid_container
+    .toggle_magazines
+      | издания
+    .search
+      .icon
+    .magazines
+.hr
+.blog_post
+  .content_header
+    .container
+      h1 О нас
+      .breadcrumbs
+        ul
+          li
+            a(href="/") Главная
+          li
+            a(href="/about") О нас
+
+  .container
+    -unless @about.illustration.blank?
+      .illustration(style="background-image: url(#{@about.illustration});")
+  .container
+
+    .left_column
+      = raw @about.left_colum_text
+
+    .post_content
+      = raw @about.text
+    .similar_posts
+  .container.team
+    - @team.each do |mate|
+      p.name =mate.name
+      p.position =mate.position
+
+
+
+

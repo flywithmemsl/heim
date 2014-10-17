@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014194039) do
+ActiveRecord::Schema.define(version: 20141017120424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abouts", force: true do |t|
+    t.string   "illustration"
+    t.text     "text"
+    t.text     "left_colum_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -88,5 +96,15 @@ ActiveRecord::Schema.define(version: 20141014194039) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "teammates", force: true do |t|
+    t.string   "name"
+    t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "about_id"
+  end
+
+  add_index "teammates", ["about_id"], name: "index_teammates_on_about_id", using: :btree
 
 end
