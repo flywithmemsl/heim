@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017120424) do
+ActiveRecord::Schema.define(version: 20141018133159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,15 @@ ActiveRecord::Schema.define(version: 20141017120424) do
     t.string   "alias"
   end
 
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "country_id"
+  end
+
+  add_index "cities", ["country_id"], name: "index_cities_on_country_id", using: :btree
+
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
@@ -96,6 +105,31 @@ ActiveRecord::Schema.define(version: 20141017120424) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "contacts", force: true do |t|
+    t.string   "position"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "countries", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "alias"
+  end
+
+  create_table "partners", force: true do |t|
+    t.string   "link"
+    t.string   "name"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "city_id"
+  end
+
+  add_index "partners", ["city_id"], name: "index_partners_on_city_id", using: :btree
 
   create_table "teammates", force: true do |t|
     t.string   "name"
