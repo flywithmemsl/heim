@@ -1,15 +1,4 @@
-
-.header
-  .logo
-    img(src="/black_logo.png")
-  = render partial: "partials/nav"
-  .fluid_container
-    .toggle_magazines
-      | издания
-    .search
-      .icon
-    .magazines
-.hr
+=render partial: "partials/header"
 .blog_post
   .content_header
     .container
@@ -27,7 +16,7 @@
           li
             a(href="/blog/#{@category.alias}") = @category.name
           li
-            a(href="#") = raw @article.title
+            = raw @article.title
   -if @article.category.id == 1
     .fluid_container
       -unless @article.illustration.blank?
@@ -52,10 +41,10 @@
         p.share
           | Поделиться постом:<br/>
           a(href="#") Вконтакте
-          | /
+          | &nbsp;/&nbsp;
           a(href="#") Facebook
         -if @article.category.id == 1
-          p.Tags
+          p.tags
             | Тэги:<br/>
             a(href="#") Рецепт
             |,&nbsp;
@@ -68,8 +57,22 @@
     -if @article.category.id == 1
       .post_content
         = raw @article.text
-      .similar_posts
-        h4 похожие посты
+      -if @article.similars.length > 2
+        .container.bottom_block.similar_posts
+          h4 похожие посты
+        .container.posts
+          - @article.similars.each do |post|
+            .post
+              = link_to "", post_path(post.try(:category).try(:alias), post.alias), class: "absolute"
+              .picture
+                = image_tag post.smallpic_url
+              .info
+                h4
+                  = post.category.name
+                  | &nbsp;|&nbsp;
+                  = post.title
+                p.text = raw post.introtext
+
 
 
 

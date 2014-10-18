@@ -39,12 +39,13 @@ h3
   text-transform: uppercase
   letter-spacing: 0.2em
 h4
-  +bold(12px,24px)
+  +bold(14px,24px)
   padding-bottom: 30px
   margin: 0
   text-transform: uppercase
   letter-spacing: 0.12em
-
+h4.date
+  +bold(12px,24px)
 
 label
   color: #9c9c9c
@@ -116,11 +117,30 @@ label
     right: 25px
     top: 75px
     padding-left: 16px
-    cursor: pointer
+    // cursor: pointer
+
+    input
+      border: 1px solid rgba(255,255,255,0)
+      outline: none !important
+      border-radius: 5px
+      padding: 4px 22px 2px 9px
+      +italic(14px,14px)
+      width: 150px
+      &:hover
+
+        border: 1px solid $grey
+      &:focus
+        border: 1px solid $grey
+
+      &.filled
+        border: 1px solid $dgrey
+
+
+
     &:before
       position: absolute
-      top: 4px
-      left: 0
+      top: 5px
+      right: 9px
       +ion("\f21f", 15px)
 
 p
@@ -229,7 +249,7 @@ p.centred
     position: absolute
     display: inline-block
     text-transform: none
-    +normal(12px,24px)
+    +normal(14px,24px)
     left: 25px
     top: 130px
     padding: 11px 20px
@@ -251,6 +271,41 @@ p.centred
         border-bottom: 1px solid $white
     &:before
       display: none
+  .search
+    color: $white
+    position: absolute
+    display: inline-block
+    right: 25px
+    top: 75px
+    padding-left: 16px
+    background: rgba(255,255,255,0)
+    // cursor: pointer
+
+    input
+      color: $white
+      background: rgba(255,255,255,0)
+      border: 1px solid rgba(255,255,255,0)
+      outline: none !important
+      border-radius: 5px
+      padding: 4px 22px 2px 9px
+      +italic(14px,14px)
+      width: 150px
+      &:hover
+
+        border: 1px solid rgba(255,255,255,0.5)
+      &:focus
+        border: 1px solid rgba(255,255,255,0.8)
+
+      &.filled
+        border: 1px solid #fff
+
+
+
+    &:before
+      position: absolute
+      top: 5px
+      right: 9px
+      +ion("\f21f", 15px)
   .illustration
     position: absolute
     top: 122px
@@ -358,18 +413,22 @@ hr
       display: inline-block
       margin-right: 15px
       position: relative
+      +italic(14px)
+      color: $grey
       &:before
         font-size: 18px
         content: ">"
         position: absolute
         right: -12px
-        top: 2px
+        top: -1px
         color: $grey
       &:last-child
         margin-right: 0px
         &:before
           display: none
       a
+        display: relative
+        top: -1px
         +italic(14px)
         color: $grey
         text-decoration: underline
@@ -421,6 +480,88 @@ a.absolute
     text-align: center
     +italic(12px)
     color: $grey
+
+
+
+
+.bottom_block
+  margin-top: 50px
+  padding-top: 40px
+  border-top: 1px solid $lgrey
+  padding-bottom: 70px
+  .wrapper
+  .item
+    display: inline-block
+    width: 180px
+    margin-right: 55px
+    vertical-align: top
+    &:nth-child(4n)
+      margin-right: 0
+
+    p.name
+      +normal(15px,26px)
+      color: $black
+    p.position
+      +italic(14px,26px)
+      padding-bottom: 15px
+      color: $grey
+
+
+
+
+
+.share,.tags
+  +italic(15px,22px)
+  color: $dgrey
+  a
+    text-decoration: underline
+    +italic(14px,22px)
+    color: $dgrey
+.tags
+  margin-top: 30px
+
+
+
+
+
+
+.posts
+  .post
+    a
+      z-index: 20
+      &:after
+        color: $dgrey
+        opacity: 0
+        position: absolute
+        left: 128px
+        top: 100px
+        +ion("\f133",54px)
+        transition: opacity 0.3s ease
+        -webkit-transition: opacity 0.3s ease
+    .picture
+      position: relative
+      z-index: 1
+      transition: opacity 0.25s ease
+      -webkit-transition: opacity 0.25s ease
+    .info
+      .text
+        transition: opacity 0.25s ease
+        -webkit-transition: opacity 0.25s ease
+        opacity: 0.5
+
+    &:hover
+      a
+        &:after
+          color: $dgrey
+          opacity: 0.8
+      .picture
+        opacity: 0.4
+      .info
+        .text
+          opacity: 1
+
+
+
 
 
 

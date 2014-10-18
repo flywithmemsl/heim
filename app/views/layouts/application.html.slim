@@ -21,17 +21,17 @@ html
           img(src="/logo_white.png")
         ul.nav
           li
-            a(href="#") О нас
+            a(href="/about") О нас
           li
-            a(href="#") Магазин
+            a(href="/shop") Магазин
           li
-            a(href="#") Блог
+            a(href="/blog") Блог
           li
-            a(href="#") События
+            a(href="/events") События
           li
-            a(href="#") Галерея
+            a(href="/gallerie") Галерея
           li
-            a(href="#") Контакты
+            a(href="/contacts") Контакты
         .toggle_magazines
           | издания :
           a(href="#")
@@ -41,7 +41,8 @@ html
             | Cereal
 
         .search
-          .icon
+          form(action=search_post_path)
+            input.icon(type="text" name="q" value="")
         a.button.rounded(href="#") Где купить оффлайн?
         .social
           a.vk(href="#")

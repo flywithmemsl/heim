@@ -1,15 +1,5 @@
 
-.header
-  .logo
-    img(src="/black_logo.png")
-  = render partial: "partials/nav"
-  .fluid_container
-    .toggle_magazines
-      | издания
-    .search
-      .icon
-    .magazines
-.hr
+=render partial: "partials/header"
 .blog
   .content_header
     .container
@@ -27,14 +17,14 @@
         li
           a(href="/blog/videos")
             | видео
-      .city
-        | Все города
+      / .city
+      /   | Все города
       .breadcrumbs
         ul
           li
             a(href="/") Главная
           li
-            a(href="/blog") Блог
+            | Блог
 
   .posts
     .container

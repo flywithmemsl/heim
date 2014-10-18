@@ -29,6 +29,10 @@ ready = ->
       $(".slideshow .counter .of").text($(".slick-slide").length)
       $(".slideshow .counter .num").text($(".slideshow").slickCurrentSlide()+1)
 
+      $(".slick-slide img").click ->
+        $(".slideshow").slickNext()
+
+
 
     do setUpSlider
 

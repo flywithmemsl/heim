@@ -47,6 +47,11 @@ $room: "Room-Thin", "Room", Helvetica, Sans, Arial
   font: 700 italic #{$font-size}/#{$line-height} $maiola
   -webkit-font-smoothing: antialiased
 
+@mixin cf
+  &:after
+    display: table
+    content: ""
+    clear: both
 
 @mixin edit($color: black, $important: false)
   @if $important

@@ -7,12 +7,13 @@
       .toggle_magazines
         | издания
       .search
-        .icon
+        form(action=search_post_path)
+          input.icon(type="text" name="q" value="")
       .magazines
 
   h1
     | студия heim
-  hr
+  .hr
   p.description
     | Kinfolk, Ouur, предметы для дома и жизни
 
@@ -65,22 +66,16 @@
     p.centred
       | В размеренном образе жизни расцветает простая красота повседневных ритуалов, где каждая деталь создает ощущение особого комфорта и соединенности.
     .previews
-      .post(style="background-image: url(/blog_pic.jpg)")
-        .info
-          .title
-            | BRITISH BEACH TOWNS: A SOCIAL HISTORY
-          .introtext
-            | Beach resort towns in the United Kingdom no longer have“
-            | wheeled bathing machines” and seawater as medicine,
-            | but there are a number of characteristics they still do share.
-      .post(style="background-image: url(/blog_pic.jpg);")
-        .info
-          .title
-            | BRITISH BEACH TOWNS: A SOCIAL HISTORY
-          .introtext
-            | Beach resort towns in the United Kingdom no longer have“
-            | wheeled bathing machines” and seawater as medicine,
-            | but there are a number of characteristics they still do share.
+      -6.times
+        .post(style="background-image: url(/blog_pic.jpg)")
+          .info
+            .title
+              | BRITISH BEACH TOWNS: A SOCIAL HISTORY
+            .introtext
+              | Beach resort towns in the United Kingdom no longer have“
+              | wheeled bathing machines” and seawater as medicine,
+              | but there are a number of characteristics they still do share.
+
 
     .button
       | перейти в блог

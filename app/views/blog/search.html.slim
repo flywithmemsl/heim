@@ -1,8 +1,35 @@
-form(action=search_post_path)
-  input(name="q" value="#{@q}")
+=render partial: "partials/header"
+.container.search_result
+  H1
+    | Результаты поиска&nbsp;
+    |«
+    =@q
+    |»
+  -if @results.length > 0
+    p
+      | Всего&nbsp;
+      = @results.length
+      | &nbsp;результатов
+  -else
+    p По вашему запросу ничего не найдено
 
+  form(action=search_post_path)
+    input(type="text" name="q" value="#{@q}")
 
-ul
-  - @results.each do |el|
-    li
-      =el.title
+  -if @results.length > 0
+    h2 Записи в блоге (#{@results.length})
+
+-if @results.length > 0
+  .container.posts
+    - @results.each do |post|
+      .post
+        = link_to "", post_path(post.try(:category).try(:alias), post.alias), class: "absolute"
+        .picture
+          = image_tag post.smallpic_url
+        .info
+          h4
+            = post.category.name
+            | &nbsp;|&nbsp;
+            = post.title
+          p.text = raw post.introtext
+

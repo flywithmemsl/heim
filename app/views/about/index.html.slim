@@ -1,15 +1,4 @@
-
-.header
-  .logo
-    img(src="/black_logo.png")
-  = render partial: "partials/nav"
-  .fluid_container
-    .toggle_magazines
-      | издания
-    .search
-      .icon
-    .magazines
-.hr
+=render partial: "partials/header"
 .blog_post
   .content_header
     .container
@@ -19,23 +8,28 @@
           li
             a(href="/") Главная
           li
-            a(href="/about") О нас
+            | О нас
 
   .container
     -unless @about.illustration.blank?
       .illustration(style="background-image: url(#{@about.illustration});")
-  .container
+  .container.about_text
 
     .left_column
       = raw @about.left_colum_text
 
-    .post_content
+    .right_colum
       = raw @about.text
     .similar_posts
-  .container.team
-    - @team.each do |mate|
-      p.name =mate.name
-      p.position =mate.position
+
+  .container.bottom_block
+    h4 Команда «Heim»
+    .wrapper
+      -15.times
+        - @team.each do |mate|
+          .item
+            p.name =mate.name
+            p.position =mate.position
 
 
 

@@ -17,7 +17,8 @@ body
   background: url(/bg1.jpg) center center no-repeat
   background-size: cover
   background-attachment: fixed
-
+  .not_fullscreen
+    display: none
   .header
     ul.nav
       li
@@ -35,9 +36,34 @@ body
             opacity: 1
     .toggle_magazines
       color: $white
+
     .search
       color: $white
+      position: absolute
+      display: inline-block
+      right: 25px
+      top: 75px
+      padding-left: 16px
+      background: rgba(255,255,255,0)
+      // cursor: pointer
 
+      input
+        color: $white
+        background: rgba(255,255,255,0)
+        border: 1px solid rgba(255,255,255,0)
+        outline: none !important
+        border-radius: 5px
+        padding: 4px 22px 2px 9px
+        +italic(14px,14px)
+        width: 150px
+        &:hover
+
+          border: 1px solid rgba(255,255,255,0.5)
+        &:focus
+          border: 1px solid rgba(255,255,255,0.8)
+
+        &.filled
+          border: 1px solid #fff
     .magazines
       display: none
       position: absolute
@@ -51,20 +77,21 @@ body
     text-align: center
     margin-top: 250px
 
-  hr
+  .hr
     width: 620px
     color: $white
-    border-color: $white
+    margin: 0 auto
+    // border-color: $white
 
 
   p.description
     margin-top: 20px
-    +italic(14px, 24px)
+    +italic(16px, 24px)
     color: $white
     text-align: center
 
   .scrolldown
-    +italic(14px, 24px)
+    +italic(16px, 24px)
     text-align: center
     position: relative
     color: $white
@@ -112,7 +139,7 @@ body
           +bold(14px,24px)
           margin-top: 120px
         .introtext
-          +italic(14px,22px)
+          +italic(16px,22px)
           white-space: normal
           width: 70%
           margin-left: 15%

@@ -1,0 +1,14 @@
+.header
+  .logo
+    a(href="/")
+      img(src="/black_logo.png")
+  = render partial: "partials/nav"
+  .fluid_container
+    .toggle_magazines
+      | издания
+    .search
+      form(action=search_post_path)
+        input.icon(type="text" name="q" value="")
+
+    .magazines
+.hr.not_fullscreen

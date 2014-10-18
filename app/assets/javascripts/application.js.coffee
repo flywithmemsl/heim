@@ -14,6 +14,12 @@ ready = ->
       if $(link).parent().prop("tagName") is "LI"
         $(link).parent().addClass("active")
 
+  $(".search input").on "change", ->
+    unless $(this).val() is ""
+      $(this).addClass("filled")
+    else
+      $(this).removeClass("filled")
+
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
