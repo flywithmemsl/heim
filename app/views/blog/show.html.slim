@@ -46,9 +46,8 @@
         -if @article.category.id == 1
           p.tags
             | Тэги:<br/>
-            a(href="#") Рецепт
-            |,&nbsp;
-            a(href="#") Кофе
+            span.taglist
+              =@article.taglist
 
       .description_and_introtext
         p.description = raw @article.description

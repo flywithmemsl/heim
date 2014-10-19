@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'slick_rails'
 gem 'rails-assets-jquery-fullscreen'
+gem 'chosen-rails'
 
 gem 'mysql2', '0.3.13'
 gem 'thinking-sphinx', '3.1.1'

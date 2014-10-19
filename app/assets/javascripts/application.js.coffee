@@ -3,6 +3,8 @@
 #= require turbolinks
 #= require slick
 #= require jquery-fullscreen/jquery.fullscreen-min.js
+#= require chosen-jquery
+#= require gridify
 #= require_tree .
 
 

@@ -1,0 +1,61 @@
+=render partial: "partials/header"
+.blog_post
+  .content_header
+    .container
+      h1 События
+      ul.types
+        li
+          a(href="/event")
+            | предстоящее
+        li
+          a(href="/event/past")
+            | прошедшие
+
+      .breadcrumbs
+        ul
+          li
+            a(href="/") Главная
+          li
+            | События
+          li
+            | Предстоящее
+
+  .container
+    -unless @event.illustration.blank?
+      .illustration(style="background-image: url(#{@event.illustration});")
+  .container.event_text
+
+    .left_column
+      h4.date
+        | Тема |&nbsp;
+        span = raw @event.name
+
+      h4.date
+        | Дата |&nbsp;
+        span = raw @event.date
+
+      .sharing
+        p.share
+          | Это событие в соц. сетях:<br/>
+          a(href="#{@event.vk_link}") Вконтакте
+          | &nbsp;/&nbsp;
+          a(href="#{@event.fb_link}") Facebook
+
+
+    .right_colum
+      = raw @event.description
+
+  .container.bottom_block
+    h4 Места
+    .wrapper
+      -6.times
+        - @city.each do |city|
+          .item
+            p.name
+              a(href="#{city.link}")
+                =city.name
+            p.position =city.place
+
+
+
+

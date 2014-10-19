@@ -1,0 +1,34 @@
+
+.event
+  .blog_post
+    .illustration
+      height: 450px
+      margin-bottom: 30px
+    .date
+      position: static
+
+  .event_text
+    &:after
+      display: table
+      content: ""
+      clear: both
+    .left_column
+      float: left
+      width: 300px
+      h4
+        padding-bottom: 16px
+      p
+        margin-top: 16px
+        margin-bottom: 32px
+        +italic(16px,24px)
+    .right_colum
+      float: right
+      width: 570px
+      text-align: left
+      padding-right: 30px
+      p
+        text-align: left
+        padding: 0px 0px 26px 0px
+  .highlighted
+    background: none !important
+    color: $grey !important

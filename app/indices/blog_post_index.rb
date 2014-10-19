@@ -3,6 +3,7 @@ ThinkingSphinx::Index.define :blog_post, :with => :active_record do
   indexes description
   indexes introtext
   indexes text
+  indexes taglist
 
   has date, :sortable => true
 

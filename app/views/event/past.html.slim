@@ -1,0 +1,48 @@
+
+=render partial: "partials/header"
+.blog
+  .content_header
+    .container
+      h1 События
+      ul.types
+        li
+          a(href="/event")
+            | предстоящее
+        li
+          a(href="/event/past")
+            | прошедшие
+      .city
+        form(action=past_path)
+          select.chosen-select(name="q" value="" data-placeholder="Все города" )
+            option
+            -@city.each do |c|
+              option(value="#{c.id}" selected=(params[:q].to_s == c.id.to_s ? 'selected' : false)) = c.name
+
+      .breadcrumbs
+        ul
+          li
+            a(href="/") Главная
+          li
+            | События
+          li
+            | Прошедшие
+
+  .posts
+    .container
+      - @list.each do |post|
+        .post
+          = link_to "", post_path(post.try(:category).try(:alias), post.alias), class: "absolute"
+          .picture
+            = image_tag post.smallpic_url
+          .info
+            h4
+              = post.category.name
+              | &nbsp;|&nbsp;
+              = post.title
+            p.text = raw post.introtext
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alias: MyString
+  name: MyString
+  date: 2014-10-19
+  description: MyString
+  fb_link: MyString
+  vk_link: MyString
+
+two:
+  alias: MyString
+  name: MyString
+  date: 2014-10-19
+  description: MyString
+  fb_link: MyString
+  vk_link: MyString

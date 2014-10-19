@@ -1,10 +1,10 @@
-ActiveAdmin.register BlogPost do
+ActiveAdmin.register EventCity do
 
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :title, :alias, :gallery, :video_link, :description, :introtext, :text, :date, :smallpic, :illustration, :category_id, :event, :event_city_id, :taglist
+  permit_params :name, :link, :place, :active, :event_id
   #
   # or
   #

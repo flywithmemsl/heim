@@ -1,5 +1,6 @@
 class BlogPost < ActiveRecord::Base
   belongs_to :category
+  belongs_to :event_city
 
   mount_uploader :smallpic, SmallpicUploader
   mount_uploader :illustration, IllustrationUploader

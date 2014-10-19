@@ -1,8 +1,17 @@
 ready = ->
 
 
+  if $(".taglist").length
+    taglist = $(".taglist").text()
+    newTaglist = ""
+    for tag, i in arr = taglist.split(", ")
+      newTaglist += "<a href='/blog/search?q=#{tag}'>#{tag}</a>"
+      unless i is arr.length-1
+        newTaglist += ",&nbsp;"
 
 
+
+    $(".taglist").html(newTaglist)
 
   if $(".slideshow").length
     $(".slideshow img").unwrap().wrap("<div class='slide'></div>")

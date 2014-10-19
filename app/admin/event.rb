@@ -1,10 +1,10 @@
-ActiveAdmin.register BlogPost do
+ActiveAdmin.register Event do
 
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :title, :alias, :gallery, :video_link, :description, :introtext, :text, :date, :smallpic, :illustration, :category_id, :event, :event_city_id, :taglist
+  permit_params :name, :date, :description, :fb_link, :vk_link, :illustration
   #
   # or
   #
@@ -13,6 +13,8 @@ ActiveAdmin.register BlogPost do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+
+
 
 
 end

@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
 
+  get 'event/index'
+
   get 'blog/search', to: "blog#search", as: :search_post
 
   get 'blog/(:category)', to: "blog#index", as: :posts, constraints: { category: /(articles|galleries|videos)/ }
 
   get 'blog/:category/:alias', to: "blog#show", as: :post
 
+  get 'event/past', to: "event#past", as: :past
+
 
   resources :about, only: [:index]
   resources :contacts, only: [:index]
   resources :offline, only: [:index]
+  resources :event, only: [:index]
 
 
 

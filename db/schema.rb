@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018133159) do
+ActiveRecord::Schema.define(version: 20141018220206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,7 +71,12 @@ ActiveRecord::Schema.define(version: 20141018133159) do
     t.string   "alias"
     t.text     "gallery"
     t.string   "video_link"
+    t.boolean  "event"
+    t.integer  "event_city_id"
+    t.string   "taglist"
   end
+
+  add_index "blog_posts", ["event_city_id"], name: "index_blog_posts_on_event_city_id", using: :btree
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -118,6 +123,29 @@ ActiveRecord::Schema.define(version: 20141018133159) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "alias"
+  end
+
+  create_table "event_cities", force: true do |t|
+    t.string   "name"
+    t.string   "link"
+    t.string   "place"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id"
+  end
+
+  add_index "event_cities", ["event_id"], name: "index_event_cities_on_event_id", using: :btree
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.string   "date"
+    t.text     "description"
+    t.string   "fb_link"
+    t.string   "vk_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "illustration"
   end
 
   create_table "partners", force: true do |t|
