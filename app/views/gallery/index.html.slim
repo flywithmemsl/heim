@@ -1,0 +1,33 @@
+=render partial: "partials/header"
+
+.content_header
+
+  .container
+    h1 Галерея
+    .breadcrumbs
+      ul
+        li
+          a(href="/") Главная
+        li
+          | Галерея
+
+.posts
+  .container.grid
+    -6.times
+      -@posts.each do |post|
+        a(href="/gallery/#{post.id}")
+          =image_tag post.image, class: "gridify"
+
+
+        / .block
+        /   h4 =contact.position
+        /   p
+        /     a(href="mailto:#{contact.address}")
+        /       =contact.address
+
+
+
+
+
+
+

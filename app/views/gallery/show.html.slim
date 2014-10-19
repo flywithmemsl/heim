@@ -1,0 +1,36 @@
+=render partial: "partials/header"
+
+.content_header
+
+  .container
+    h1 Галерея
+    .breadcrumbs
+      ul
+        li
+          a(href="/") Главная
+        li
+          a(href="/gallery") Галерея
+        li
+          = @post.name
+
+.posts
+  .fluid_container.single_image
+    =image_tag @post.image
+    h4 = @post.name
+    p = raw @post.description
+    p
+      a(href="/gallery")
+        | назад в галерею
+
+        / .block
+        /   h4 =contact.position
+        /   p
+        /     a(href="mailto:#{contact.address}")
+        /       =contact.address
+
+
+
+
+
+
+

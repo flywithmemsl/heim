@@ -66,18 +66,17 @@
     p.centred
       | В размеренном образе жизни расцветает простая красота повседневных ритуалов, где каждая деталь создает ощущение особого комфорта и соединенности.
     .previews
-      -6.times
-        .post(style="background-image: url(/blog_pic.jpg)")
+      -@posts.each do |post|
+
+        .post(style="background-image: url(#{post.illustration})")
           .info
             .title
-              | BRITISH BEACH TOWNS: A SOCIAL HISTORY
+              = post.title
             .introtext
-              | Beach resort towns in the United Kingdom no longer have“
-              | wheeled bathing machines” and seawater as medicine,
-              | but there are a number of characteristics they still do share.
+              = post.introtext
 
 
-    .button
+    a.button(href="/blog")
       | перейти в блог
 
 

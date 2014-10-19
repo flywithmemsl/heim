@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'event/index'
+  get 'gallery', to: "gallery#index"
+
+  get 'gallery/:id', to: "gallery#show", as: :gallery_post
+
+  get 'event', to: "event#index"
 
   get 'blog/search', to: "blog#search", as: :search_post
 
@@ -14,7 +18,6 @@ Rails.application.routes.draw do
   resources :about, only: [:index]
   resources :contacts, only: [:index]
   resources :offline, only: [:index]
-  resources :event, only: [:index]
 
 
 
