@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'shop', to: "shop#index"
+
   get 'gallery', to: "gallery#index"
 
   get 'gallery/:id', to: "gallery#show", as: :gallery_post

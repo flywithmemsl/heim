@@ -1,0 +1,203 @@
+@import "settings"
+
+
+.shop
+  .content_header
+    h1
+      left: 20px
+    .breadcrumbs
+      left: 20px
+
+html#ecwid_html
+  body#ecwid_body
+    td.ecwid-productBrowser-productsGrid-cell
+      padding: 0 !important
+      margin: 0 !important
+      width: 295px !important
+      display: inline-block !important
+      margin-right: 8px !important
+
+      table
+        img
+          width: 295px !important
+          height: 250px !important
+
+    .ecwid
+      table.ecwid-productBrowser-productsGrid-productTopFragment-inner
+        margin: 0 !important
+        border: none !important
+      table.ecwid-productBrowser-productsGrid-productBottomFragment-inner
+        margin: 0 !important
+        border: none !important
+
+    td.ecwid-productBrowser-productsGrid-cellSpace
+      height: 0 !important
+
+    div.ecwid-productBrowser-productsGrid-productTopFragment
+      border: none !important
+      margin: 0 !important
+      padding: 0 !important
+      width: 295px !important
+
+    div.ecwid-productBrowser-productsGrid-productBottomFragment
+      border: none !important
+      margin: 0 !important
+      padding: 0 !important
+      width: 295px !important
+      position: relative !important
+      height: 156px
+      top: -159px !important
+      background: rgba(0,0,0,0.4) !important
+      transition: opacity 0.3s ease
+      -webkit-transition: opacity 0.3s ease
+      opacity: 0
+      .ecwid-productBrowser-productNameLink, .ecwid-productBrowser-price, .ecwid-productBrowser-price-compareTo, .ecwid-productBrowser-price-save
+        color: $white !important
+        a
+          color: $white !important
+      .ecwid-productBrowser-productNameLink,.ecwid-productBrowser-price
+        font: 700 13px/25px $room !important
+        a
+          font: 700 13px/25px $room !important
+          text-decoration: none
+          text-transform: uppercase
+      .ecwid-productBrowser-productNameLink
+        padding-top: 45px !important
+      .ecwid-productBrowser-price-value
+        display: block !important
+        position: absolute !important
+        bottom: 10px !important
+        width: 100% !important
+      .ecwid-productBrowser-price-compareTo,
+      .ecwid-productBrowser-price-save
+        font: 300 italic 13px/20px $maiola !important
+      div.ecwid-BuyNow
+        display: none !important
+
+
+    div.ecwid-productBrowser-productsGrid-productTopFragment-mouseover
+      border: none !important
+      margin: 0 !important
+
+    div.ecwid-productBrowser-productsGrid-productBottomFragment-mouseover
+      border: none !important
+      margin: 0 !important
+      opacity: 1
+
+    div.ecwid-productBrowser-productsGrid
+      .ecwid-productBrowser-productsGrid-mainTable
+        tr:nth-child(3n)
+          height: 5px !important
+        tr:nth-child(3n-1)
+          height: 0 !important
+          display: block !important
+          position: absolute !important
+          .ecwid-productBrowser-productsGrid-cell
+            height: 0 !important
+            position: relative !important
+            &:after
+              display: block
+              top: 0
+              left: 0
+              position: absolute
+              content: ""
+              width: 100%
+              height: 100%
+              z-index: 555
+              background-color: #fff
+
+
+
+    .ecwid-productBrowser-head
+      font: 300 22px/24px "Room", Room, Helvetica, Sans, Arial !important
+
+
+    .ecwid-productBrowser-nav-left, .ecwid-productBrowser-nav-right
+      display: none !important
+    .ecwid-productBrowser-backgroundedPanel
+      background: none !important
+      .ecwid-productBrowser-details-inStockLabel
+        font: 700 13px/25px $room !important
+        color: $grey !important
+        text-transform: uppercase
+        border-top: 1px solid $lgrey
+        border-bottom: 1px solid $lgrey
+        padding-top: 12px !important
+      .ecwid-productBrowser-price
+        font: 300 22px/26px $room !important
+      .ecwid-productBrowser-price-compareTo-title
+        display: none !important
+      .ecwid-productBrowser-price-compareTo-container
+        margin-top: 20px !important
+      .ecwid-productBrowser-price-compareTo
+        font: 300 italic 13px/20px $maiola !important
+        margin-top: 20px !important
+      .ecwid-productBrowser-price-save,.ecwid-productBrowser-price-save-title
+        font: 300 italic 13px/20px $maiola !important
+
+    .ecwid-productBrowser-details-qtyPanel
+      .ecwid-productBrowser-details-qtyLabel
+        font: 300 italic 13px/20px $maiola !important
+      .ecwid-productBrowser-details-qtyTextField
+        border-radius: 5px !important
+        border-color: $lgrey !important
+        font: 300 italic 13px/20px $maiola !important
+    .ecwid-AddToBagButton
+      background: $black !important
+      margin: 0px !important
+      position: relative !important
+      &:after
+        position: absolute
+        top: 7px
+        left: 9px
+        color: $white
+        content: "Добавить в корзину"
+        font: 700 13px/25px $room !important
+        text-transform: uppercase
+
+    .ecwid-productBrowser-details-inTheBag
+      background: none !important
+
+    div.ecwid-productBrowser-details-inTheBag div
+      left: 0 !important
+      font: 700 13px/25px $room !important
+      color: $grey !important
+      text-transform: uppercase !important
+    .ecwid-productBrowser-details-addMoreButton
+      display: none !important
+    .ecwid-ContinueShoppingButton
+      display: none !important
+
+    .ecwid-productBrowser-details-openBagButton
+      position: absolute !important
+      background: $black !important
+      border-color: $black !important
+      left: 0 !important
+      color: $white !important
+      font: 700 11px/21px $room !important
+      text-transform: uppercase !important
+
+
+
+    .ecwid-productBrowser-sharePanel-header,.ecwid-ProductDetails-gray-panel-bottom
+      display: none !important
+
+    .ecwid-pager-link-disabled
+      color: $grey !important
+    .ecwid-pager-link-enabled
+      color: $dgrey !important
+
+
+    .ecwid-productBrowser-details-descr
+      width: 690px !important
+      font: 400 15px/24px $maiola !important
+      p, ul, li, span
+        font: 400 15px/24px $maiola !important
+      strong
+        font: 700 15px/24px $room !important
+        span
+          font: 700 15px/24px $room !important
+
+
+
+
