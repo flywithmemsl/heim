@@ -11,6 +11,53 @@ body
   background: $white
 
 
+.fullscreen_promo
+  height: 720px
+  background: url(/bg1.jpg) center center no-repeat
+  background-size: cover
+  background-attachment: fixed
+  .search
+    color: $white
+    position: absolute
+    display: inline-block
+    right: 25px
+    top: 75px
+    padding-left: 16px
+    background: rgba(255,255,255,0)
+    // cursor: pointer
+
+    input
+      color: $white
+      background: rgba(255,255,255,0)
+      border: 1px solid rgba(255,255,255,0)
+      outline: none !important
+      border-radius: 5px
+      padding: 4px 22px 2px 9px
+      +italic(14px,14px)
+      width: 150px
+      &:hover
+
+        border: 1px solid rgba(255,255,255,0.5)
+      &:focus
+        border: 1px solid rgba(255,255,255,0.8)
+
+      &.filled
+        border: 1px solid #fff
+
+  .scrolldown
+    +italic(16px, 24px)
+    text-align: center
+    position: relative
+    color: $black
+    margin-top: 540px
+    &:before
+      +ion("\f151  \f151")
+      position: absolute
+      top: -15px
+      left: 50%
+      margin-left: -4px
+      width: 1px
+      line-height: 6px
 
 .fullscreen
   height: 720px
@@ -64,13 +111,9 @@ body
 
         &.filled
           border: 1px solid #fff
-    .magazines
-      display: none
-      position: absolute
-      top: 110px
-      height: 220px
-      width: 100%
-      background: rgba(0,0,0,0.5)
+
+
+
 
   h1
     color: $white

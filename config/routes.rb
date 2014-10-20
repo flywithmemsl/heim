@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'shop', to: "shop#index"
 
+  get 'kinfolk', to: "main#static"
+
   get 'gallery', to: "gallery#index"
 
   get 'gallery/:id', to: "gallery#show", as: :gallery_post

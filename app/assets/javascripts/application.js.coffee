@@ -22,6 +22,8 @@ ready = ->
     else
       $(this).removeClass("filled")
 
+  $(".toggle_magazines").click -> $(".magazines").slideToggle()
+
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

@@ -1,0 +1,76 @@
+.fullscreen_promo.static(style="background-image: url(/bg2.jpg)")
+  .header
+    .logo
+      img(src="black_logo.png")
+    = render partial: "partials/nav"
+    .fluid_container
+      .toggle_magazines
+        | издания
+      .search
+        form(action=search_post_path)
+          input.icon(type="text" name="q" value="")
+      .magazines
+        = render partial: "partials/magazines"
+
+
+
+  .scrolldown
+    | Скрольте вниз
+
+.mission.block
+  .container
+    h2 Дух kinfolk / sprirt
+    p.col-2
+      | Кроме того, постоянно воспроизводится постулат о письме как о технике, обслуживающей язык, поэтому первое полустишие отражает композиционный анализ. Символ изменяем. Кроме того, постоянно
+
+    p.col-2
+      | Воспроизводится постулат о письме как о технике, обслуживающей язык, поэтому первое полустишие отражает композиционный анализ. Символ изменяем. Символ изменяем. Символ изменяем.
+
+.slider.block
+  .container
+    .image
+      img(src="journal.jpg")
+    .text
+      h2 Журнал Kinfolk
+      p
+        | Kinfolk – это журнал, который объединяет растущее сообщество творческих личностей по всему миру. Это жемчужина для тех, кто любит собираться вместе небольшими компаниями и интересно проводить время.
+      / .button узнать подробнее
+
+.mission.block
+  .container
+    p.col-2
+      | Кроме того, постоянно воспроизводится постулат о письме как о технике, обслуживающей язык, поэтому первое полустишие отражает композиционный
+
+    p.col-2
+      | нивелирует зачин вот здесь. Кроме того, постоянно воспроизводится постулат о письме как о технике, обслуживающей язык. Кроме того, постоянно.
+
+
+
+
+
+.blog.block
+  .fluid_container
+    h2 Приобрести журнал / Buy
+    / p.centred
+    /   | В размеренном образе жизни расцветает простая красота повседневных ритуалов, где каждая деталь создает ощущение особого комфорта и соединенности.
+    .previews
+      .post(style="background-image: url(/blog_pic.jpg)")
+        .info
+          .title
+             post.title
+          .introtext
+             post.introtext
+      .post(style="background-image: url(/blog_pic.jpg)")
+        .info
+          .title найти в оффлайн магазине
+          .introtext 13 точек всей России и страны СНГ
+
+.mission.block
+  .container
+    h2 События / Events
+    p.centred
+      | Кроме того, постоянно воспроизводится постулат о письме как о технике, обслуживающей язык, поэтому первое полустишие отражает композиционный анализ.
+
+
+
+
