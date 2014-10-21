@@ -20,7 +20,7 @@
       .country(class="#{country.alias}")
         h4 =country.name
         .wrapper
-          - country.cities.order("name").all.each do |city|
+          - country.cities.all.sort_by {|e| e.name.downcase }.each do |city|
             p =city.name
             - city.partners.all.each do |dude|
               p.partner
