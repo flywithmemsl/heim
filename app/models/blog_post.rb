@@ -8,8 +8,8 @@ class BlogPost < ActiveRecord::Base
 
   def similars
     tag = self.title.split(" ").first
-    @posts = self.class.all.limit(3)
-    # @posts = self.class.where(category_id: self.category_id).where("title like ?", "%#{tag}%").where.not(id: self.id).sort_by(&:date).limit(3)
+    # @posts = self.class.all.limit(3)
+    @posts = self.class.where(category_id: self.category_id).where("title like ?", "%#{tag}%").where.not(id: self.id).sort_by(&:date).limit(3)
 
   end
 
