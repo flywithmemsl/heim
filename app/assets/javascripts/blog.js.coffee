@@ -53,7 +53,16 @@ ready = ->
 
 
 
+  for p in $(".post_content p")
+    if $(p).children().length == $(p).find("img").length
+      $(p).addClass("forGallery")
+      $(p).find("img").wrap("<div class='slide'></div>")
 
+
+  $(".forGallery").slick
+    arrows: false
+    fade: true
+    dots: true
 
 
 

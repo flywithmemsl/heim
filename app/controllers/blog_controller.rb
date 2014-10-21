@@ -6,7 +6,11 @@ class BlogController < ApplicationController
 
   def show
     @category = Category.find_by(alias: params[:category])
-    @article = BlogPost.find_by(alias: params[:alias])
+    post = BlogPost.find_by(alias: params[:alias])
+    if post == nil
+      post = BlogPost.find_by(id: params[:alias])
+    end
+    @article = post
   end
 
   def search
