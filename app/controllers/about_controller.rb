@@ -4,6 +4,7 @@ class AboutController < ApplicationController
     @about = About.first
     @team = Teammate.all
 
+
   end
 
 
