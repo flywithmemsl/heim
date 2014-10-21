@@ -30,7 +30,9 @@
     .container
       - @list.each do |post|
         .post
-          = link_to "", post_path(post.try(:category).try(:alias), post.alias || post.id), class: "absolute"
+          / - post_link_param = post.try(:category).try(:alias) || post.id
+          - post_link = post.alias || post.id
+          = link_to "", post_path(post.try(:category).try(:alias), post_link), class: "absolute"
           .picture
             = image_tag post.smallpic_url
           .info
