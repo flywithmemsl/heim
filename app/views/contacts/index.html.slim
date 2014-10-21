@@ -15,13 +15,12 @@
 
 .posts
   .container
-    -6.times
-      -@contacts.each do |contact|
-        .block
-          h4 =contact.position
-          p
-            a(href="mailto:#{contact.address}")
-              =contact.address
+    -@contacts.each do |contact|
+      .block
+        h4 =contact.position
+        p
+          a(href="mailto:#{contact.address}")
+            =contact.address
 
 .container.bottom_block
   h4 heim в социальных сетях

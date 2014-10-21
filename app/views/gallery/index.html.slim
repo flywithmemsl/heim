@@ -13,10 +13,9 @@
 
 .posts
   .container.grid
-    -6.times
-      -@posts.each do |post|
-        a(href="/gallery/#{post.id}")
-          =image_tag post.image, class: "gridify"
+    -@posts.each do |post|
+      a(href="/gallery/#{post.id}")
+        =image_tag post.image, class: "gridify"
 
 
         / .block

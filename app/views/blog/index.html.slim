@@ -31,7 +31,10 @@
       - @list.each do |post|
         .post
           / - post_link_param = post.try(:category).try(:alias) || post.id
-          - post_link = post.alias || post.id
+          - unless post.alias.empty?
+            - post_link = post.alias
+          -else
+            - post_link = post.id
           = link_to "", post_path(post.try(:category).try(:alias), post_link), class: "absolute"
           .picture
             = image_tag post.smallpic_url

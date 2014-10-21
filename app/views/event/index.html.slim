@@ -48,13 +48,12 @@
   .container.bottom_block
     h4 Места
     .wrapper
-      -6.times
-        - @city.each do |city|
-          .item
-            p.name
-              a(href="#{city.link}")
-                =city.name
-            p.position =city.place
+      - @city.each do |city|
+        .item
+          p.name
+            a(href="#{city.link}")
+              =city.name
+          p.position =city.place
 
 
 
