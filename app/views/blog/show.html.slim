@@ -57,7 +57,7 @@
     -if @article.category.id == 1
       .post_content
         = raw @article.text
-      -if @article.similars.length > 2
+      -if @article.similars.length == 3
         .container.bottom_block.similar_posts
           h4 похожие посты
         .container.posts
