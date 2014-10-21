@@ -33,7 +33,8 @@
     .post_header
       h4.date
         | Дата |&nbsp;
-        span = l @article.date, format: :long
+        - unless @article.date.empty?
+          span = l @article.date, format: :long
       h2.theme
         | Тема |&nbsp;
         span = raw @article.title
