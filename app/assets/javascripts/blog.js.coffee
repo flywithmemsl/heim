@@ -15,6 +15,10 @@ ready = ->
 
   if $(".slideshow").length
     $(".slideshow img").unwrap().wrap("<div class='slide'></div>")
+    unless $(".slide").parent().hasClass("slideshow")
+      $(".slide").unwrap
+    unless $(".slide").parent().hasClass("slideshow")
+      $(".slide").unwrap
 
 
 
