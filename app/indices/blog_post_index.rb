@@ -1,4 +1,4 @@
-ThinkingSphinx::Index.define :blog_post, :with => :active_record do
+ThinkingSphinx::Index.define :blog_post, :with => :active_record, :delta => true do
   indexes title, :sortable => true
   indexes description
   indexes introtext
