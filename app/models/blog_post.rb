@@ -14,4 +14,5 @@ class BlogPost < ActiveRecord::Base
   end
 
 
+
 end

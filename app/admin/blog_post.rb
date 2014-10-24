@@ -14,5 +14,28 @@ ActiveAdmin.register BlogPost do
   #   permitted
   # end
 
+  form do |f|
+    f.inputs do
+      f.input :title
+      f.input :alias
+      f.input :gallery
+      f.input :video_link
+      f.input :description
+      f.input :introtext
+      f.input :text, as: :wysihtml5, commands: :all , blocks: :all
+      f.input :date
+      f.input :smallpic
+      f.input :illustration
+      f.input :category_id
+      f.input :event
+      f.input :event_city_id
+      f.input :taglist
+    end
+
+    f.actions
+  end
+
+
+
 
 end

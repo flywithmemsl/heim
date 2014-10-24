@@ -62,8 +62,13 @@ gem 'mini_magick'
 
 gem 'ckeditor'
 
-gem 'devise', '~> 3.3.0'
 gem 'activeadmin', github: 'activeadmin'
+
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
+
+gem 'devise', '~> 3.3.0'
+
 
 gem 'rollbar'
 gem 'figaro'
