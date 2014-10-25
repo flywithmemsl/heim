@@ -14,5 +14,15 @@ ActiveAdmin.register GalleryPost do
   #   permitted
   # end
 
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :description, as: :wysihtml5, commands: [ :bold, :italic, :underline, :link ], blocks: [:p]
+      f.input :image
+      f.input :link
+    end
+
+    f.actions
+  end
 
 end

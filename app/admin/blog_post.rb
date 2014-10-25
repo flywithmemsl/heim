@@ -1,5 +1,13 @@
 ActiveAdmin.register BlogPost do
 
+  index do
+    selectable_column
+    column :title
+    column :category_id
+    column :event
+    column :date
+    actions
+  end
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -14,21 +22,28 @@ ActiveAdmin.register BlogPost do
   #   permitted
   # end
 
+
   form do |f|
     f.inputs do
+      f.input :category, :default => "1"
+
+      f.input :event
+      f.input :event_city
+
       f.input :title
       f.input :alias
-      f.input :gallery
-      f.input :video_link
-      f.input :description
-      f.input :introtext
-      f.input :text, as: :wysihtml5, commands: :all , blocks: :all
-      f.input :date
+
       f.input :smallpic
       f.input :illustration
-      f.input :category_id
-      f.input :event
-      f.input :event_city_id
+
+      f.input :description, as: :wysihtml5, commands: [ :bold, :italic, :underline, :link ], blocks: [:p]
+      f.input :introtext, as: :wysihtml5, commands: [ :bold, :italic, :underline, :link ], blocks: [:p]
+      f.input :text, as: :wysihtml5, commands: :all , blocks: [:h3, :h4, :h5, :h6, :p]
+      f.input :gallery, as: :wysihtml5, commands: [ :image, :video ], blocks: :all
+      f.input :video_link
+
+      f.input :date
+
       f.input :taglist
     end
 
