@@ -12,6 +12,7 @@ body
 
 
 .fullscreen_promo
+  position: relative
   height: 720px
   background: url(/bg1.jpg) center center no-repeat
   background-size: cover
@@ -49,7 +50,9 @@ body
     text-align: center
     position: relative
     color: $black
-    margin-top: 540px
+    width: 100%
+    position: absolute
+    bottom: 2px
     &:before
       +ion("\f151  \f151")
       position: absolute
@@ -60,6 +63,7 @@ body
       line-height: 6px
 
 .fullscreen
+  position: relative
   height: 720px
   background: url(/bg1.jpg) center center no-repeat
   background-size: cover
@@ -138,7 +142,9 @@ body
     text-align: center
     position: relative
     color: $white
-    margin-top: 200px
+    width: 100%
+    position: absolute
+    bottom: 2px
     &:before
       +ion("\f151  \f151")
       position: absolute

@@ -16,6 +16,14 @@ ready = ->
       if $(link).parent().prop("tagName") is "LI"
         $(link).parent().addClass("active")
 
+  if $(window).height() > 400
+    $(".fullscreen, .fullscreen_promo").css("height", $(window).height())
+    $(".fullscreen h1").css("margin-top", ($(window).height()-190)/2)
+
+  if $(".scrolldown").length
+    $(window).on "scroll", ->
+      $(".scrolldown").fadeOut(1000)
+
   $(".search input").on "change", ->
     unless $(this).val() is ""
       $(this).addClass("filled")
