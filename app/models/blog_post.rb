@@ -7,9 +7,17 @@ class BlogPost < ActiveRecord::Base
 
 
   def similars
-    tag = self.title.split(" ").first
-    # @posts = self.class.all.limit(3)
-    @posts = BlogPost.where(category_id: self.category_id).where("taglist like ?", "%#{tag}%").where.not(id: self.id).sort_by(&:date)
+    if self.taglist != nil
+      tag = self.taglist.split(", ").first
+      @posts = BlogPost
+      .where(category_id: self.category_id)
+      .where("taglist like ?", "%#{tag}%")
+      .where.not(id: self.id)
+      .sort_by(&:date)
+    else
+      @posts = []
+    end
+
 
   end
 
