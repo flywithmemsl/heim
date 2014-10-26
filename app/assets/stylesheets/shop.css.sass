@@ -1,7 +1,10 @@
 @import "settings"
 
+@mixin up()
+  text-transform: uppercase
 
 .shop
+  min-height: 600px
   .content_header
     h1
       left: 20px
@@ -10,7 +13,8 @@
 
 html#ecwid_html
   body#ecwid_body
-    td.ecwid-productBrowser-productsGrid-cell
+
+    td.ecwid-productBrowser-productsGrid-cell,
       padding: 0 !important
       margin: 0 !important
       width: 295px !important
@@ -174,8 +178,14 @@ html#ecwid_html
       border-color: $black !important
       left: 0 !important
       color: $white !important
-      font: 700 11px/21px $room !important
       text-transform: uppercase !important
+
+      background: $black !important
+      font: 700 13px/25px $room !important
+      text-transform: uppercase !important
+      width: 168px !important
+      height: 39px !important
+      cursor: pointer !important
 
 
 
@@ -193,11 +203,278 @@ html#ecwid_html
       font: 400 15px/24px $maiola !important
       p, ul, li, span
         font: 400 15px/24px $maiola !important
+      ul,ol
+        padding-left: 30px !important
+      p, ul
+        margin: 20px 0
       strong
         font: 700 15px/24px $room !important
         span
           font: 700 15px/24px $room !important
 
+    .ecwid-productBrowser-relatedProducts-title
+      padding: 30px 0 !important
+      border-top: 1px solid $grey !important
+      text-align: center !important
+    .ecwid-productBrowser-relatedProducts-item-top, .ecwid-productBrowser-relatedProducts-item-bottom
+      border: none !important
+      margin: 0 !important
+      padding: 0 !important
 
 
+    .ecwid-productBrowser-relatedProducts-button + td > div
+      height: 250px !important
+      &>div
+        width: 295px !important
+        height: 250px !important
+        position: relative !important
+        display: inline-block !important
+        left: auto !important
+        top: auto !important
+        margin-right: 8px !important
+        table
+          img
+            width: 295px !important
+            height: 250px !important
+    .ecwid-productBrowser-relatedProducts-item-bottom
+      display: none !important
+
+
+    .ecwid-productBrowser-cart-itemsTable
+      >tbody
+        >tr:first-child
+          border-top: 1px solid rgb(196, 196, 196) !important
+          td
+            padding: 20px !important
+        >tr:last-child
+          border-bottom: 1px solid rgb(196, 196, 196) !important
+
+    .ecwid-productBrowser-cart-itemsTable-cell-thumbnail
+      // div
+      //   visibility: hidden !important
+
+    .ecwid-productBrowser-cart-itemsTable-cell-descr
+      padding: 20px
+      .ecwid-productBrowser-productNameLink
+        // width: 380px !important
+        a
+          text-transform: uppercase !important
+          text-decoration: none !important
+          font: 300 13px/15px "Room", Room, Helvetica, Sans, Arial !important
+          padding-bottom: 10px !important
+    .ecwid-productBrowser-cart-itemsTable-cell-price, .ecwid-productBrowser-cart-itemsTable-cell-subtotal
+      padding: 14px !important
+
+
+    .ecwid-productBrowser-price
+      color: $grey !important
+      text-transform: uppercase !important
+      text-decoration: none !important
+      font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+
+    .ecwid-productBrowser-cart-qtyTextField
+      border-radius: 5px !important
+      border-color: $lgrey !important
+      font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+
+    .ecwid-productBrowser-cart-hint
+      width: 380px !important
+      font: 300 italic 13px/18px $maiola !important
+      margin-top: 15px !important
+      margin-bottom: 15px !important
+      margin-right: 10px !important
+
+    .ecwid-productBrowser-cart-EnterCouponBox
+      background: none !important
+      border-left: none !important
+      border-right: none !important
+      .gwt-HTML
+        font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+        text-transform: uppercase !important
+      .ecwid-fieldEnvelope-around input
+        border-radius: 5px !important
+        border-color: $lgrey !important
+        font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+        height: 28px !important
+
+
+    button
+      background: none !important
+      padding: 8px 24px !important
+      color: $grey !important
+      border: 1px solid $lgrey !important
+      font: 300 13px/15px "Room", Room, Helvetica, Sans, Arial !important
+      text-transform: uppercase !important
+      height: 32px !important
+      &.ecwid-productBrowser-cart-clearBagButton
+        color: #d05f5f !important
+        border-color: #d05f5f !important
+        margin-top: 30px !important
+      &.ecwid-productBrowser-cart-continueShoppingButton
+        color: $black !important
+        border-color: $black !important
+        margin-top: 30px !important
+
+    .ecwid-productBrowser-cart-estimation
+      button.gwt-Button
+        margin-left: 20px
+        margin-top: 20px
+        width: 181px !important
+
+    .ecwid-productBrowser-cart-rightPanel>tbody
+      &:before
+        text-align: left
+        content: "ВАШ ЗАКАЗ" !important
+        font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+        display: table-cell !important
+        border-top: 1px solid rgb(196, 196, 196) !important
+        border-bottom: 1px solid rgb(196, 196, 196) !important
+        padding: 20px 0
+        padding-left: 20px
+
+    .ecwid-productBrowser-cart-asterisk
+      display: none !important
+
+    .ecwid-productBrowser-cart-subtotalLabel, .ecwid-productBrowser-cart-shippingLabel, .ecwid-productBrowser-cart-taxLabel
+      font: 300 italic 15px/21px $maiola !important
+      text-transform: lowercase !important
+      color: $black !important
+
+    .ecwid-productBrowser-cart-shippingLabel:after
+      content: "*"
+
+    .ecwid-productBrowser-cart-taxLabel, .ecwid-productBrowser-cart-taxAmount
+      color: $grey !important
+
+    .ecwid-productBrowser-cart-subtotalAmount, .ecwid-productBrowser-cart-shippingAmount, .ecwid-productBrowser-cart-taxAmount
+      font: 300 19px/21px "Room", Room, Helvetica, Sans, Arial !important
+      text-transform: uppercase !important
+
+
+    .ecwid-productBrowser-cart-totalAmountPanel
+      // border-top: 1px solid rgb(196, 196, 196) !important
+      // border-bottom: 1px solid rgb(196, 196, 196) !important
+      margin: 20px 0 !important
+      .ecwid-productBrowser-cart-totalLabel
+        font: 700 19px/21px "Room", Room, Helvetica, Sans, Arial !important
+        color: $grey !important
+        text-transform: lowercase !important
+      .ecwid-productBrowser-cart-totalAmount
+        font: 300 19px/21px "Room", Room, Helvetica, Sans, Arial !important
+        text-transform: uppercase !important
+
+    .ecwid-productBrowser-cart-checkoutButton
+      background: $black !important
+      margin: 0px !important
+      position: relative !important
+      width: 180px !important
+      &:after
+        position: absolute
+        top: 7px
+        left: 26px
+        color: $white
+        content: "Оформить заказ"
+        font: 700 13px/25px $room !important
+        text-transform: uppercase
+
+    .ecwid-productBrowser-cart-estimation
+      .ecwid-productBrowser-cart-estimationNote
+        &:before
+          content: "*"
+        padding: 0 20px
+        color: $black !important
+        font: 300 italic 15px/18px $maiola !important
+        span
+          color: $black !important
+          text-decoration: underline !important
+
+    .ecwid-popup-headLabel
+      text-align: center !important
+      font: 300 21px/26px $room !important
+      text-transform: uppercase !important
+
+    .ecwid-productBrowser-cart-chooseLocationPopup-getQuoteButton
+      margin-top: 20px !important
+    .ecwid-productBrowser-cart-chooseLocationPopup-deliveryMethods-List
+      label
+        font: 300 italic 15px/22px $maiola !important
+        color: $black !important
+        text-transform: lowercase
+        span
+          color: $black !important
+          font: 300 15px/22px $room !important
+
+
+    .ecwid-Checkout-blockTitle, .ecwid-Checkout-blockTitle
+      display: none !important
+
+
+    .ecwid-Checkout-BreadCrumbs, .ecwid-AddressForm-secureLockIcon
+      display: none !important
+
+    .ecwid-AddressForm-fields
+      label
+        color: $grey !important
+        font: 700 17px/25px $room !important
+        +up
+        margin: 10px 0 5px 0 !important
+      .ecwid-note
+        display: none !important
+
+      input
+        border-radius: 5px !important
+        border-color: $lgrey !important
+        font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+
+    select
+      background: #fff !important
+      height: 30px !important
+
+
+html#ecwid_html body#ecwid_body div.ecwid-AddressForm div.ecwid-fieldWrapper label.ecwid-fieldLabel
+  width: 300px !important
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup label.ecwid-fieldLabel, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup-deliveryMethodLabel
+  color: $grey !important
+  font: 700 17px/25px $room !important
+  +up
+  margin: 10px 0 !important
+
+html#ecwid_html body#ecwid_body input.gwt-TextBox, html#ecwid_html body#ecwid_body input.gwt-PasswordTextBox, html#ecwid_html body#ecwid_body select.gwt-ListBox, html#ecwid_html body#ecwid_body textarea.gwt-TextArea, html#ecwid_html body#ecwid_body input.gwt-DateBox
+
+  font: 300 italic 15px/18px $maiola !important
+  color: $black !important
+  // padding: 5px 15px !important
+
+
+html#ecwid_html body#ecwid_body div.ecwid-form
+  background: none !important
+
+html#ecwid_html body#ecwid_body button.ecwid-popup-closeButton
+  background: transparent url(http://d6v0rpojioggw.cloudfront.net/gz/16.2-523-gf45d10b/icons/popup_close.png) no-repeat center center !important
+  border: none !important
+
+html#ecwid_html body#ecwid_body div.ecwid-popup
+  border: none !important
+
+
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-totalAmountPanel td
+  padding: 13px 0 !important
+
+
+html#ecwid_html body#ecwid_body tr.ecwid-productBrowser-cart-itemsTable-row-selected, html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-selected
+  background-color: #fafafa !important
+
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-removeItemButton
+  right: -20px !important
+
+
+html#ecwid_html body#ecwid_body span.ecwid-productBrowser-cart-weight
+  padding: 0 !important
+  font: 300 italic 13px/18px $maiola !important
+
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productTopFragment-inTheBag div.ecwid-productBrowser-productsGrid-inTheBagTick
+  background: none !important
 
