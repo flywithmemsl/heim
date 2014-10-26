@@ -4,6 +4,12 @@
 
 
 ready = ->
+
+  $(".main .promo_blocks").slick
+    arrows: true
+    dots: true
+    fade: true
+
   $(".main .previews").slick
     arrows: false
     dots: true
