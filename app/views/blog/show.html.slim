@@ -27,7 +27,7 @@
         = raw @article.gallery
 
     -if @article.category.id == 3
-      .slideshow
+      .video
         = raw @article.video_link
 
     .post_header
@@ -41,9 +41,9 @@
       .sharing
         p.share
           | Поделиться постом:<br/>
-          a(href="#") Вконтакте
+          a(href="#" target="_blank" class="addvklink") Вконтакте
           | &nbsp;/&nbsp;
-          a(href="#") Facebook
+          a(href="#" target="_blank" class="addfblink") Facebook
         -if @article.category.id == 1
           p.tags
             | Тэги:<br/>

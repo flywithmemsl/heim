@@ -10,6 +10,13 @@
 
 
 ready = ->
+
+  if $(".addvklink").length
+    $(".addvklink").attr("href", "http://vk.com/share.php?url=#{window.location.href}")
+  if $(".addfblink").length
+    $(".addfblink").attr("href", "http://www.facebook.com/sharer/sharer.php?u=#{window.location.href}")
+
+
   for link in $("a")
     if $(link).attr("href") is window.location.pathname
       $(link).addClass("active")

@@ -8,10 +8,10 @@
     display: inline-block
     position: absolute
     right: 10px
-    top: 60px
+    top: 64px
     color: $grey
-    border-color: $grey
-    padding: 5px 28px
+    border-color: $lgrey
+    padding: 3px 28px
     &:hover
       color: $white
   .open_fullscreen
@@ -24,7 +24,8 @@
       border-color: $grey
 
 
-
+.video
+  padding-bottom: 30px
 .slideshow
   .counter
     position: absolute
@@ -33,7 +34,7 @@
     font-size: 10px
 
 .slick-slider
-  margin-bottom: 60px
+  margin-bottom: 100px
   .slick-slide
     text-align: center
     height: 450px
@@ -46,7 +47,7 @@
       button
 
         &:before
-          font-size: 9px
+          font-size: 11px
           color: $grey
       &.slick-active
         button:before
@@ -98,7 +99,7 @@ p
     // margin-bottom: 50px
     width: 520px
     text-align: left
-    text-indent: -117px
+    text-indent: -113px
     display: inline-block
     margin-left: 417px
     color: $grey
@@ -112,11 +113,11 @@ p
     display: inline-block
     vertical-align: top
   .description_and_introtext
-    width: 640px
+    width: 600px
     display: inline-block
     vertical-align: top
     .description
-      +italic(14px,22px)
+      +italic(15px,22px)
       width: 400px
       margin-bottom: 27px
     .introtext
@@ -125,11 +126,13 @@ p
       width: auto
       width: 565px
       margin-bottom: 30px
+      letter-spacing: 0.12em
   // .post_content
 
   .similar_posts
     h4
       text-align: center
+      padding: 0
 
 
 
@@ -144,6 +147,7 @@ p
       margin: 45px 0
 .posts
   +cf
+
 
 
 

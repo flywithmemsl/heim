@@ -6,10 +6,20 @@
 .shop
   min-height: 600px
   .content_header
+    min-height: 120px
+    height: auto
     h1
       left: 20px
     .breadcrumbs
       left: 20px
+
+
+  .shop_slideshow
+    display: none
+    padding-top: 120px
+    margin-bottom: 50px
+    // img
+    //   width: 100%
 
 html#ecwid_html
   body#ecwid_body
@@ -27,12 +37,16 @@ html#ecwid_html
 
       .ecwid-pager-link
         display: inline-block !important
+        font: 700 12px/25px $room !important
+        letter-spacing: 0.12em !important
+        text-transform: lowercase
+
 
       .ecwid-pager-link-disabled, .ecwid-pager-link-enabled
         margin: 10px !important
-        padding: 2px 6px !important
+        padding: 2px 8px !important
         text-decoration: none !important
-        font-size: 14px
+        font-size: 12px !important
         span
           text-decoration: none !important
 
@@ -61,13 +75,13 @@ html#ecwid_html
     td.ecwid-productBrowser-productsGrid-cell,
       padding: 0 !important
       margin: 0 !important
-      width: 295px !important
+      width: 290px !important
       display: inline-block !important
       margin-right: 8px !important
 
       table
         img
-          width: 295px !important
+          width: 290px !important
           height: 250px !important
 
     .ecwid
@@ -85,13 +99,13 @@ html#ecwid_html
       border: none !important
       margin: 0 !important
       padding: 0 !important
-      width: 295px !important
+      width: 290px !important
 
     div.ecwid-productBrowser-productsGrid-productBottomFragment
       border: none !important
       margin: 0 !important
       padding: 0 !important
-      width: 295px !important
+      width: 290px !important
       position: relative !important
       height: 156px
       top: -159px !important
@@ -105,8 +119,10 @@ html#ecwid_html
           color: $white !important
       .ecwid-productBrowser-productNameLink,.ecwid-productBrowser-price
         font: 700 13px/25px $room !important
+        letter-spacing: 0.12em !important
         a
           font: 700 13px/25px $room !important
+          letter-spacing: 0.12em !important
           text-decoration: none
           text-transform: uppercase
       .ecwid-productBrowser-productNameLink
@@ -158,6 +174,7 @@ html#ecwid_html
 
     .ecwid-productBrowser-head
       font: 300 22px/24px "Room", Room, Helvetica, Sans, Arial !important
+      letter-spacing: 0.12em !important
 
 
     .ecwid-productBrowser-nav-left, .ecwid-productBrowser-nav-right
@@ -166,13 +183,16 @@ html#ecwid_html
       background: none !important
       .ecwid-productBrowser-details-inStockLabel
         font: 700 13px/25px $room !important
+        letter-spacing: 0.12em !important
         color: $grey !important
         text-transform: uppercase
         border-top: 1px solid $lgrey
         border-bottom: 1px solid $lgrey
         padding-top: 12px !important
+        margin-bottom: 30px
       .ecwid-productBrowser-price
         font: 300 22px/26px $room !important
+        letter-spacing: 0.12em !important
       .ecwid-productBrowser-price-compareTo-title
         display: none !important
       .ecwid-productBrowser-price-compareTo-container
@@ -190,18 +210,24 @@ html#ecwid_html
         border-radius: 5px !important
         border-color: $lgrey !important
         font: 300 italic 13px/20px $maiola !important
-    .ecwid-AddToBagButton
-      background: $black !important
-      margin: 0px !important
-      position: relative !important
-      &:after
-        position: absolute
-        top: 7px
-        left: 9px
-        color: $white
-        content: "Добавить в корзину"
-        font: 700 13px/25px $room !important
-        text-transform: uppercase
+    .shop
+      .ecwid-AddToBagButton
+        background: $black !important
+        margin: 0px !important
+        position: relative !important
+        width: 187px !important
+        transition: background 0.3s ease
+        &:hover
+          background: $grey !important
+        &:after
+          position: absolute
+          top: 7px
+          left: 9px
+          color: $white
+          content: "Добавить в корзину"
+          font: 700 13px/25px $room !important
+          letter-spacing: 0.12em !important
+          text-transform: uppercase
 
     .ecwid-productBrowser-details-inTheBag
       background: none !important
@@ -209,6 +235,7 @@ html#ecwid_html
     div.ecwid-productBrowser-details-inTheBag div
       left: 0 !important
       font: 700 13px/25px $room !important
+      letter-spacing: 0.12em !important
       color: $grey !important
       text-transform: uppercase !important
     .ecwid-productBrowser-details-addMoreButton
@@ -226,6 +253,7 @@ html#ecwid_html
 
       background: $black !important
       font: 700 13px/25px $room !important
+      letter-spacing: 0.12em !important
       text-transform: uppercase !important
       width: 168px !important
       height: 39px !important
@@ -253,8 +281,10 @@ html#ecwid_html
         margin: 20px 0
       strong
         font: 700 15px/24px $room !important
+        letter-spacing: 0.12em !important
         span
           font: 700 15px/24px $room !important
+          letter-spacing: 0.12em !important
 
     .ecwid-productBrowser-relatedProducts-title
       padding: 30px 0 !important
@@ -269,16 +299,16 @@ html#ecwid_html
     .ecwid-productBrowser-relatedProducts-button + td > div
       height: 250px !important
       &>div
-        width: 295px !important
+        width: 290px !important
         height: 250px !important
         position: relative !important
         display: inline-block !important
         left: auto !important
         top: auto !important
-        margin-right: 8px !important
+        margin-right: 6px !important
         table
           img
-            width: 295px !important
+            width: 290px !important
             height: 250px !important
     .ecwid-productBrowser-relatedProducts-item-bottom
       display: none !important
@@ -305,6 +335,7 @@ html#ecwid_html
           text-transform: uppercase !important
           text-decoration: none !important
           font: 300 13px/15px "Room", Room, Helvetica, Sans, Arial !important
+          letter-spacing: 0.12em !important
           padding-bottom: 10px !important
     .ecwid-productBrowser-cart-itemsTable-cell-price, .ecwid-productBrowser-cart-itemsTable-cell-subtotal
       padding: 14px !important
@@ -315,11 +346,13 @@ html#ecwid_html
       text-transform: uppercase !important
       text-decoration: none !important
       font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+      letter-spacing: 0.12em !important
 
     .ecwid-productBrowser-cart-qtyTextField
       border-radius: 5px !important
       border-color: $lgrey !important
       font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+      letter-spacing: 0.12em !important
 
     .ecwid-productBrowser-cart-hint
       width: 380px !important
@@ -334,30 +367,33 @@ html#ecwid_html
       border-right: none !important
       .gwt-HTML
         font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+        letter-spacing: 0.12em !important
         text-transform: uppercase !important
       .ecwid-fieldEnvelope-around input
         border-radius: 5px !important
         border-color: $lgrey !important
         font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+        letter-spacing: 0.12em !important
         height: 28px !important
 
-
-    button
-      background: none !important
-      padding: 8px 24px !important
-      color: $grey !important
-      border: 1px solid $lgrey !important
-      font: 300 13px/15px "Room", Room, Helvetica, Sans, Arial !important
-      text-transform: uppercase !important
-      height: 32px !important
-      &.ecwid-productBrowser-cart-clearBagButton
-        color: #d05f5f !important
-        border-color: #d05f5f !important
-        margin-top: 30px !important
-      &.ecwid-productBrowser-cart-continueShoppingButton
-        color: $black !important
-        border-color: $black !important
-        margin-top: 30px !important
+    .shop
+      button
+        background: none !important
+        padding: 8px 24px !important
+        color: $grey !important
+        border: 1px solid $lgrey !important
+        font: 300 13px/15px "Room", Room, Helvetica, Sans, Arial !important
+        letter-spacing: 0.12em !important
+        text-transform: uppercase !important
+        height: 32px !important
+        &.ecwid-productBrowser-cart-clearBagButton
+          color: #d05f5f !important
+          border-color: #d05f5f !important
+          margin-top: 30px !important
+        &.ecwid-productBrowser-cart-continueShoppingButton
+          color: $black !important
+          border-color: $black !important
+          margin-top: 30px !important
 
     .ecwid-productBrowser-cart-estimation
       button.gwt-Button
@@ -370,6 +406,7 @@ html#ecwid_html
         text-align: left
         content: "ВАШ ЗАКАЗ" !important
         font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+        letter-spacing: 0.12em !important
         display: table-cell !important
         border-top: 1px solid rgb(196, 196, 196) !important
         border-bottom: 1px solid rgb(196, 196, 196) !important
@@ -392,6 +429,7 @@ html#ecwid_html
 
     .ecwid-productBrowser-cart-subtotalAmount, .ecwid-productBrowser-cart-shippingAmount, .ecwid-productBrowser-cart-taxAmount
       font: 300 19px/21px "Room", Room, Helvetica, Sans, Arial !important
+      letter-spacing: 0.12em !important
       text-transform: uppercase !important
 
 
@@ -401,10 +439,12 @@ html#ecwid_html
       margin: 20px 0 !important
       .ecwid-productBrowser-cart-totalLabel
         font: 700 19px/21px "Room", Room, Helvetica, Sans, Arial !important
+        letter-spacing: 0.12em !important
         color: $grey !important
         text-transform: lowercase !important
       .ecwid-productBrowser-cart-totalAmount
         font: 300 19px/21px "Room", Room, Helvetica, Sans, Arial !important
+        letter-spacing: 0.12em !important
         text-transform: uppercase !important
 
     .ecwid-productBrowser-cart-checkoutButton
@@ -412,6 +452,9 @@ html#ecwid_html
       margin: 0px !important
       position: relative !important
       width: 180px !important
+      transition: background 0.3s ease
+      &:hover
+        background: $grey !important
       &:after
         position: absolute
         top: 7px
@@ -419,6 +462,7 @@ html#ecwid_html
         color: $white
         content: "Оформить заказ"
         font: 700 13px/25px $room !important
+        letter-spacing: 0.12em !important
         text-transform: uppercase
 
     .ecwid-productBrowser-cart-estimation
@@ -435,6 +479,7 @@ html#ecwid_html
     .ecwid-popup-headLabel
       text-align: center !important
       font: 300 21px/26px $room !important
+      letter-spacing: 0.12em !important
       text-transform: uppercase !important
 
     .ecwid-productBrowser-cart-chooseLocationPopup-getQuoteButton
@@ -447,7 +492,14 @@ html#ecwid_html
         span
           color: $black !important
           font: 300 15px/22px $room !important
+          letter-spacing: 0.12em !important
 
+    .ecwid-productBrowser-cart-itemsTable-headerCell
+      font: 300 12px/18px $room !important
+      letter-spacing: 0.12em !important
+      span
+        font: 300 12px/18px $room !important
+        letter-spacing: 0.12em !important
 
     .ecwid-Checkout-blockTitle, .ecwid-Checkout-blockTitle
       display: none !important
@@ -460,6 +512,7 @@ html#ecwid_html
       label
         color: $grey !important
         font: 700 17px/25px $room !important
+        letter-spacing: 0.12em !important
         +up
         margin: 10px 0 5px 0 !important
       .ecwid-note
@@ -469,6 +522,7 @@ html#ecwid_html
         border-radius: 5px !important
         border-color: $lgrey !important
         font: 300 15px/17px "Room", Room, Helvetica, Sans, Arial !important
+        letter-spacing: 0.12em !important
 
     select
       background: #fff !important
@@ -481,6 +535,7 @@ html#ecwid_html body#ecwid_body div.ecwid-AddressForm div.ecwid-fieldWrapper lab
 html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup label.ecwid-fieldLabel, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup-deliveryMethodLabel
   color: $grey !important
   font: 700 17px/25px $room !important
+  letter-spacing: 0.12em !important
   +up
   margin: 10px 0 !important
 
@@ -534,7 +589,8 @@ html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productTop
 
 
 
-
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser
+  padding: 0 !important
 
 
 
