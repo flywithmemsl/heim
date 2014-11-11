@@ -3,8 +3,8 @@
   .content_header
     .container
       h1 Блог
-      -if @article.category.id == 2
-        a.button.open_fullscreen(href="#") фуллскрин
+      / -if @article.category.id == 2
+      /   a.button.open_fullscreen(href="#") фуллскрин
       a.button.goback(href="/blog")
         | Вернуться
       .breadcrumbs
@@ -21,11 +21,16 @@
     .fluid_container
       -unless @article.illustration.blank?
         .illustration(style="background-image: url(#{@article.illustration});")
-  .container(class="#{@category.alias}")
-    -if @article.category.id == 2
-      .slideshow
-        = raw @article.gallery
 
+  -if @article.category.id == 2
+    / .slideshow
+    /   = raw @article.gallery
+    .slideshow-wrapper
+      .slider
+        .scroller
+          = raw @article.gallery
+
+  .container(class="#{@category.alias}")
     -if @article.category.id == 3
       .video
         = raw @article.video_link

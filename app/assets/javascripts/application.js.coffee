@@ -5,6 +5,7 @@
 #= require jquery-fullscreen/jquery.fullscreen-min.js
 #= require chosen-jquery
 #= require gridify
+#= require jquery.nyroModal.custom
 #= require_tree .
 
 
