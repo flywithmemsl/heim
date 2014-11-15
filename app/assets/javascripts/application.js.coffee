@@ -6,11 +6,14 @@
 #= require chosen-jquery
 #= require gridify
 #= require jquery.nyroModal.custom
+#= require perfect-scrollbar
 #= require_tree .
 
 
 
 ready = ->
+
+  $('.blog_post .slider').perfectScrollbar()
 
   if $(".addvklink").length
     $(".addvklink").attr("href", "http://vk.com/share.php?url=#{window.location.href}")
