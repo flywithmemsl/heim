@@ -15,6 +15,11 @@ ready = ->
 
   $('.blog_post .slider').perfectScrollbar()
 
+
+  if navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
+    $(".fullscreen").css("background-size", "auto 100%")
+
+
   if $(".addvklink").length
     $(".addvklink").attr("href", "http://vk.com/share.php?url=#{window.location.href}")
   if $(".addfblink").length
@@ -29,7 +34,7 @@ ready = ->
 
   if $(window).height() > 400
     $(".fullscreen, .fullscreen_promo").css("height", $(window).height())
-    $(".fullscreen h1").css("margin-top", ($(window).height()-190)/2)
+    $(".fullscreen .logo").css("margin-top", ($(window).height()-190)/2)
 
   if $(".scrolldown").length
     $(window).on "scroll", ->

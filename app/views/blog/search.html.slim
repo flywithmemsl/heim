@@ -22,14 +22,16 @@
 -if @results.length > 0
   .container.posts
     - @results.each do |post|
-      .post
-        = link_to "", post_path(post.try(:category).try(:alias), post.alias), class: "absolute"
-        .picture
-          = image_tag post.smallpic_url
-        .info
-          h4
-            = post.category.name
-            | &nbsp;|&nbsp;
-            = post.title
-          p.text = raw post.introtext
+      - unless post.alias.empty?
+        .post
+
+          = link_to "", post_path(post.try(:category).try(:alias), post.try(:alias)), class: "absolute"
+          .picture
+            = image_tag post.smallpic_url
+          .info
+            h4
+              = post.category.name
+              | &nbsp;|&nbsp;
+              = post.title
+            p.text = raw post.introtext
 
