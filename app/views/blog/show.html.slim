@@ -17,23 +17,23 @@
             a(href="/blog/#{@category.alias}") = @category.name
           li
             = raw @article.title
-  -if @article.category.id == 1
-    .fluid_container
-      -unless @article.illustration.blank?
-        .illustration(style="background-image: url(#{@article.illustration});")
+  / -if @article.category.id == 1
+  /   .fluid_container
+  /     -unless @article.illustration.blank?
+  /       .illustration(style="background-image: url(#{@article.illustration});")
 
-  -if @article.category.id == 2
+  / -if @article.category.id == 2
     / .slideshow
     /   = raw @article.gallery
-    .slideshow-wrapper
-      .slider
-        .scroller
-          = raw @article.gallery
+  .slideshow-wrapper
+    .slider
+      .scroller
+        = raw @article.gallery
 
   .container(class="#{@category.alias}")
-    -if @article.category.id == 3
-      .video
-        = raw @article.video_link
+    / -if @article.category.id == 3
+    /   .video
+    /     = raw @article.video_link
 
     .post_header
       h4.date
