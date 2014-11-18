@@ -18,7 +18,7 @@ body
   background-size: cover
   background-attachment: fixed
   .search
-    color: $white
+    color: $dgrey
     position: absolute
     display: inline-block
     right: 25px
@@ -28,7 +28,7 @@ body
     // cursor: pointer
 
     input
-      color: $white
+      color: $dgrey
       background: rgba(255,255,255,0)
       border: 1px solid rgba(255,255,255,0)
       outline: none !important
@@ -218,16 +218,81 @@ body
     padding: 40px 0 20px 0
   .promo_blocks
     .slick-slide
-      height: auto
+      height: 630px
+
+@media only screen and (max-width: 640px)
+  .main
+    .slick-next
+      display: none !important
+    .slick-prev
+      display: none !important
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2 / 3)
+  .main
+    .slick-next
+      display: none !important
+    .slick-prev
+      display: none !important
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71)
+  .main
+    .slick-next
+      display: none !important
+    .slick-prev
+      display: none !important
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+  .main
+    .slick-next
+      display: none !important
+    .slick-prev
+      display: none !important
 
 
 
 
+.promo_blog_block
+  .previews
+    vertical-align: top
+    margin: 0
+    .post
+      vertical-align: top
+      cursor: auto
+  .info
+    opacity: 1 !important
+
+  .button
+    position: relative
+    top: 135px
+    border-color: $white !important
+    background: $white !important
+    color: $dgrey !important
 
 
+.bottom_promo_block
+  height: 300px
+  background-size: cover
+  // background-attachment: fixed
+  .button
+    color: $lgrey
+    border-color: $lgrey
+    position: absolute
+    display: inline-block
+    // text-transform: none
+    // +italic(14px,24px)
+    left: 50%
+    transform: translateX(-50%)
+    -webkit-transform: translateX(-50%)
+    top: 130px
+    padding: 11px 20px
+    padding-top: 13px
 
+.bottom_promo_block+.footer
+  margin-top: 0
 
-
+.promo_blocks
+  .block
+    max-height: 630px
 
 
 

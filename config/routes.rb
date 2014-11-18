@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'shop', to: "shop#index"
 
-  get 'kinfolk', to: "main#static"
+  get 'promo/:alias', to: "main#static"
 
   get 'gallery', to: "gallery#index"
 
@@ -35,6 +35,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'main#index'
 
+
+
+  get '*path' => redirect('/')
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

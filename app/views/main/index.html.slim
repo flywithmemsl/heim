@@ -1,4 +1,4 @@
-.fullscreen
+.fullscreen(style="background-image: url(#{@index.try :fullscreenpic})")
   / img(src="bg1.jpg" id="bg" alt="" style="position: absolute;top: 0;left: 0;min-width: 100%;min-height: 100%;")
   .header
     = render partial: "partials/nav"
@@ -62,7 +62,7 @@
     h2 Магазин / store
     p.centred
       / | Ценность лишь в том, что существует вне времени, что никогда не выйдет из моды и не перестанет быть нужным и качественным.
-      =@index.text3
+      = @index.text3
     .shop_items
       - @items.each do |item|
         .shop_item

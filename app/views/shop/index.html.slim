@@ -10,7 +10,7 @@
           a(href="/") Главная
         li(data-no-turbolink)
           a(href="/shop") Магазин
-
+    - unless @gallery.nil?
     .shop_slideshow
       = raw @gallery
 

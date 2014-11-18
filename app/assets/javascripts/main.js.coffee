@@ -10,11 +10,12 @@ ready = ->
     dots: true
     fade: true
 
-  $(".main .previews").slick
-    arrows: false
-    dots: true
-    slidesToShow: 2
-    slidesToScroll: 2
+  unless $(".promo_blog_block").length
+    $(".main .previews").slick
+      arrows: false
+      dots: true
+      slidesToShow: 2
+      slidesToScroll: 2
 
 
 $(document).ready(ready)

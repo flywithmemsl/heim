@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029091541) do
+ActiveRecord::Schema.define(version: 20141118110748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -181,6 +181,24 @@ ActiveRecord::Schema.define(version: 20141029091541) do
     t.text     "text4"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "header1"
+    t.string   "header2"
+    t.string   "header3"
+    t.string   "fullscreenpic"
+    t.string   "name"
+    t.text     "text5"
+    t.string   "alias"
+    t.string   "small_picture"
+    t.string   "left_picture"
+    t.string   "right_picture"
+    t.string   "left_link"
+    t.string   "left_link_text"
+    t.string   "right_block_tittle"
+    t.string   "right_block_text"
+    t.string   "bottom_picture"
+    t.string   "right_block_link"
+    t.string   "bottom_link"
+    t.string   "bottom_text"
   end
 
   create_table "partners", force: true do |t|
@@ -198,7 +216,10 @@ ActiveRecord::Schema.define(version: 20141029091541) do
     t.text     "block_html"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "index_page_id"
   end
+
+  add_index "promo_blocks", ["index_page_id"], name: "index_promo_blocks_on_index_page_id", using: :btree
 
   create_table "shop_galleries", force: true do |t|
     t.text     "gallery"

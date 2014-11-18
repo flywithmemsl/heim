@@ -1,5 +1,5 @@
 class ShopController < ApplicationController
   def index
-    @gallery = ShopGallery.first.gallery
+    @gallery = ShopGallery.first.try :gallery
   end
 end

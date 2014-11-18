@@ -58,9 +58,9 @@ html
             a(href="/contacts") Контакты
         .toggle_magazines
           | издания :
-          a(href="/kinfolk")
-            | Kinfolk
-
+          - magazines.each do |zine|
+            a(href="promo/#{zine.try :alias}")
+              = zine.try :name
 
         .search
           form(action=search_post_path)

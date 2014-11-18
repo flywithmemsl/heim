@@ -8,6 +8,7 @@ class MainController < ApplicationController
   end
 
   def static
+    @page = IndexPage.find_by(alias: params[:alias])
   end
 
 end
