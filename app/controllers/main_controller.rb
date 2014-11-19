@@ -3,7 +3,7 @@ class MainController < ApplicationController
     @posts = BlogPost.all.limit(6)
     @index = IndexPage.first
     @items = ShopItem.all
-    @blocks = PromoBlock.all
+    @blocks = @index.promo_blocks
 
   end
 
