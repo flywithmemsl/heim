@@ -35,7 +35,7 @@
 .slider.block
   .container
     .promo_blocks
-      -@page.promo_blocks.each do |block|
+      -@page.promo_blocks.sort_by {|e| e.id }.each do |block|
         .block
           = raw block.block_html
 .mission.block
