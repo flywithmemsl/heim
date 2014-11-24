@@ -18,6 +18,7 @@ ready = ->
 
   if navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
     $(".fullscreen").css("background-size", "auto 100%")
+    $(".fullscreen").css("background-attachment", "scroll")
 
 
   if $(".addvklink").length
