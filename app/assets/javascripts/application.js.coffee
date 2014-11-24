@@ -34,7 +34,7 @@ ready = ->
 
   if $(window).height() > 400
     $(".fullscreen, .fullscreen_promo").css("height", $(window).height())
-    $(".fullscreen .logo").css("margin-top", ($(window).height()-190)/2)
+    $(".fullscreen .logo").css("margin-top", ($(window).height()-190)/4)
 
   if $(".scrolldown").length
     $(window).on "scroll", ->
