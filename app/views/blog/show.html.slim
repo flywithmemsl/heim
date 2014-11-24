@@ -41,7 +41,6 @@
         - unless @article.date == nil
           span = l @article.date, format: :long
       h2.theme
-        | Тема |&nbsp;
         span = raw @article.title
       .sharing
         p.share

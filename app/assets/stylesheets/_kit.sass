@@ -107,7 +107,8 @@ label
     color: #4d4d4d
     padding-left: 16px
     cursor: pointer
-    text-transform: none
+    text-transform: uppercase
+
     &:before
       position: absolute
       top: 4px
@@ -271,11 +272,14 @@ p.centred
     height: 215px
   .toggle_magazines
     padding: 0
+    color: $white !important
     a
-      color: $white
-      +normal(10px,10px)
+      color: $white !important
+      +normal(11px,11px)
       margin-left: 8px
       padding-bottom: 1px
+      text-transform: none !important
+
       &:hover
         border-bottom: 1px solid $white
     &:before
