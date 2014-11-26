@@ -27,7 +27,7 @@
     /   = raw @article.gallery
   .slideshow-wrapper
     .slider
-      .scroller
+      .scroller(data-no-turbolink)
         = raw @article.gallery
 
   .container(class="#{@category.alias}")
