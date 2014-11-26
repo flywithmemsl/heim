@@ -36,6 +36,7 @@ ActiveAdmin.register BlogPost do
       f.input :smallpic
       f.input :illustration
 
+
       f.input :description
       f.input :introtext
       f.input :text, as: :wysihtml5, commands: :all , blocks: [:h3, :h4, :h5, :h6, :p]
