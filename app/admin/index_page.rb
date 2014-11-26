@@ -21,7 +21,7 @@ ActiveAdmin.register IndexPage do
   #   permitted
   # end
 
-  permit_params :header, :alias, :slogan, :text1, :text2, :text3, :text4, :text5, :header1, :header2, :header3, :name, :small_picture, :left_picture, :right_picture, :left_link, :left_link_text, :right_block_tittle, :right_block_text, :bottom_picture, :fullscreenpic, :right_block_link, :bottom_link, :bottom_text
+  permit_params :header, :alias, :slogan, :text1, :text2, :text3, :text4, :text5, :header1, :header2, :header3, :name, :small_picture, :left_picture, :right_picture, :left_link, :left_link_text, :right_block_tittle, :right_block_text, :bottom_picture, :fullscreenpic, :right_block_link, :bottom_link, :bottom_text, :left_block_tittle, :left_block_text, :right_link_text
 
 
 
@@ -57,11 +57,20 @@ ActiveAdmin.register IndexPage do
 
       f.input :left_link
       f.input :left_link_text
+      f.input :left_block_tittle
+      f.input :left_block_text
       f.input :left_picture
+
+
+
+
+
+      f.input :right_block_link
+      f.input :right_link_text
       f.input :right_block_tittle
       f.input :right_block_text
       f.input :right_picture
-      f.input :right_block_link
+
 
       f.input :bottom_text
       f.input :bottom_picture

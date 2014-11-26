@@ -54,8 +54,13 @@
     .previews
       .post(style="background-image: url(#{@page.try :left_picture})" data-no-turbolink)
         a.button(href="#{@page.try :left_link}") = @page.try :left_link_text
+        .info
+          a.absolute(href="#{@page.try :left_link}")
+          .title = @page.try :left_block_tittle
+          .introtext = @page.try :left_block_text
 
       .post(style="background-image: url(#{@page.try :right_picture})")
+        a.button(href="#{@page.try :right_block_link}") = @page.try :right_link_text
         .info
           a.absolute(href="#{@page.try :right_block_link}")
           .title = @page.try :right_block_tittle

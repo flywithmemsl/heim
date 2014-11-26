@@ -256,11 +256,17 @@ body
   .previews
     vertical-align: top
     margin: 0
+    a.absolute
+      transition: opacity 0.3s ease
+      -webkit-transition: opacity 0.3s ease
+    &:hover
+      a.absolute
+        opacity: 0
     .post
       vertical-align: top
       cursor: auto
-  .info
-    opacity: 1 !important
+    .info
+      top: 0
 
   .button
     position: relative
