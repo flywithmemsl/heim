@@ -13,7 +13,7 @@ class BlogPost < ActiveRecord::Base
       .where(category_id: self.category_id)
       .where("taglist like ?", "%#{tag}%")
       .where.not(id: self.id)
-      .order(:date)
+      .order(date: :desc)
       .limit(3)
     else
       @posts = []
