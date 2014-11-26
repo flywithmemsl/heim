@@ -36,8 +36,8 @@ ActiveAdmin.register BlogPost do
       f.input :smallpic
       f.input :illustration
 
-      f.input :description, as: :wysihtml5, commands: [ :bold, :italic, :underline, :link ], blocks: [:p]
-      f.input :introtext, as: :wysihtml5, commands: [ :bold, :italic, :underline, :link ], blocks: [:p]
+      f.input :description
+      f.input :introtext
       f.input :text, as: :wysihtml5, commands: :all , blocks: [:h3, :h4, :h5, :h6, :p]
       f.input :gallery, as: :wysihtml5, commands: [ :image, :video, :source ], blocks: :all
       f.input :video_link
