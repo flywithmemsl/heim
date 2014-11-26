@@ -4,7 +4,7 @@ ActiveAdmin.register ShopItem do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :category, :price, :image, :link
+  permit_params :name, :category, :price, :image, :link, :sort_index
   #
   # or
   #
@@ -23,6 +23,7 @@ ActiveAdmin.register ShopItem do
 
       f.input :image
       f.input :link
+      f.input :sort_index
 
     end
 

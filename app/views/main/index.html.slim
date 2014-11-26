@@ -108,7 +108,7 @@
             .title
               = post.title
             .introtext
-              = truncate(post.introtext, :length => 170, :separator => ' ')
+              = truncate(post.try(:short_text), :length => 170, :separator => ' ')
 
 
     a.button(href="/blog" style="margin-top: 20px")

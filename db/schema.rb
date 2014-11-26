@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118110748) do
+ActiveRecord::Schema.define(version: 20141126151312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20141118110748) do
     t.integer  "event_city_id"
     t.string   "taglist"
     t.boolean  "delta",         default: true, null: false
+    t.string   "short_text"
   end
 
   add_index "blog_posts", ["event_city_id"], name: "index_blog_posts_on_event_city_id", using: :btree
@@ -235,6 +236,7 @@ ActiveRecord::Schema.define(version: 20141118110748) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
+    t.integer  "sort_index"
   end
 
   create_table "teammates", force: true do |t|

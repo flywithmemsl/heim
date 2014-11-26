@@ -12,7 +12,7 @@ ActiveAdmin.register BlogPost do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :title, :alias, :gallery, :video_link, :description, :introtext, :text, :date, :smallpic, :illustration, :category_id, :event, :event_city_id, :taglist
+  permit_params :title, :alias, :gallery, :video_link, :description, :introtext, :text, :date, :smallpic, :illustration, :category_id, :event, :event_city_id, :taglist, :short_text
   #
   # or
   #
@@ -37,6 +37,7 @@ ActiveAdmin.register BlogPost do
       f.input :illustration
 
 
+      f.input :short_text
       f.input :description
       f.input :introtext
       f.input :text, as: :wysihtml5, commands: :all , blocks: [:h3, :h4, :h5, :h6, :p]
