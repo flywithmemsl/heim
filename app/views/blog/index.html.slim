@@ -29,7 +29,7 @@
   .posts
     .container
       - @list.each do |post|
-        .post
+        .post(data-no-turbolink)
           / - post_link_param = post.try(:category).try(:alias) || post.id
           - unless post.alias.empty?
             - post_link = post.alias

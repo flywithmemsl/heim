@@ -66,7 +66,7 @@
           h4 похожие посты
         .container.posts
           - @article.similars.each do |post|
-            .post
+            .post(data-no-turbolink)
               - unless post.alias.empty?
                 - post_link = post.alias
               -else

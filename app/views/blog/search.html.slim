@@ -23,7 +23,7 @@
   .container.posts
     - @results.each do |post|
       - unless post.alias.empty?
-        .post
+        .post(data-no-turbolink)
 
           = link_to "", post_path(post.try(:category).try(:alias), post.try(:alias)), class: "absolute"
           .picture

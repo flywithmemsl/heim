@@ -30,7 +30,7 @@
   .posts
     .container
       - @list.each do |post|
-        .post
+        .post(data-no-turbolink)
           - unless post.alias.empty?
             - post_link = post.alias
           -else
@@ -43,7 +43,7 @@
               = post.category.name
               | &nbsp;|&nbsp;
               = post.title
-            p.text = raw post.introtext
+            p.text = raw post.try(:short_text)
 
 
 

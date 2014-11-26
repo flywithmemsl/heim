@@ -93,7 +93,7 @@
     .previews
       -@posts.each do |post|
 
-        .post(style="background-image: url(#{post.illustration})")
+        .post(style="background-image: url(#{post.illustration})" data-no-turbolink)
           - unless post.alias.empty?
             - post_link = post.alias
           -else
