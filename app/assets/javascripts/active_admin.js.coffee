@@ -23,8 +23,8 @@ $ ->
       $("#blog_post_taglist_input").hide()
       # $("#blog_post_gallery_input").show()
       $("#blog_post_video_link_input").hide()
-      $("#blog_post_event_input").hide()
-      $("#blog_post_event_city_input").hide()
+      $("#blog_post_event_input").show()
+      $("#blog_post_event_city_input").show()
 
     else
       if $category.find("[value=3]").prop("selected")
@@ -66,8 +66,8 @@ $ ->
         $("#blog_post_taglist_input").hide()
         # $("#blog_post_gallery_input").show()
         $("#blog_post_video_link_input").hide()
-        $("#blog_post_event_input").hide()
-        $("#blog_post_event_city_input").hide()
+        $("#blog_post_event_input").show()
+        $("#blog_post_event_city_input").show()
 
       else
         if $category.find("[value=3]").prop("selected")
