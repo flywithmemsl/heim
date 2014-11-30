@@ -17,8 +17,8 @@ ready = ->
 
 
   if navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
-    $(".fullscreen").css("background-size", "auto 100%")
-    $(".fullscreen").css("background-attachment", "scroll")
+    $(".fullscreen, .fullscreen_promo").css("background-size", "auto 100%")
+    $(".fullscreen, .fullscreen_promo").css("background-attachment", "scroll")
 
 
   if $(".addvklink").length
@@ -49,6 +49,12 @@ ready = ->
       $(this).removeClass("filled")
 
   $(".toggle_magazines").click -> $(".magazines").slideToggle()
+
+
+  margin = $(window).height() - ($(".footer").offset().top + $(".footer").height())
+
+  if margin > 0
+    $(".footer").css("margin-top", "+=#{margin+25}px")
 
 
 $(document).ready(ready)

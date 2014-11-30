@@ -14,7 +14,11 @@ Rails.application.routes.draw do
 
   get 'blog/(:category)', to: "blog#index", as: :posts, constraints: { category: /(articles|galleries|videos)/ }
 
+  get 'shop/(:category)', to: "shop#index", as: :shop_items, constraints: { category: /(kinfolk|heim|sale)/ }
+
   get 'blog/:category/:alias', to: "blog#show", as: :post
+
+  get 'shop/index', to: "shop#show", as: :shop_item
 
   get 'event/past', to: "event#past", as: :past
 

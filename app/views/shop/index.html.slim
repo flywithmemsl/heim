@@ -4,22 +4,54 @@
 
   .container
     h1 Магазин
+
+    ul.types
+      li
+        a(href="/shop")
+          | все
+      li
+        a(href="/shop/kinfolk")
+          | kinfolk
+      li
+        a(href="/shop/heim")
+          | heim
+      li
+        a(href="/shop/sale")
+          | sale
+
     .breadcrumbs
       ul
         li
           a(href="/") Главная
         li(data-no-turbolink)
           a(href="/shop") Магазин
-    - unless @gallery.nil?
-      .shop_slideshow
-        = raw @gallery
+    / - unless @gallery.nil?
+    /   .shop_slideshow
+    /     = raw @gallery
 
-.shop
-  .container
-    #my-store-2214324
-      script(type="text/javascript" src="http://app.ecwid.com/script.js?2214324" charset="utf-8")
-      script(type="text/javascript")
-        | xProductBrowser("categoriesPerRow=3","views=grid(3,3) list(10) table(20)","categoryView=grid","searchView=list","id=my-store-2214324");
+.container
+  .shop_items
+    - @items.each do |item|
+      .shop_item
+        a.absolute(href="#{item.try( :link)}")
+        img(src="#{item.try( :image)}")
+        .info
+          p.name =item.try( :name)
+          p.type =item.try( :category)
+          p.price =item.try( :price)
+
+
+
+
+/ .shop
+/   .container
+/     #my-store-2214324
+/       script(type="text/javascript" src="http://app.ecwid.com/script.js?2214324" charset="utf-8")
+/       script(type="text/javascript")
+/         | xProductBrowser("categoriesPerRow=3","views=grid(3,3) list(10) table(20)","categoryView=grid","searchView=list","id=my-store-2214324");
+
+
+
     / #my-store-5841251
     / div
     /   script(type="text/javascript" src="http://app.ecwid.com/script.js?5841251" charset="utf-8")

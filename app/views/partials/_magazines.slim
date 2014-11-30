@@ -1,6 +1,6 @@
 - magazines.each do |zine|
   .zine
-    a.absolute(href="promo/#{zine.try :alias}")
+    a.absolute(href="/promo/#{zine.try :alias}")
       | &nbsp;
     img(src="#{zine.try :small_picture}")
     .name
