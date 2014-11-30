@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126152811) do
+ActiveRecord::Schema.define(version: 20141130191651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -225,6 +225,12 @@ ActiveRecord::Schema.define(version: 20141126152811) do
 
   add_index "promo_blocks", ["index_page_id"], name: "index_promo_blocks_on_index_page_id", using: :btree
 
+  create_table "shop_categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "shop_galleries", force: true do |t|
     t.text     "gallery"
     t.datetime "created_at"
@@ -240,7 +246,10 @@ ActiveRecord::Schema.define(version: 20141126152811) do
     t.datetime "updated_at"
     t.string   "link"
     t.integer  "sort_index"
+    t.integer  "shop_category_id"
   end
+
+  add_index "shop_items", ["shop_category_id"], name: "index_shop_items_on_shop_category_id", using: :btree
 
   create_table "teammates", force: true do |t|
     t.string   "name"
