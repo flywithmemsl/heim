@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130193035) do
+ActiveRecord::Schema.define(version: 20141130201215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -248,6 +248,7 @@ ActiveRecord::Schema.define(version: 20141130193035) do
     t.string   "link"
     t.integer  "sort_index"
     t.integer  "shop_category_id"
+    t.boolean  "show_on_main"
   end
 
   add_index "shop_items", ["shop_category_id"], name: "index_shop_items_on_shop_category_id", using: :btree
