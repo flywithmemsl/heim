@@ -19,7 +19,7 @@ class BlogController < ApplicationController
     @q = params[:q].to_s
     @results = BlogPost.none.page(1)
     if @q != ''
-      @results = BlogPost.search "#{@q}|*#{@q}*", page: params[:page], per_page: 20
+      @results = BlogPost.search "#{@q}|*#{@q}*", page: params[:page], per_page: 20, :order => 'date DESC'
     end
   end
 

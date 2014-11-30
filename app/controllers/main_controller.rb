@@ -2,7 +2,7 @@ class MainController < ApplicationController
   def index
     @posts = BlogPost.all.order(id: :desc).limit(6)
     @index = IndexPage.first
-    @items = ShopItem.find_by(show_on_main: true).order(sort_index: :desc)
+    @items = ShopItem.where(show_on_main: true).order(sort_index: :desc)
     @blocks = @index.promo_blocks.sort_by {|e| e.id }
 
   end

@@ -10,7 +10,7 @@ class ShopController < ApplicationController
   end
 
   def show
-    @category = ShopCategory.find_by(alias: params[:category])
+    # @category = ShopCategory.find_by(alias: params[:category])
 
   end
 
