@@ -34,4 +34,27 @@
               | &nbsp;|&nbsp;
               = post.title
             / p.text = raw post.try(:short_text)
+.container.search_result
+  -if @shop_results.length > 0
+    h2 Позиции в магазине (#{@shop_results.length})
+
+-if @shop_results.length > 0
+  .container.posts
+    - @shop_results.each do |item|
+      .post(data-no-turbolink)
+
+        a.absolute(href="#{item.try( :link)}")
+        .picture
+          img(src="#{item.try( :image)}")
+        .info
+          h4 =item.try( :name)
+
+      / .shop_item
+      /   a.absolute(href="#{item.try( :link)}")
+      /   img(src="#{item.try( :image)}")
+      /   .info
+      /     p.name =item.try( :name)
+      /     p.type =item.try( :category)
+      /     p.price =item.try( :price)
+      /       / p.text = raw post.try(:short_text)
 

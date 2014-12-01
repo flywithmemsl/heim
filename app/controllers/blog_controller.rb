@@ -20,6 +20,7 @@ class BlogController < ApplicationController
     @results = BlogPost.none.page(1)
     if @q != ''
       @results = BlogPost.search "#{@q}|*#{@q}*", page: params[:page], per_page: 20, :order => 'date DESC'
+      @shop_results = ShopItem.search "#{@q}|*#{@q}*", page: params[:page], per_page: 20, :order => 'sort_index DESC'
     end
   end
 
