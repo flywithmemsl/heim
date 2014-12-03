@@ -17,7 +17,7 @@ ready = ->
 
 
   if navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
-    $(".fullscreen, .fullscreen_promo").css("background-size", "auto 100%")
+    # $(".fullscreen, .fullscreen_promo").css("background-size", "auto 100%")
     $(".fullscreen, .fullscreen_promo").css("background-attachment", "scroll")
 
 
