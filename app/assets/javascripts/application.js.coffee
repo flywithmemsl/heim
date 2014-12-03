@@ -9,6 +9,11 @@
 #= require perfect-scrollbar
 #= require_tree .
 
+timeOut = 0
+resize = () ->
+   if $(window).height() > 400
+      $(".fullscreen, .fullscreen_promo").css("height", $(window).height())
+      $(".fullscreen .logo").css("margin-top", "0px")
 
 
 ready = ->
@@ -33,9 +38,7 @@ ready = ->
       if $(link).parent().prop("tagName") is "LI"
         $(link).parent().addClass("active")
 
-  if $(window).height() > 400
-    $(".fullscreen, .fullscreen_promo").css("height", $(window).height())
-    $(".fullscreen .logo").css("margin-top", "0px")
+  resize()
       # ($(window).height()-190)/2)
 
   if $(".scrolldown").length
@@ -55,6 +58,12 @@ ready = ->
 
   if margin > 0
     $(".footer").css("margin-top", "+=#{margin+25}px")
+
+  $(window).on 'resize', ->
+    clearTimeout(timeOut)
+    timeOut = setTimeout ->
+      do resize
+    ,200
 
 
 $(document).ready(ready)
