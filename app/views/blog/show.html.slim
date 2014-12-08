@@ -45,12 +45,12 @@
       .sharing
         p.share
           | Поделиться постом:<br/>
-          a(href="#" target="_blank" class="addvklink") Вконтакте
+          a(href="#" target="_blank" class="addvklink") ВКонтакте
           | &nbsp;/&nbsp;
           a(href="#" target="_blank" class="addfblink") Facebook
         -if @article.category.id == 1
           p.tags
-            | Тэги:<br/>
+            | Теги:<br/>
             span.taglist
               =@article.taglist
 
