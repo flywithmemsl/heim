@@ -1,7 +1,7 @@
 class ShopController < ApplicationController
 
   def index
-    # @gallery = ShopGallery.first.try :gallery
+    @gallery = ShopGallery.first.try :gallery
     category = params[:category]
     if category == "sale"
       @items = ShopItem.where(sale: :true).try(:order, sort_index: :desc)
