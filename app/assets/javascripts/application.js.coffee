@@ -32,11 +32,13 @@ ready = ->
     $(".addfblink").attr("href", "http://www.facebook.com/sharer/sharer.php?u=#{window.location.href}")
 
 
+
   for link in $("a")
     if $(link).attr("href") is window.location.pathname
       $(link).addClass("active")
       if $(link).parent().prop("tagName") is "LI"
         $(link).parent().addClass("active")
+
 
   resize()
       # ($(window).height()-190)/2)
