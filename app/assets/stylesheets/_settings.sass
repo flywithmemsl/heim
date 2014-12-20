@@ -1,5 +1,7 @@
 @import "bourbon"
 @import "neat"
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,cyrillic)
+
 
 @include reset-all
 
@@ -15,16 +17,17 @@ $sandy:   #f5f0e9
 
 $asset-pipeline: true
 
-@include font-face(Maiola, 'MaiolaPro', 400, normal)
-@include font-face(Maiola, 'MaiolaPro-Italic', 300, italic)
-@include font-face(Maiola, 'MaiolaPro-BoldItalic', 700, italic)
+// @include font-face(Maiola, 'MaiolaPro', 400, normal)
+// @include font-face(Maiola, 'MaiolaPro-Italic', 300, italic)
+// @include font-face(Maiola, 'MaiolaPro-BoldItalic', 700, italic)
+
 
 @include font-face(Room, 'Room-Bold', 700, normal)
 @include font-face(Room, 'Room-Thin', 300, normal)
 @include font-face(Ionicons, 'ionicons', 400, normal)
 
-
-$maiola: "Maiola", Maiola, "PT Serif", "Times New Roman", Arial
+// "Maiola", Maiola,
+$maiola: "PT Serif", "Times New Roman", Arial
 $room: "Room", Room, Helvetica, Sans, Arial
 
 
