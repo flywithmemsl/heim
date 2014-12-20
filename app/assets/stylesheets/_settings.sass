@@ -41,11 +41,12 @@ $room: "Room", Room, Helvetica, Sans, Arial
   -webkit-font-smoothing: antialiased
 
 @mixin normal($font-size: 14px, $line-height: 22px)
-  font: 400 #{$font-size}/#{$line-height} $maiola
+
+  font: 400 #{$font-size - 1px}/#{$line-height} $maiola
   -webkit-font-smoothing: antialiased
 
 @mixin italic($font-size: 14px, $line-height: 22px)
-  font: 300 italic #{$font-size}/#{$line-height} $maiola
+  font: 400 normal #{$font-size - 1px}/#{$line-height} $maiola
   -webkit-font-smoothing: antialiased
 
 @mixin bolditalic($font-size: 14px, $line-height: 22px)
