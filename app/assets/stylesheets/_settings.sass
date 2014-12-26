@@ -17,9 +17,9 @@ $sandy:   #f5f0e9
 
 $asset-pipeline: true
 
-// @include font-face(Maiola, 'MaiolaPro', 400, normal)
-// @include font-face(Maiola, 'MaiolaPro-Italic', 300, italic)
-// @include font-face(Maiola, 'MaiolaPro-BoldItalic', 700, italic)
+@include font-face(permian, 'permianseriftypeface', 400, normal)
+@include font-face(permian, 'permianseriftypeface-italic', 300, italic)
+@include font-face(permian, 'permianseriftypeface-bold', 700, normal)
 
 
 @include font-face(Room, 'Room-Bold', 700, normal)
@@ -27,7 +27,7 @@ $asset-pipeline: true
 @include font-face(Ionicons, 'ionicons', 400, normal)
 
 // "Maiola", Maiola,
-$maiola: "PT Serif", "Times New Roman", Arial
+$maiola: permian, "permian", "PT Serif", "Times New Roman", Arial
 $room: "Room", Room, Helvetica, Sans, Arial
 
 
@@ -46,11 +46,12 @@ $room: "Room", Room, Helvetica, Sans, Arial
   -webkit-font-smoothing: antialiased
 
 @mixin italic($font-size: 14px, $line-height: 22px)
-  font: 400 normal #{$font-size - 1px}/#{$line-height} $maiola
+  font: 400 italic #{$font-size - 2px}/#{$line-height - 1px} $maiola
   -webkit-font-smoothing: antialiased
+  letter-spacing: initial
 
 @mixin bolditalic($font-size: 14px, $line-height: 22px)
-  font: 700 italic #{$font-size}/#{$line-height} $maiola
+  font: 700 normal #{$font-size}/#{$line-height} $maiola
   -webkit-font-smoothing: antialiased
 
 @mixin cf
