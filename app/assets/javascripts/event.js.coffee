@@ -5,6 +5,7 @@ ready = ->
 
   $(".chosen-select").chosen
     disable_search: true
+    width: "100%"
 
 
 
