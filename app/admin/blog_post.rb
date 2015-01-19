@@ -47,7 +47,7 @@ ActiveAdmin.register BlogPost do
       f.input :date
 
       f.input :taglist
-      f.input :publish
+      f.input :publish, label: "Hide"
     end
 
     f.actions

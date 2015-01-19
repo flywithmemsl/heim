@@ -10,6 +10,7 @@ class BlogPost < ActiveRecord::Base
     if self.taglist != nil
       tag = self.taglist.split(", ").first
       @posts = BlogPost
+      .where(publish: :false)
       .where(category_id: self.category_id)
       .where("taglist like ?", "%#{tag}%")
       .where.not(id: self.id)

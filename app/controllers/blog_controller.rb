@@ -2,7 +2,7 @@ class BlogController < ApplicationController
   def index
 
     @category = Category.find_by(alias: params[:category])
-    @list = @category.try(:blog_posts).try(:order, date: :desc) || BlogPost.all.try(:order, date: :desc)
+    @list = @category.try(:blog_posts).where(publish: :false).try(:order, date: :desc) || BlogPost.all.where(publish: :false).try(:order, date: :desc)
 
   end
 
