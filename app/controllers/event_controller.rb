@@ -8,9 +8,9 @@ class EventController < ApplicationController
   def past
     @q = params[:q].to_s
     @city = EventCity.all
-    @list = BlogPost.all.where(publish: :false).where(category_id: 2).where(event: true)
+    @list = BlogPost.all.try(:where, publish: :false).where(category_id: 2).where(event: true)
     if @q != ''
-      @list = BlogPost.all.where(publish: :false).where(event_city_id: @q).where(category_id: 2).where(event: true)
+      @list = BlogPost.all.try(:where, publish: :false).where(event_city_id: @q).where(category_id: 2).where(event: true)
     end
   end
 

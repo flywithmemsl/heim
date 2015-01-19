@@ -16,6 +16,7 @@ class ShopController < ApplicationController
     # else
 
 
+
   end
 
   def show
