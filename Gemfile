@@ -74,8 +74,8 @@ gem 'rollbar'
 gem 'figaro'
 gem 'newrelic_rpm'
 
-# gem 'meta-tags'
 
+gem 'meta-tags'
 gem 'bourbon'
 gem 'neat'
 gem 'rails-assets-jquery'
