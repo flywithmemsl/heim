@@ -18,6 +18,12 @@ resize = () ->
 
 ready = ->
 
+
+  meta = document.createElement('meta')
+  meta.property = "og:image"
+  meta.content = $(".header+div+div img").first().attr("src")
+  document.getElementsByTagName('head')[0].appendChild(meta)
+
   $('.blog_post .slider').perfectScrollbar()
 
 
