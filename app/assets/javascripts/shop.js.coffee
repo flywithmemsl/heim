@@ -2,23 +2,66 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+class Bag
+
+  init: =>
+    $(document).click =>
+      if Ecwid?
+        Ecwid.Cart.get (cart) =>
+          localStorage.setItem("mybag", cart.productsQuantity)
+
+      @updateBag()
+    @updateBag()
+
+
+
+  ending = (n) ->
+    mod10  = n % 10
+    mod100 = n % 100
+    if ( mod10 is 1 and ((n % 100)!= 11) )
+      return ""
+    if ( mod10 in [ 2, 3, 4 ] and mod100 not in [ 12, 13, 14 ] )
+      return "а"
+    if ( mod10 in [ 0, 5, 6, 7, 8, 9 ] or mod100 in [ 11, 12, 13, 14 ] )
+      return "ов"
+    return "а"
+
+  updateBag: ->
+    count = +localStorage.getItem("mybag")
+    if count is 0
+      $(".header .fluid_container .bag a").text("корзина пуста")
+    else
+      string = "Корзина (#{count} товар#{ending(count)})"
+      $(".header .fluid_container .bag a").text(string)
+
+
+
+
+
 
 
 
 ready = ->
-  if $(".shop_slideshow").length
-    $(".shop_slideshow img").wrap("<div class='slide'></div>")
-    $(".shop_slideshow").slick
-      arrows: false
-      fade: true
-      dots: true
+  if localStorage?
+    if window.location.pathname.indexOf("shop") != -1
+      $(".header .fluid_container").append("<div class='bag'><a data-no-turbolink href='/shop/index#!/~/cart'></a></div>")
+      try
+        Ecwid.OnAPILoaded.add ->
+          Ecwid.OnPageLoad.add ->
+            unless window.bag
+              window.bag = new Bag()
+              window.bag.init()
+          Ecwid.OnCartChanged.add (cart) ->
+            localStorage.setItem("mybag", cart.productsQuantity)
+            window.bag.updateBag()
 
-    Ecwid.OnAPILoaded.add ->
-      Ecwid.OnPageLoad.add ->
-        if ((window.location.hash == "") or (window.location.hash[3] == "c"))
-          $(".shop_slideshow").slideDown()
-        else
-          $(".shop_slideshow").slideUp()
+      catch
+        console.log "Ecwid disabled"
+        unless window.bag
+          window.bag = new Bag()
+          window.bag.init()
+    else
+      $(".header .fluid_container .bag").remove()
 
 
 
