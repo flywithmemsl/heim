@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '~> 4.2.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -20,7 +20,7 @@ gem 'slick_rails'
 gem 'rails-assets-jquery-fullscreen'
 gem 'chosen-rails'
 
-gem 'mysql2', '0.3.13'
+gem 'mysql2', '~> 0.3.13'
 gem 'thinking-sphinx', '3.1.1'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
