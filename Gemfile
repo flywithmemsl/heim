@@ -80,6 +80,7 @@ gem 'meta-tags'
 gem 'bourbon'
 gem 'neat'
 gem 'rails-assets-jquery'
+gem 'yaml_db'
 
 
 
