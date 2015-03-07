@@ -1,27 +1,29 @@
 Rails.application.routes.draw do
 
+  get 'workshop/index'
+
+  get 'workshop/show'
+
   # get 'shop', to: "shop#index"
-  get 'shop', to: redirect('/shop/kinfolk')
+  get 'shop',                  to: redirect('/shop/kinfolk')
 
-  get 'promo/:alias', to: "main#static"
+  get 'promo/:alias',          to: "main#static"
 
-  get 'gallery', to: "gallery#index"
+  get 'gallery',               to: "gallery#index"
+  get 'gallery/:id',           to: "gallery#show",   as: :gallery_post
 
-  get 'gallery/:id', to: "gallery#show", as: :gallery_post
+  get 'event',                 to: "event#index"
+  get 'event/past',            to: "event#past",     as: :past
 
-  get 'event', to: "event#index"
+  get 'blog/search',           to: "blog#search",    as: :search_post
+  get 'blog/(:category)',      to: "blog#index",     as: :posts, constraints: { category: /(articles|galleries|videos)/ }
+  get 'blog/:category/:alias', to: "blog#show",      as: :post
 
-  get 'blog/search', to: "blog#search", as: :search_post
+  get 'shop/(:category)',      to: "shop#index",     as: :shop_items, constraints: { category: /(kinfolk|heim|sale)/ }
+  get 'shop/index',            to: "shop#show",      as: :shop_item
 
-  get 'blog/(:category)', to: "blog#index", as: :posts, constraints: { category: /(articles|galleries|videos)/ }
 
-  get 'shop/(:category)', to: "shop#index", as: :shop_items, constraints: { category: /(kinfolk|heim|sale)/ }
-
-  get 'blog/:category/:alias', to: "blog#show", as: :post
-
-  get 'shop/index', to: "shop#show", as: :shop_item
-
-  get 'event/past', to: "event#past", as: :past
+  get 'workshop',              to: "workshop#index", as: :workshop
 
 
   resources :about, only: [:index]
