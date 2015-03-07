@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150126150425) do
+ActiveRecord::Schema.define(version: 20150307161108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -275,5 +275,22 @@ ActiveRecord::Schema.define(version: 20150126150425) do
   end
 
   add_index "teammates", ["about_id"], name: "index_teammates_on_about_id", using: :btree
+
+  create_table "workshops", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.string   "city"
+    t.string   "place"
+    t.string   "place_link"
+    t.string   "buy_link"
+    t.string   "price"
+    t.string   "masters"
+    t.string   "vk_link"
+    t.string   "fb_link"
+    t.string   "illustration"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "description"
+  end
 
 end
