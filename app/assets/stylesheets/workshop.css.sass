@@ -1,0 +1,60 @@
+.workshop_grid
+  &:after
+    display: table
+    content: ""
+    clear: both
+  .left_column
+    float: left
+    width: 300px
+  .right_colum
+    +normal(14px, 22px)
+    float: right
+    width: 600px
+    text-align: left
+
+
+.workshop_item
+  margin-bottom: 70px
+  
+.workshop_text
+  @extend .workshop_grid
+  padding-top: 30px
+
+  .left_column
+    h4
+      padding-bottom: 16px
+    p
+      margin-top: 0px
+      margin-bottom: 32px
+      +italic(16px,24px)
+
+  .right_colum
+    padding-right: 30px
+    p.history_text
+      +italic(16px, 24px)
+    p
+      text-align: left
+      padding: 0px 0px 26px 0px
+
+  .highlighted
+    background: none !important
+    color: $grey !important
+
+.workshop_header
+  @extend .workshop_grid
+
+  // Не нашел переменную с шириной контейнера. Если есть, замени 920
+  // Почему тут не падинги? ЕТА Потому что нижний бордер должен ровнятся по тексту
+  width: 920px - 20px
+  margin: 0 auto
+
+  border-bottom: 1px solid #e1e1e1
+  padding: 35px 0px 29px 0px
+
+  .button
+    padding: 2px 41px
+
+  h4
+    padding-bottom: 0px
+    display: inline-block
+

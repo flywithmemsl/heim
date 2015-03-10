@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150126150425) do
+ActiveRecord::Schema.define(version: 20150310151838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "abouts", force: true do |t|
+  create_table "abouts", force: :cascade do |t|
     t.string   "illustration"
     t.text     "text"
     t.text     "left_colum_text"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
     t.datetime "updated_at"
   end
 
-  create_table "active_admin_comments", force: true do |t|
+  create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
     t.text     "body"
     t.string   "resource_id",   null: false
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "admin_users", force: true do |t|
+  create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "assets", force: true do |t|
+  create_table "assets", force: :cascade do |t|
     t.string   "storage_uid"
     t.string   "storage_name"
     t.datetime "created_at"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
     t.string   "storage_size"
   end
 
-  create_table "blog_posts", force: true do |t|
+  create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.text     "introtext"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
 
   add_index "blog_posts", ["event_city_id"], name: "index_blog_posts_on_event_city_id", using: :btree
 
-  create_table "categories", force: true do |t|
+  create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.integer  "sort_index"
     t.datetime "created_at"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
     t.string   "alias"
   end
 
-  create_table "cities", force: true do |t|
+  create_table "cities", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
 
   add_index "cities", ["country_id"], name: "index_cities_on_country_id", using: :btree
 
-  create_table "ckeditor_assets", force: true do |t|
+  create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
     t.integer  "data_file_size"
@@ -128,21 +128,21 @@ ActiveRecord::Schema.define(version: 20150126150425) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
-  create_table "contacts", force: true do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string   "position"
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "countries", force: true do |t|
+  create_table "countries", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "alias"
   end
 
-  create_table "event_cities", force: true do |t|
+  create_table "event_cities", force: :cascade do |t|
     t.string   "name"
     t.string   "link"
     t.string   "place"
@@ -154,7 +154,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
 
   add_index "event_cities", ["event_id"], name: "index_event_cities_on_event_id", using: :btree
 
-  create_table "events", force: true do |t|
+  create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "date"
     t.text     "description"
@@ -165,7 +165,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
     t.string   "illustration"
   end
 
-  create_table "gallery_posts", force: true do |t|
+  create_table "gallery_posts", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "image"
@@ -174,7 +174,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
     t.string   "link"
   end
 
-  create_table "index_pages", force: true do |t|
+  create_table "index_pages", force: :cascade do |t|
     t.string   "header"
     t.string   "slogan"
     t.text     "text1"
@@ -206,7 +206,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
     t.string   "right_link_text"
   end
 
-  create_table "meta_tags", force: true do |t|
+  create_table "meta_tags", force: :cascade do |t|
     t.string   "url"
     t.string   "title"
     t.string   "description"
@@ -216,7 +216,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
     t.datetime "updated_at"
   end
 
-  create_table "partners", force: true do |t|
+  create_table "partners", force: :cascade do |t|
     t.string   "link"
     t.string   "name"
     t.string   "phone"
@@ -227,7 +227,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
 
   add_index "partners", ["city_id"], name: "index_partners_on_city_id", using: :btree
 
-  create_table "promo_blocks", force: true do |t|
+  create_table "promo_blocks", force: :cascade do |t|
     t.text     "block_html"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -236,20 +236,20 @@ ActiveRecord::Schema.define(version: 20150126150425) do
 
   add_index "promo_blocks", ["index_page_id"], name: "index_promo_blocks_on_index_page_id", using: :btree
 
-  create_table "shop_categories", force: true do |t|
+  create_table "shop_categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "alias"
   end
 
-  create_table "shop_galleries", force: true do |t|
+  create_table "shop_galleries", force: :cascade do |t|
     t.text     "gallery"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "shop_items", force: true do |t|
+  create_table "shop_items", force: :cascade do |t|
     t.string   "name"
     t.string   "category"
     t.string   "price"
@@ -266,7 +266,7 @@ ActiveRecord::Schema.define(version: 20150126150425) do
 
   add_index "shop_items", ["shop_category_id"], name: "index_shop_items_on_shop_category_id", using: :btree
 
-  create_table "teammates", force: true do |t|
+  create_table "teammates", force: :cascade do |t|
     t.string   "name"
     t.string   "position"
     t.datetime "created_at"
@@ -275,5 +275,23 @@ ActiveRecord::Schema.define(version: 20150126150425) do
   end
 
   add_index "teammates", ["about_id"], name: "index_teammates_on_about_id", using: :btree
+
+  create_table "workshops", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.string   "city"
+    t.string   "place"
+    t.string   "place_link"
+    t.string   "buy_link"
+    t.string   "price"
+    t.string   "masters"
+    t.string   "vk_link"
+    t.string   "fb_link"
+    t.string   "illustration"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "description"
+    t.string   "masters_link"
+  end
 
 end

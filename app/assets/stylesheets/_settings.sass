@@ -92,3 +92,23 @@ p
   content: $content
   font-size: $size
 
+@mixin fa($content: "", $size: inherit)
+  display: inline-block
+  font-family: "FontAwesome"
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  text-rendering: auto
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  content: $content
+  font-size: $size
+
+
+.pull-right
+  float: right
+.pull-left
+  float: left

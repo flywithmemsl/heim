@@ -7,6 +7,7 @@
 #= require gridify
 #= require jquery.nyroModal.custom
 #= require perfect-scrollbar
+#= require sweet-alert.min
 #= require_tree .
 
 timeOut = 0
@@ -17,7 +18,6 @@ resize = () ->
 
 
 ready = ->
-
 
   meta = document.createElement('meta')
   meta.property = "og:image"
