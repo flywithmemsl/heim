@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'slick_rails'
+gem 'jquery-slick-rails'
 gem 'rails-assets-jquery-fullscreen'
 gem 'chosen-rails'
 
