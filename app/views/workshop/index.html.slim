@@ -37,12 +37,13 @@
                   = raw workshop.place
             p.tags
               | Цена:
-              span
+              span<
                 =  raw workshop.price
             p.tags
               | Мастера:<br/>
               span
-                = raw workshop.masters
+                a(href="#{workshop.masters_link}" target="_blank")
+                  = raw workshop.masters
             p.tags
               | Мастер-класс в соц. сетях:<br/>
               span

@@ -36,6 +36,7 @@ ActiveAdmin.register Workshop do
       f.input :buy_link
       f.input :price
       f.input :masters
+      f.input :masters_link
       f.input :fb_link
       f.input :vk_link
       f.input :illustration
