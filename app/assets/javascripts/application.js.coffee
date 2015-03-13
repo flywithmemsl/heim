@@ -73,6 +73,10 @@ ready = ->
       do resize
     ,200
 
+  $('body').on 'click','.reg-button',(e)->
+    e.preventDefault()
+    swal { html:true,  title: "Регистрация",   text: "Для завершения регистрации пришлите заявку на <a href='mailto:tatiana@kinfolkmag.ru'>tatiana@kinfolkmag.ru</a>" ,   imageUrl: "" }
+
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

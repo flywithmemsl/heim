@@ -22,7 +22,7 @@ ActiveAdmin.register Workshop do
   #   permitted
   # end
   permit_params :name, :date, :description, :fb_link, :vk_link, :illustration, :city, :place,
-  :place_link, :buy_link, :price, :masters
+  :place_link, :buy_link, :price, :masters, :masters_link
 
 
   form do |f|
