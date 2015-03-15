@@ -24,7 +24,7 @@
           // Это мелкий хак для производительности, если часто нужно дергать какое-то свойство ORM в цикле
           // я кидаю его в переменную
           - date = workshop.date
-          h4 #{raw workshop.city}, #{date.day} #{month_convert_to_string(date.month)}, #{date.hour}:#{date.min}
+          h4 #{raw workshop.city}, #{date.day} #{month_convert_to_string(date.month)}, #{date.hour}:#{date.strftime('%M')}
           -if !workshop.buy_link.blank?
             a.button.pull-right(href="#{workshop.buy_link}") Купить билет
           -else
