@@ -21,7 +21,7 @@ gem 'rails-assets-jquery-fullscreen'
 gem 'chosen-rails'
 
 gem 'mysql2', '~> 0.3.13'
-gem 'thinking-sphinx', '3.1.1'
+gem 'thinking-sphinx', '3.1.3'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
