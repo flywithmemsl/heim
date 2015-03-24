@@ -16,6 +16,7 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 /public/uploads
+/db/sphinx
 /config/development.sphinx.conf
 /config/thinking_sphinx.yml
 /config/development_back.sphinx.conf_back
