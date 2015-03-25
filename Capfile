@@ -7,9 +7,6 @@ require 'capistrano/deploy'
 require 'capistrano/bundler'
 require 'capistrano/rails'
 require 'thinking_sphinx/capistrano'
-require 'thinking_sphinx/deploy/capistrano'
-require 'vendor/plugins/thinking-sphinx/recipes/thinking_sphinx'
-
 
 # Includes tasks from other gems included in your Gemfile
 #

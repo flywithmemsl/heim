@@ -7,8 +7,8 @@ set :repo_url, 'git@bitbucket.org:adimov/heim.git'
 
 set :deploy_to, '/home/deploy/heim'
 
-set :linked_files, %w{config/database.yml config/application.yml config/unicorn.rb}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_files, fetch(:linked_files, []) + %w{config/database.yml config/application.yml config/unicorn.rb}
+set :linked_dirs, fetch(:linked_dirs, []) + %w{db/sphinx log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 
 namespace :deploy do
