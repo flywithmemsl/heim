@@ -54,7 +54,7 @@ html
         .toggle_magazines
           | издания :
           - magazines.each do |zine|
-            a(href="promo/#{zine.try :alias}")
+            a(href="/promo/#{zine.try :alias}")
               = zine.try :name
 
         .search
