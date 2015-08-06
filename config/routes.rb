@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get 'workshop/show'
 
-  # get 'shop', to: "shop#index"
-  get 'shop',                  to: redirect('/shop/kinfolk')
+  get 'shop', to: "shop#index"
+  # get 'shop',                  to: redirect('/shop/kinfolk')
 
   get 'promo/:alias',          to: "main#static"
 

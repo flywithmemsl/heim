@@ -34,18 +34,21 @@ class Bag
       string = "Корзина (#{count} товар#{ending(count)})"
       $(".header .fluid_container .bag a").text(string)
 
-showNotify: ->
-  swal {   title: "Наконец-то вы вернулись!",   text: "Не забудьте проверить корзину, там остались товары с вашего прошлого посещения.",   imageUrl: "" }
+  showNotify: ->
+    swal {   title: "Наконец-то вы вернулись!",   text: "Не забудьте проверить корзину, там остались товары с вашего прошлого посещения.",   imageUrl: "" }
 
-setTimestamp: ->
-  last_update = Math.floor(new Date().getTime() / 1000)
-  localStorage.setItem("last_update", last_update)
+  setTimestamp: ->
+    last_update = Math.floor(new Date().getTime() / 1000)
+    localStorage.setItem("last_update", last_update)
 
-checkLastUpdate: ->
-  now         = Math.floor(new Date().getTime() / 1000)
-  last_update = localStorage.getItem("mybag")
-  week_stamp  = 60 * 60 * 24 * 7
-  if now - last_update > week_stamp then @showNotify()
+  checkLastUpdate: ->
+    now         = Math.floor(new Date().getTime() / 1000)
+    last_update = localStorage.getItem("last_update")
+    week_stamp  = 60 * 60 * 24 * 7
+    if now - last_update > week_stamp
+      @showNotify()
+      last_update = Math.floor(new Date().getTime() / 1000)
+      localStorage.setItem("last_update", last_update)
 
 ready = ->
   if localStorage?

@@ -75,6 +75,8 @@ GEM
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (6.0.0)
+    autoprefixer-rails (3.1.0.20140911)
+      execjs
     bcrypt (3.1.10)
     bourbon (3.2.4)
       sass (~> 3.2)
@@ -318,6 +320,7 @@ DEPENDENCIES
   activeadmin!
   activeadmin-dragonfly!
   activeadmin-wysihtml5!
+  autoprefixer-rails
   bourbon
   capistrano (~> 3.2)
   capistrano-bundler (~> 1.1)

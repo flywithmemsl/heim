@@ -7,9 +7,9 @@
     h1 Магазин
 
     ul.types
-      / li
-      /   a(href="/shop")
-      /     | все
+      li
+        a(href="/shop")
+          | все
       li
         a(href="/shop/kinfolk")
           | kinfolk
@@ -40,6 +40,18 @@
           p.name =item.try( :name)
           p.type =item.try( :category)
           p.price =item.try( :price)
+    - if @all
+      .shop_spacer
+
+      - @items2.each do |item|
+        .shop_item(data-no-turbolink class="#{ item.sale ? 'onsale' : ''}")
+          a.absolute(href="#{item.try( :link)}")
+          img(src="#{item.try( :image)}")
+          .info
+            p.name =item.try( :name)
+            p.type =item.try( :category)
+            p.price =item.try( :price)
+
 
 
 

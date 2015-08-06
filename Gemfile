@@ -20,6 +20,8 @@ gem 'slick_rails'
 gem 'rails-assets-jquery-fullscreen'
 gem 'chosen-rails'
 
+gem 'autoprefixer-rails'
+
 gem 'mysql2', '~> 0.3.13'
 gem 'thinking-sphinx', '3.1.3'
 
