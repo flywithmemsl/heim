@@ -45,10 +45,11 @@ class Bag
     now         = Math.floor(new Date().getTime() / 1000)
     last_update = localStorage.getItem("last_update")
     week_stamp  = 60 * 60 * 24 * 7
-    if now - last_update > week_stamp
-      @showNotify()
-      last_update = Math.floor(new Date().getTime() / 1000)
-      localStorage.setItem("last_update", last_update)
+    if last_update
+      if now - last_update > week_stamp
+        @showNotify()
+        last_update = Math.floor(new Date().getTime() / 1000)
+        localStorage.setItem("last_update", last_update)
 
 ready = ->
   if localStorage?
