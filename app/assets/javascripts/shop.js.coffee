@@ -52,6 +52,9 @@ class Bag
         localStorage.setItem("last_update", last_update)
 
 ready = ->
+  try
+    window.bag.updateBag()
+
   if localStorage?
     if window.location.pathname.indexOf("shop") != -1
       $(".header .fluid_container").append("<div class='bag'><a data-no-turbolink href='/shop/index#!/~/cart'></a></div>")
