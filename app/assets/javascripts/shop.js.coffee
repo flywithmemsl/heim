@@ -52,8 +52,8 @@ class Bag
         localStorage.setItem("last_update", last_update)
 
 ready = ->
-  try
-    window.bag.updateBag()
+
+  window.bag.updateBag()
 
   if localStorage?
     if window.location.pathname.indexOf("shop") != -1
