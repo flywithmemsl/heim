@@ -57,7 +57,7 @@ ready = ->
 
   if localStorage?
     if window.location.pathname.indexOf("shop") != -1
-      $(".header .fluid_container").append("<div class='bag'><a data-no-turbolink href='/shop/index#!/~/cart'></a></div>")
+      $(".header .fluid_container").append("<div class='bag'><a data-no-turbolink href='/shop/index#!/~/cart'>Корзина</a></div>")
       try
         Ecwid.OnAPILoaded.add ->
           Ecwid.OnPageLoad.add ->
