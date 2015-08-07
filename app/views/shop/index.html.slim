@@ -40,9 +40,10 @@
           p.name =item.try( :name)
           p.type =item.try( :category)
           p.price =item.try( :price)
-    - if @all
-      .shop_spacer
 
+  - if @all
+    .shop_spacer
+    .shop_items
       - @items2.each do |item|
         .shop_item(data-no-turbolink class="#{ item.sale ? 'onsale' : ''}")
           a.absolute(href="#{item.try( :link)}")
