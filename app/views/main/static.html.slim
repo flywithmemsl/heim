@@ -64,40 +64,13 @@
     p.centred = @page.text5
 
 
-
-.bottom_promo_block(style="background-image: url(#{@page.bottom_picture})")
-  .container
-    a.button(href="#{@page.try :bottom_link}")
-      = @page.try :bottom_text
-
-
-
-      / f.input :fullscreenpic
-
-      / f.input :header
-
-      / f.input :header1
-      / f.input :header2
-      / f.input :header3
-      / f.input :text1
-      / f.input :text2
-
-      / f.input :text3
-      / f.input :text4
-
-      / f.input :text5
-      / f.input :bottom, as: :wysihtml5, commands: [ :source ]
+-if @page.bottom_picture.present?
+  .bottom_promo_block(style="background-image: url(#{@page.bottom_picture})")
+    .container
+      - if @page.bottom_link.present?
+        a.button(href="#{@page.try :bottom_link}")
+          = @page.try :bottom_text
 
 
 
-
-
-      / f.input :left_link
-      / f.input :left_link_text
-      / f.input :left_picture
-      / f.input :right_block_tittle
-      / f.input :right_block_text
-      / f.input :right_picture
-
-      / f.input :bottom_picture
 

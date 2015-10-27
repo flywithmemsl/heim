@@ -52,22 +52,24 @@ html
           li
             a(href="/contacts") Контакты
         .toggle_magazines
-          | издания :
+          div
+            | издания :
           - magazines.each do |zine|
-            a(href="/promo/#{zine.try :alias}")
-              = zine.try :name
+            div
+              a(href="/promo/#{zine.try :alias}")
+                = zine.try :name
 
         .search
           form(action=search_post_path)
             input.icon(type="text" name="q" value="")
-        a.button.rounded(href="/offline") Где купить офлайн?
+
         .social
           a.vk(href="https://vk.com/kinfolkmag")
           a.fb(href="https://www.facebook.com/KinfolkRussia")
           a.in(href="https://instagram.com/heimstudio/")
           a.pi(href="https://www.pinterest.com/jugofwater/")
-        .illustration
-          img(src="/illustr.png")
+        a.button.rounded(href="/offline") Где купить офлайн?
+
       hr
       .container
         p.copy Heim Publishing, 2014

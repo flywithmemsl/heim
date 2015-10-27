@@ -282,8 +282,8 @@ p.centred
     display: inline-block
     text-transform: none
     +italic(14px,24px)
-    left: 25px
-    top: 130px
+    top: 122px
+    right: 25px
     padding: 11px 20px
     padding-top: 13px
 
@@ -298,11 +298,15 @@ p.centred
     padding: 0
     color: $white !important
     letter-spacing: 0.12em
-
+    & > div
+      text-align: left
+      margin-bottom: 3px
+      &:first-child
+        margin-bottom: 6px
     a
       color: $white !important
       +normal(11px,11px)
-      margin-left: 8px
+      margin-left: 0px
       padding-bottom: 1px
       text-transform: none !important
 
