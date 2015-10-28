@@ -35,7 +35,7 @@ class Bag
       $(".header .fluid_container .bag a").text(string)
 
   showNotify: ->
-    swal {   title: "Наконец-то вы вернулись!",   text: "Не забудьте проверить корзину, там остались товары с вашего прошлого посещения.",   imageUrl: "" }
+    # swal {   title: "Наконец-то вы вернулись!",   text: "Не забудьте проверить корзину, там остались товары с вашего прошлого посещения.",   imageUrl: "" }
 
   setTimestamp: ->
     last_update = Math.floor(new Date().getTime() / 1000)
