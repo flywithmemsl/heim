@@ -282,7 +282,7 @@ p.centred
     display: inline-block
     text-transform: none
     +italic(14px,24px)
-    top: 122px
+    top: 133px
     right: 25px
     padding: 11px 20px
     padding-top: 13px
@@ -302,13 +302,18 @@ p.centred
       text-align: left
       margin-bottom: 3px
       &:first-child
-        margin-bottom: 6px
+        color: #e1e1e1
+        margin-bottom: 32px
     a
       color: $white !important
-      +normal(11px,11px)
+      +normal(12px,18px)
       margin-left: 0px
       padding-bottom: 1px
       text-transform: none !important
+      opacity: 0.8
+      transition: opacity 0.3s ease
+      &:hover
+        opacity: 1
 
       &:hover
         border-bottom: 1px solid $white
@@ -636,7 +641,7 @@ a.absolute
   .zine
     position: relative
     display: inline-block
-    margin: 25px 5px 0 5px
+    margin: 25px 9px 0 7px
     width: 129px
     height: 169px
     overflow: hidden
