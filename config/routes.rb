@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get 'workshop/show'
 
   get 'shop', to: "shop#index"
-  # get 'shop',                  to: redirect('/shop/kinfolk')
 
   get 'promo/:alias',          to: "main#static"
 
@@ -19,7 +18,7 @@ Rails.application.routes.draw do
   get 'blog/(:category)',      to: "blog#index",     as: :posts, constraints: { category: /(articles|galleries|videos)/ }
   get 'blog/:category/:alias', to: "blog#show",      as: :post
 
-  get 'shop/(:category)',      to: "shop#index",     as: :shop_items, constraints: { category: /(kinfolk|heim|sale)/ }
+  get 'shop/(:category)',      to: "shop#index",     as: :shop_items, constraints: { category: /(publications|courses|sale)/ }
   get 'shop/index',            to: "shop#show",      as: :shop_item
 
 

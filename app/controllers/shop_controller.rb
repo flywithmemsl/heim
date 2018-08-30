@@ -12,10 +12,10 @@ class ShopController < ApplicationController
     if category == nil
 
       @all = true
-      @kinfolk = ShopCategory.find_by(alias: 'kinfolk')
-      @heim = ShopCategory.find_by(alias: 'heim')
-      @items = @kinfolk.try(:shop_items).try(:order, sort_index: :desc) || ShopItem.all.try(:order, sort_index: :desc)
-      @items2 = @heim.try(:shop_items).try(:order, sort_index: :desc) || ShopItem.all.try(:order, sort_index: :desc)
+      @publications = ShopCategory.find_by(alias: 'publications')
+      @courses = ShopCategory.find_by(alias: 'courses')
+      @items = @publications.try(:shop_items).try(:order, sort_index: :desc) || ShopItem.all.try(:order, sort_index: :desc)
+      @items2 = @courses.try(:shop_items).try(:order, sort_index: :desc) || ShopItem.all.try(:order, sort_index: :desc)
 
 
     end
