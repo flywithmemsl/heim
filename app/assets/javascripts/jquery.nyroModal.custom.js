@@ -1701,7 +1701,7 @@ jQuery(function($, undefined) {
  */
 jQuery(function($, undefined) {
 	$.nmObj({
-		embedlyUrl: 'http://api.embed.ly/1/oembed',
+		embedlyUrl: 'https://api.embed.ly/1/oembed',
 		embedly: {
 			key: undefined,
 			wmode: 'transparent',
