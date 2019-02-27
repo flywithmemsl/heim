@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'heim'
-set :repo_url, 'git@bitbucket.org:adimov/heim.git'
+set :repo_url, 'git@github.com:flywithmemsl/heim.git'
 
 
 set :deploy_to, '/home/deploy/heim'
