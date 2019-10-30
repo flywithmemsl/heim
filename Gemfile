@@ -70,7 +70,7 @@ gem 'inherited_resources'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'flywithmemsl/activeadmin-wysihtml5'
 
-gem 'devise', '~> 3.4.0'
+gem 'devise', '~> 4.7.1'
 
 
 gem 'rollbar'
